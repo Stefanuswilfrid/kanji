@@ -18,6 +18,8 @@ export default {
         black: "#050a0e",
         white: "#fefefe",
         secondary: "#d0d0d0",
+        gray: "#3a3d3f",
+
         hovered: "#242424",
         subtle: "#282828",
       },
