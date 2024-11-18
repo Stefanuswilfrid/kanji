@@ -2,6 +2,8 @@ import { Divider } from "@/components";
 import { Layout } from "@/modules/layout";
 import { cn } from "@/utils";
 import { AnimatePresence } from "framer-motion";
+import { NewReading, NewReadingOnboarding } from "@/modules/new";
+
 import { CameraIcon, FileTextIcon, ImageUpIcon, TypeIcon } from "lucide-react";
 import React from "react";
 type ReadingType = "pdf" | "text" | "image";

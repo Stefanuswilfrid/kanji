@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 const defaultMeta = {
   title: "kanji",
   siteName: "kanji",
-  description: "kanji, learn hsk characters and read chinese books.",
+  description: "kanji, learn  characters and read chinese books.",
   url: "https://kanji",
   image:
     "https://res.cloudinary.com/drjgq6umm/image/upload/v1719405836/uploads/focus-web-app/Screenshot_2024-06-26_194347_uaotxf.png",
