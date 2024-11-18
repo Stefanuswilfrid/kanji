@@ -2,6 +2,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/utils";
 import { Line } from "./line";
+import { Layout } from "../layout";
+import { ContinueButton } from "./continue-button";
 
 const texts = [
   "Welcome to Flow.",
@@ -10,8 +12,8 @@ const texts = [
   "Feel free to alter your thoughts within 5 minutes, after which you can leave them to rest.",
   "Don't worry. You can always come back to read your thought process.",
 ];
-export function Onboarding() {
-  const [currentSentenceIndex, setCurrentSentenceIndex] = React.useState(-1);
+export function Onboarding({ onContinue }: { onContinue: () => void }) {
+  const [currentSentenceIndex, setCurrentSentenceIndex] = React.useState(4);
   React.useEffect(() => {
     const timeout = setTimeout(() => {
       setCurrentSentenceIndex((prev) => {
@@ -42,6 +44,7 @@ export function Onboarding() {
   const ref = React.useRef() as React.MutableRefObject<HTMLDivElement>;
   const router = useRouter();
   return (
+    <Layout>
     <article className="relative">
       <h1 className="text-3xl font-bold">Onboarding</h1>
       <hr className="w-full h-[1px] bg-[#282828] border-none my-4" />
@@ -84,17 +87,9 @@ export function Onboarding() {
           );
         })}
       </ul>
-      <button
-        onClick={() => router.push("/read/1")}
-        className={cn(
-          "mt-4 w-9 h-9 grid place-items-center ease duration-500 text-white pb-2.5 pt-1.5 px-2 rounded-md",
-          isEnd ? "opacity-100" : "opacity-0",
-          "duration-300 hover:bg-[#242424]"
-        )}
-        aria-label="Continue"
-      >
-        &#8594;
-      </button>
+      <ContinueButton isEnd={isEnd} onClick={onContinue} />
+
     </article>
+    </Layout>
   );
 }

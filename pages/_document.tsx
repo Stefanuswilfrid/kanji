@@ -14,7 +14,7 @@ export default function Document() {
           href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
         />
       </Head>{" "}
-      <body className="antialiased">
+      <body className="bg-deepblack">
         <Main />
         <NextScript />
       </body>

@@ -5,8 +5,9 @@ import type { AppProps } from "next/app";
 
 import { Seo } from "@/components";
 import { apiClient } from "@/utils";
+import { AnimatePresence } from "framer-motion";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps,router }: AppProps) {
   return (
     <ThemeProvider forcedTheme="dark">
       <Seo />
@@ -18,8 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         }}
       >
-        <Component {...pageProps} />
-      </SWRConfig>
+        <AnimatePresence mode="wait">
+          <Component key={router.pathname} {...pageProps} />
+        </AnimatePresence>      </SWRConfig>
     </ThemeProvider>
   );
 }
