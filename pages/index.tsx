@@ -1,10 +1,10 @@
 import React from "react";
-import { Onboarding } from "@/modules/onboarding";
+import { Onboarding } from "@/modules/onboarding/onboarding";
 import { AnimatePresence } from "framer-motion";
-import { Layout } from "@/modules/layout";
 import { useOnboarded } from "@/modules/onboarding/use-onboarded";
+import { Home } from "@/modules/home/home";
 
-export default function Home() {
+export default function Index() {
   const { isOnboarded, setIsOnboarded } = useOnboarded();
 
   return (
@@ -12,9 +12,7 @@ export default function Home() {
       <main className="max-w-[960px] mx-auto px-4 md:px-8 py-32">
       <AnimatePresence mode="wait">
           {isOnboarded ? (
-            <Layout key="home">
-              <h1 className="text-3xl font-bold">Welcome back!</h1>
-            </Layout>
+            <Home key="home"/>
           ) : (
             <Onboarding
               onContinue={() => {
