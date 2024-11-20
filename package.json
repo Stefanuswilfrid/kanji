@@ -29,7 +29,8 @@
     "reading-time-estimator": "^1.11.0",
     "sonner": "^1.7.0",
     "swr": "^2.2.5",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

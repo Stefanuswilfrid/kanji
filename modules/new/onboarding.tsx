@@ -7,7 +7,7 @@ import { cn, uploadImage } from "@/utils";
 import Image from "next/image";
 import { Loader } from "./loader";
 import { FormTextarea } from "@/components/text-area";
-import { BackRouteButton, CustomRouteButton } from "@/components";
+import { BackRouteButton, CustomRouteButton } from "@/components/route-button";
 
 export function NewReadingOnboarding() {
   const { register, setValue, watch, control } = useFormContext<NewReadingProps>();
