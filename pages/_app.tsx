@@ -19,7 +19,6 @@ export default function App({ Component, pageProps,router }: AppProps) {
           },
         }}
       >
-                    <SearchCommandMenu />
 
         <AnimatePresence mode="wait">
           <Component key={router.pathname} {...pageProps} />
