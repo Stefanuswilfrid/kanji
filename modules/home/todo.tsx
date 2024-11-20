@@ -70,7 +70,7 @@ export function HomeTodo() {
         <Button
           className="relative hover:bg-sky-200/5"
           icon={<div className="w-12 shrink-0 text-3xl font-bold text-sky-500">3.0</div>}
-          path="/hsk/1"
+          path="/jlpt/1"
           title={"t.home.jlpt.title"}
           description={"t.home.jlpt.description"}
         >

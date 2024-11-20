@@ -5,8 +5,8 @@ import { NewReadingProps } from "../new";
 
 import React from "react";
 import Confetti from "react-confetti";
-import { useWindowSize } from "@/hooks";
 import { usePathname } from "next/navigation";
+import { useWindowSize } from "@/hooks";
 
 export const defaultValues = {
   title: "",
