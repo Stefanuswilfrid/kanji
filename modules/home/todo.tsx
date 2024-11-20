@@ -16,7 +16,7 @@ import { AuthButton } from "./auth-button";
 import { useRouter } from "next/router";
 import { useWindowSize } from "@/hooks";
 
-const isAdmin = process.env.NEXT_PUBLIC_IS_ADMIN;
+const isAdmin = true;
 
 export function HomeTodo() {
 

@@ -180,7 +180,7 @@ export function Explore() {
                       <div className="flex flex-col flex-1">
                         
                         <p className="mt-1 max-md:text-sm text-secondary line-clamp-2 md:line-clamp-3">
-                          {/* {locale === "en" ? book.description : book.descriptionId} */}
+                          {book.description}
                         </p>
                         <div className="mt-2 max-md:mt-4 inline-flex text-xs items-center rounded-full backdrop-blur-sm bg-blue-500/10 dark:bg-blue-400/10 px-2 py-1 font-medium text-blue-500 dark:text-blue-400 ring-1 ring-inset ring-blue-500/20 dark:ring-blue-400/20 w-fit">
                           {book.chapters.length} {book.chapters.length > 1 ? "chapters" : "chapter"}

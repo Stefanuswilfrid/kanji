@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth, useUser } from "@/modules/auth";
-import { Google } from "@/components";
+import { Google } from "@/components/icons";
 import { AnimatePresence, motion } from "framer-motion";
 
 export function AuthButton() {

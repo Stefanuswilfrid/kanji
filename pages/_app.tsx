@@ -6,8 +6,9 @@ import type { AppProps } from "next/app";
 import { Seo } from "@/components";
 import { apiClient } from "@/utils";
 import { AnimatePresence } from "framer-motion";
+import { SessionProvider } from "next-auth/react";
 
-export default function App({ Component, pageProps,router }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider forcedTheme="dark">
       <Seo />
@@ -19,10 +20,12 @@ export default function App({ Component, pageProps,router }: AppProps) {
           },
         }}
       >
-
-        <AnimatePresence mode="wait">
-          <Component key={router.pathname} {...pageProps} />
-        </AnimatePresence>      </SWRConfig>
+        <SessionProvider session={pageProps.session}>
+          <AnimatePresence mode="wait">
+            <Component key={router.pathname} {...pageProps} />
+          </AnimatePresence>
+        </SessionProvider>
+      </SWRConfig>
     </ThemeProvider>
   );
 }
