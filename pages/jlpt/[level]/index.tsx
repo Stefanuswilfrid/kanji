@@ -1,12 +1,14 @@
 import type { InferGetStaticPropsType, GetStaticPaths, GetStaticPropsContext } from "next";
 import { promises as fs } from "fs";
-import { CHARACTERS_PER_PAGE, ChineseCharacter, HSK_LEVELS, Level } from "@/data";
+import { CHARACTERS_PER_PAGE, ChineseCharacter, HSK_LEVELS, Level } from "@/data/constants";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import * as React from "react";
 import Head from "next/head";
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store";
-import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
+import { CharacterCard } from "@/components/jlpt/CharacterCard";
+import { Pagination } from "@/components/jlpt/Pagination";
+// import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
 import { MobileSidebar, HanziModal } from "@/modules/hsk";
 import { useWindowSize } from "@/hooks";
 
