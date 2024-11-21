@@ -6,13 +6,14 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import Head from "next/head";
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store";
-import { CharacterCard } from "@/components/jlpt/CharacterCard";
+import { CharacterCard, Locale } from "@/components/jlpt/CharacterCard";
 import { Pagination } from "@/components/jlpt/Pagination";
 // import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
 // import { MobileSidebar, HanziModal } from "@/modules/hsk";
 import { MobileSidebar } from "@/modules/jlpt";
 
 import { useWindowSize } from "@/hooks";
+import { CharacterRow } from "@/components/jlpt/CharacterRow";
 
 async function getCharactersOnLevel(level: string | number, locale?: string) {
   const file = await fs.readFile(process.cwd() + getFilePath(level, locale), "utf8");
@@ -145,7 +146,6 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
 
   const router = useRouter();
 
-  const { isSimplified } = usePreferences();
 
   return (
     <>
