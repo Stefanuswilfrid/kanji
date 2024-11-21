@@ -2,14 +2,14 @@ import * as React from "react";
 import { KanjiApiResponse } from "../types";
 import { BASE_URL } from "@/pages/_app";
 import { AudioButton } from "../AudioButton";
+
 import clsx from "clsx";
 import { ExampleSentences } from "./ExampleSentences";
-import { HanziDefinition } from "./HanziDefinition";
+import { KanjiDefinition } from "./KanjiDefinition";
 import { ExampleIdioms } from "./ExampleIdioms";
 import { RelatedKanji } from "./RelatedKanji";
 import { IdHanziMapKey } from "../KanjiModal";
 import { Level } from "@/data/constants";
-import { usePreferences } from "@/components";
 
 export function KanjiDetails({
   definition,
@@ -26,7 +26,6 @@ export function KanjiDetails({
 
   const ref = React.useRef<HTMLDivElement>(null);
 
-  const { isSimplified } = usePreferences();
 
   React.useEffect(() => {
     if (ref.current) {
@@ -48,7 +47,7 @@ export function KanjiDetails({
   const currentEntry = definition.entries[actualEntryIndex];
   const entryLength = definition.entries.length;
 
-  const hanzi = isSimplified ? definition.simplified : currentEntry.traditional;
+  const hanzi =  definition.simplified;
   const pinyin = currentEntry.pinyin;
   const audioUrl = BASE_URL + `/api/audio/${encodeURI(hanzi)}?pinyin=${pinyin}`;
 
@@ -95,13 +94,13 @@ export function KanjiDetails({
           </div>
         )}
 
-        <HanziDefinition entry={currentEntry} />
+        <KanjiDefinition entry={currentEntry} />
 
-        <RelatedHanzi hanzi={hanzi} related={related} />
+        <RelatedKanji hanzi={hanzi} related={related} />
 
-        <ExampleIdioms hanzi={isSimplified ? definition.simplified : currentEntry.traditional} idioms={idioms} />
+        <ExampleIdioms hanzi={definition.simplified } idioms={idioms} />
 
-        <ExampleSentences hanzi={isSimplified ? definition.simplified : currentEntry.traditional} lessons={lessons} />
+        <ExampleSentences hanzi={definition.simplified} lessons={lessons} />
       </div>
     </div>
   );

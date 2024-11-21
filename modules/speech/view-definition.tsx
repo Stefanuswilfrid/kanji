@@ -167,7 +167,6 @@ export function DefinitionModal({
 
   const { width } = useWindowSize();
 
-  const { isSimplified } = usePreferences();
 
   const currentHanzi = isSimplified ? currentSection?.simplified : currentSection?.traditional;
 

@@ -23,7 +23,6 @@ export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: H
 
   const regex = new RegExp(`(${hanzi})`);
 
-  const { isSimplified } = usePreferences();
 
   const { t } = useLocale();
 

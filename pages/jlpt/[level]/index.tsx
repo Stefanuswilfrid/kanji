@@ -8,7 +8,6 @@ import Head from "next/head";
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 import { CharacterCard, Locale } from "@/components/jlpt/CharacterCard";
 import { Pagination } from "@/components/jlpt/Pagination";
-// import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
 // import { MobileSidebar, HanziModal } from "@/modules/hsk";
 import { MobileSidebar } from "@/modules/jlpt";
 

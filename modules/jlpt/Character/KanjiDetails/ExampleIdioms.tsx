@@ -1,6 +1,5 @@
 import React from "react";
 import { KanjiApiResponse } from "../types";
-// import { Popover, Drawer, usePreferences } from "@/components";
 import { useWindowSize } from "@/hooks";
 import clsx from "clsx";
 import { useLocale } from "@/locales/use-locale";
@@ -15,7 +14,6 @@ export function ExampleIdioms({ hanzi, idioms }: { hanzi: string; idioms: KanjiA
 
   const { t } = useLocale();
 
-  const { isSimplified } = usePreferences();
 
   if (!idioms) return null;
 

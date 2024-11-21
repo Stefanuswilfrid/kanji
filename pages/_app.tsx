@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { SessionProvider } from "next-auth/react";
 import { AuthProvider } from "@/modules/auth";
 import { ConfettiProvider, NewReadingLayout } from "@/modules/layout/new-reading-layout";
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const isNewReading = router.pathname.startsWith("/new");
