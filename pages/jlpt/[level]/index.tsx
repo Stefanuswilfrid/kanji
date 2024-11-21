@@ -9,7 +9,9 @@ import { useCompletedCharacters, useCompletedCharactersActions } from "@/store";
 import { CharacterCard } from "@/components/jlpt/CharacterCard";
 import { Pagination } from "@/components/jlpt/Pagination";
 // import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
-import { MobileSidebar, HanziModal } from "@/modules/hsk";
+// import { MobileSidebar, HanziModal } from "@/modules/hsk";
+import { MobileSidebar } from "@/modules/jlpt";
+
 import { useWindowSize } from "@/hooks";
 
 async function getCharactersOnLevel(level: string | number, locale?: string) {

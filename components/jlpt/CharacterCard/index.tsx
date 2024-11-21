@@ -1,4 +1,4 @@
-import { ChineseCharacter } from "@/data";
+import { ChineseCharacter } from "@/data/constants";
 import { cn } from "@/utils/cn";
 import clsx from "clsx";
 import { LucideCheckCircle } from "lucide-react";

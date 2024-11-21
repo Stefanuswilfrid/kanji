@@ -4,8 +4,9 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 import * as React from "react";
-import { ChangeLocaleButton, ChangeSimplifiedTraditional, Drawer } from "@/components";
-import { useLocale } from "@/locales/use-locale";
+import { ChangeLocaleButton } from "@/components";
+import { Drawer } from "@/components/jlpt";
+// import { useLocale } from "@/locales/use-locale";
 import { toast } from "sonner";
 import { JLPTLevelItems } from "./JLPTLevelItems";
 
@@ -35,7 +36,6 @@ const levelToHanzi = (level: string) => {
 };
 
 export function DesktopSidebar() {
-  const { t } = useLocale();
 
   return (
     <div className="max-md:hidden border-r border-r-secondary/10">
@@ -46,7 +46,6 @@ export function DesktopSidebar() {
       </aside>
       <div className="ml-6 space-y-2 pt-3 max-w-[180px]">
         <div className="flex gap-2">
-          <ChangeSimplifiedTraditional />
           <ChangeLocaleButton />
         </div>
         <div className="flex items-end gap-2">
@@ -55,7 +54,7 @@ export function DesktopSidebar() {
             target="_blank"
             className="inline-block relative z-10 hover:underline underline-offset-4 pl-4 pr-5 py-2 border border-secondary/10 bg-softblack w-fit rounded-md flex-1 text-center"
           >
-            {t.practice} &#8594;
+            {"t.practice"} &#8594;
           </a>
         </div>
       </div>
@@ -66,7 +65,6 @@ export function DesktopSidebar() {
 export function MobileSidebar() {
   const pathname = usePathname();
   const showSidebar = pathname !== "/";
-  const { t } = useLocale();
 
   const level = pathname.split("/")[2];
 
@@ -93,14 +91,13 @@ export function MobileSidebar() {
           <aside className="relative max-h-[calc(100dvh-2rem)] pt-2 overflow-y-auto scrollbar-none">
             <ul className="space-y-2 pb-2">
               <li className="flex justify-center gap-2 py-1">
-                <ChangeSimplifiedTraditional />
                 <ChangeLocaleButton />
                 <a
                   href="https://pandarin.net/latihan-ujian-hsk/"
                   target="_blank"
                   className="inline-block relative z-10 hover:underline underline-offset-4 pl-6 pr-7 py-2 border border-secondary/10 bg-softblack w-fit rounded-md"
                 >
-                  {t.practice} &#8594;
+                  {"t.practice"} &#8594;
                 </a>
               </li>
               <JLPTLevelItems isDrawer />
