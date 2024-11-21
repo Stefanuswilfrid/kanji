@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import * as React from "react";
 import Head from "next/head";
-import { useCompletedCharacters, useCompletedCharactersActions } from "@/store";
+import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 import { CharacterCard, Locale } from "@/components/jlpt/CharacterCard";
 import { Pagination } from "@/components/jlpt/Pagination";
 // import { CharacterCard, Pagination, CharacterRow, Locale, usePreferences } from "@/components";
@@ -14,6 +14,7 @@ import { MobileSidebar } from "@/modules/jlpt";
 
 import { useWindowSize } from "@/hooks";
 import { CharacterRow } from "@/components/jlpt/CharacterRow";
+import { KanjiModal } from "@/modules/jlpt/Character/KanjiModal";
 
 async function getCharactersOnLevel(level: string | number, locale?: string) {
   const file = await fs.readFile(process.cwd() + getFilePath(level, locale), "utf8");
@@ -41,7 +42,7 @@ export const getStaticPaths = (async ({ locales }) => {
 }) satisfies GetStaticPaths;
 
 const getFilePath = (level: string | number, locale?: string) =>
-  `/data/${locale === "id" ? "id" : "en"}/hsk-level-${level}.json`;
+  `/data/${locale === "id" ? "id" : "en"}/jlpt-level-${level}.json`;
 
 export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) => {
   const level = params?.level as string;
@@ -153,7 +154,7 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
         <title>{title}</title>
       </Head>
 
-      <HanziModal />
+      <KanjiModal />
 
       <div className="relative h-dvh pt-12 w-full">
         <div ref={ref} className="w-full h-full overflow-y-auto scrollbar max-sm:pb-12">

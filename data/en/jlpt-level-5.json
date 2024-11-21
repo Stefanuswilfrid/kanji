@@ -1,0 +1,1423 @@
+[
+    {
+        "kanji": "日",
+        "readings": {
+            "onyomi": [
+                "ニチ",
+                "ジツ"
+            ],
+            "kunyomi": [
+                "ひ",
+                "か"
+            ]
+        },
+        "meaning": "day, sun"
+    },
+    {
+        "kanji": "月",
+        "readings": {
+            "onyomi": [
+                "ゲツ",
+                "ガツ"
+            ],
+            "kunyomi": [
+                "つき"
+            ]
+        },
+        "meaning": "month, moon"
+    },
+    {
+        "kanji": "木",
+        "readings": {
+            "onyomi": [
+                "モク",
+                "ボク"
+            ],
+            "kunyomi": [
+                "き",
+                "こ"
+            ]
+        },
+        "meaning": "tree, wood"
+    },
+    {
+        "kanji": "山",
+        "readings": {
+            "onyomi": [
+                "サン"
+            ],
+            "kunyomi": [
+                "やま"
+            ]
+        },
+        "meaning": "mountain"
+    },
+    {
+        "kanji": "川",
+        "readings": {
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "かわ"
+            ]
+        },
+        "meaning": "river"
+    },
+    {
+        "kanji": "田",
+        "readings": {
+            "onyomi": [
+                "デン"
+            ],
+            "kunyomi": [
+                "た"
+            ]
+        },
+        "meaning": "rice field"
+    },
+    {
+        "kanji": "人",
+        "readings": {
+            "onyomi": [
+                "ジン",
+                "ニン"
+            ],
+            "kunyomi": [
+                "ひと"
+            ]
+        },
+        "meaning": "person"
+    },
+    {
+        "kanji": "口",
+        "readings": {
+            "onyomi": [
+                "コウ",
+                "ク"
+            ],
+            "kunyomi": [
+                "くち"
+            ]
+        },
+        "meaning": "mouth"
+    },
+    {
+        "kanji": "車",
+        "readings": {
+            "onyomi": [
+                "シャ"
+            ],
+            "kunyomi": [
+                "くるま"
+            ]
+        },
+        "meaning": "car, vehicle"
+    },
+    {
+        "kanji": "門",
+        "readings": {
+            "onyomi": [
+                "モン"
+            ],
+            "kunyomi": [
+                "かど"
+            ]
+        },
+        "meaning": "gate"
+    },
+    {
+        "kanji": "火",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "ひ"
+            ]
+        },
+        "meaning": "fire"
+    },
+    {
+        "kanji": "水",
+        "readings": {
+            "onyomi": [
+                "スイ"
+            ],
+            "kunyomi": [
+                "みず"
+            ]
+        },
+        "meaning": "water"
+    },
+    {
+        "kanji": "金",
+        "readings": {
+            "onyomi": [
+                "キン",
+                "コン"
+            ],
+            "kunyomi": [
+                "かね"
+            ]
+        },
+        "meaning": "gold, money"
+    },
+    {
+        "kanji": "土",
+        "readings": {
+            "onyomi": [
+                "ド",
+                "ト"
+            ],
+            "kunyomi": [
+                "つち"
+            ]
+        },
+        "meaning": "earth, soil"
+    },
+    {
+        "kanji": "子",
+        "readings": {
+            "onyomi": [
+                "シ",
+                "ス"
+            ],
+            "kunyomi": [
+                "こ"
+            ]
+        },
+        "meaning": "child"
+    },
+    {
+        "kanji": "女",
+        "readings": {
+            "onyomi": [
+                "ジョ"
+            ],
+            "kunyomi": [
+                "おんな"
+            ]
+        },
+        "meaning": "woman"
+    },
+    {
+        "kanji": "男",
+        "readings": {
+            "onyomi": [
+                "ダン",
+                "ナン"
+            ],
+            "kunyomi": [
+                "おとこ"
+            ]
+        },
+        "meaning": "man"
+    },
+    {
+        "kanji": "学",
+        "readings": {
+            "onyomi": [
+                "ガク"
+            ],
+            "kunyomi": [
+                "まな"
+            ]
+        },
+        "meaning": "study, learning"
+    },
+    {
+        "kanji": "校",
+        "readings": {
+            "onyomi": [
+                "コウ"
+            ],
+            "kunyomi": []
+        },
+        "meaning": "school"
+    },
+    {
+        "kanji": "先",
+        "readings": {
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "さき"
+            ]
+        },
+        "meaning": "ahead, previous"
+    },
+    {
+        "kanji": "生",
+        "readings": {
+            "onyomi": [
+                "セイ",
+                "ショウ"
+            ],
+            "kunyomi": [
+                "い",
+                "う",
+                "なま"
+            ]
+        },
+        "meaning": "life, birth"
+    },
+    {
+        "kanji": "何",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "なに",
+                "なん"
+            ]
+        },
+        "meaning": "what"
+    },
+    {
+        "kanji": "天",
+        "readings": {
+            "onyomi": [
+                "テン"
+            ],
+            "kunyomi": [
+                "あま"
+            ]
+        },
+        "meaning": "heaven, sky"
+    },
+    {
+        "kanji": "白",
+        "readings": {
+            "onyomi": [
+                "ハク"
+            ],
+            "kunyomi": [
+                "しろ"
+            ]
+        },
+        "meaning": "white"
+    },
+    {
+        "kanji": "本",
+        "readings": {
+            "onyomi": [
+                "ホン"
+            ],
+            "kunyomi": [
+                "もと"
+            ]
+        },
+        "meaning": "book, origin"
+    },
+    {
+        "kanji": "中",
+        "readings": {
+            "onyomi": [
+                "チュウ"
+            ],
+            "kunyomi": [
+                "なか"
+            ]
+        },
+        "meaning": "middle, inside"
+    },
+    {
+        "kanji": "大",
+        "readings": {
+            "onyomi": [
+                "ダイ",
+                "タイ"
+            ],
+            "kunyomi": [
+                "おお"
+            ]
+        },
+        "meaning": "big, large"
+    },
+    {
+        "kanji": "小",
+        "readings": {
+            "onyomi": [
+                "ショウ"
+            ],
+            "kunyomi": [
+                "ちい",
+                "こ"
+            ]
+        },
+        "meaning": "small, little"
+    },
+    {
+        "kanji": "上",
+        "readings": {
+            "onyomi": [
+                "ジョウ"
+            ],
+            "kunyomi": [
+                "うえ",
+                "あ"
+            ]
+        },
+        "meaning": "above, up"
+    },
+    {
+        "kanji": "下",
+        "readings": {
+            "onyomi": [
+                "カ",
+                "ゲ"
+            ],
+            "kunyomi": [
+                "した",
+                "さ"
+            ]
+        },
+        "meaning": "below, down"
+    },
+    {
+        "kanji": "右",
+        "readings": {
+            "onyomi": [
+                "ウ",
+                "ユウ"
+            ],
+            "kunyomi": [
+                "みぎ"
+            ]
+        },
+        "meaning": "right"
+    },
+    {
+        "kanji": "左",
+        "readings": {
+            "onyomi": [
+                "サ"
+            ],
+            "kunyomi": [
+                "ひだり"
+            ]
+        },
+        "meaning": "left"
+    },
+    {
+        "kanji": "名",
+        "readings": {
+            "onyomi": [
+                "メイ",
+                "ミョウ"
+            ],
+            "kunyomi": [
+                "な"
+            ]
+        },
+        "meaning": "name"
+    },
+    {
+        "kanji": "年",
+        "readings": {
+            "onyomi": [
+                "ネン"
+            ],
+            "kunyomi": [
+                "とし"
+            ]
+        },
+        "meaning": "year"
+    },
+    {
+        "kanji": "時",
+        "readings": {
+            "onyomi": [
+                "ジ"
+            ],
+            "kunyomi": [
+                "とき"
+            ]
+        },
+        "meaning": "time, hour"
+    },
+    {
+        "kanji": "今",
+        "readings": {
+            "onyomi": [
+                "コン",
+                "キン"
+            ],
+            "kunyomi": [
+                "いま"
+            ]
+        },
+        "meaning": "now"
+    },
+    {
+        "kanji": "会",
+        "readings": {
+            "onyomi": [
+                "カイ",
+                "エ"
+            ],
+            "kunyomi": [
+                "あ"
+            ]
+        },
+        "meaning": "meet, society"
+    },
+    {
+        "kanji": "国",
+        "readings": {
+            "onyomi": [
+                "コク"
+            ],
+            "kunyomi": [
+                "くに"
+            ]
+        },
+        "meaning": "country"
+    },
+    {
+        "kanji": "京",
+        "readings": {
+            "onyomi": [
+                "キョウ"
+            ],
+            "kunyomi": []
+        },
+        "meaning": "capital"
+    },
+    {
+        "kanji": "電",
+        "readings": {
+            "onyomi": [
+                "デン"
+            ],
+            "kunyomi": []
+        },
+        "meaning": "electricity"
+    },
+    {
+        "kanji": "話",
+        "readings": {
+            "onyomi": [
+                "ワ"
+            ],
+            "kunyomi": [
+                "はな",
+                "はなし"
+            ]
+        },
+        "meaning": "talk, story"
+    },
+    {
+        "kanji": "書",
+        "readings": {
+            "onyomi": [
+                "ショ"
+            ],
+            "kunyomi": [
+                "か"
+            ]
+        },
+        "meaning": "write"
+    },
+    {
+        "kanji": "聞",
+        "readings": {
+            "onyomi": [
+                "ブン",
+                "モン"
+            ],
+            "kunyomi": [
+                "き"
+            ]
+        },
+        "meaning": "hear, ask"
+    },
+    {
+        "kanji": "食",
+        "readings": {
+            "onyomi": [
+                "ショク"
+            ],
+            "kunyomi": [
+                "た"
+            ]
+        },
+        "meaning": "eat, food"
+    },
+    {
+        "kanji": "飲",
+        "readings": {
+            "onyomi": [
+                "イン"
+            ],
+            "kunyomi": [
+                "の"
+            ]
+        },
+        "meaning": "drink"
+    },
+    {
+        "kanji": "行",
+        "readings": {
+            "onyomi": [
+                "コウ",
+                "ギョウ"
+            ],
+            "kunyomi": [
+                "い",
+                "おこな"
+            ]
+        },
+        "meaning": "go"
+    },
+    {
+        "kanji": "来",
+        "readings": {
+            "onyomi": [
+                "ライ"
+            ],
+            "kunyomi": [
+                "く",
+                "きた"
+            ]
+        },
+        "meaning": "come"
+    },
+    {
+        "kanji": "見",
+        "readings": {
+            "onyomi": [
+                "ケン"
+            ],
+            "kunyomi": [
+                "み"
+            ]
+        },
+        "meaning": "see, look"
+    },
+    {
+        "kanji": "立",
+        "readings": {
+            "onyomi": [
+                "リツ"
+            ],
+            "kunyomi": [
+                "た"
+            ]
+        },
+        "meaning": "stand"
+    },
+    {
+        "kanji": "休",
+        "readings": {
+            "onyomi": [
+                "キュウ"
+            ],
+            "kunyomi": [
+                "やす"
+            ]
+        },
+        "meaning": "rest"
+    },
+    {
+        "kanji": "気",
+        "readings": {
+            "onyomi": [
+                "キ"
+            ],
+            "kunyomi": []
+        },
+        "meaning": "spirit, mind"
+    },
+    {
+        "kanji": "空",
+        "readings": {
+            "onyomi": [
+                "クウ"
+            ],
+            "kunyomi": [
+                "そら",
+                "あ"
+            ]
+        },
+        "meaning": "sky, empty"
+    },
+    {
+        "kanji": "雨",
+        "readings": {
+            "onyomi": [
+                "ウ"
+            ],
+            "kunyomi": [
+                "あめ"
+            ]
+        },
+        "meaning": "rain"
+    },
+    {
+        "kanji": "手",
+        "readings": {
+            "onyomi": [
+                "シュ"
+            ],
+            "kunyomi": [
+                "て"
+            ]
+        },
+        "meaning": "hand"
+    },
+    {
+        "kanji": "足",
+        "readings": {
+            "onyomi": [
+                "ソク"
+            ],
+            "kunyomi": [
+                "あし",
+                "た"
+            ]
+        },
+        "meaning": "foot, leg"
+    },
+    {
+        "kanji": "目",
+        "readings": {
+            "onyomi": [
+                "モク"
+            ],
+            "kunyomi": [
+                "め"
+            ]
+        },
+        "meaning": "eye"
+    },
+    {
+        "kanji": "耳",
+        "readings": {
+            "onyomi": [
+                "ジ"
+            ],
+            "kunyomi": [
+                "みみ"
+            ]
+        },
+        "meaning": "ear"
+    },
+    {
+        "kanji": "口",
+        "readings": {
+            "onyomi": [
+                "コウ",
+                "ク"
+            ],
+            "kunyomi": [
+                "くち"
+            ]
+        },
+        "meaning": "mouth"
+    },
+    {
+        "kanji": "力",
+        "readings": {
+            "onyomi": [
+                "リョク",
+                "リキ"
+            ],
+            "kunyomi": [
+                "ちから"
+            ]
+        },
+        "meaning": "power, strength"
+    },
+    {
+        "kanji": "花",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "はな"
+            ]
+        },
+        "meaning": "flower"
+    },
+    {
+        "kanji": "魚",
+        "readings": {
+            "onyomi": [
+                "ギョ"
+            ],
+            "kunyomi": [
+                "さかな",
+                "うお"
+            ]
+        },
+        "meaning": "fish"
+    },
+    {
+        "kanji": "犬",
+        "readings": {
+            "onyomi": [
+                "ケン"
+            ],
+            "kunyomi": [
+                "いぬ"
+            ]
+        },
+        "meaning": "dog"
+    },
+    {
+        "kanji": "鳥",
+        "readings": {
+            "onyomi": [
+                "チョウ"
+            ],
+            "kunyomi": [
+                "とり"
+            ]
+        },
+        "meaning": "bird"
+    },
+    {
+        "kanji": "牛",
+        "readings": {
+            "onyomi": [
+                "ギュウ"
+            ],
+            "kunyomi": [
+                "うし"
+            ]
+        },
+        "meaning": "cow"
+    },
+    {
+        "kanji": "馬",
+        "readings": {
+            "onyomi": [
+                "バ"
+            ],
+            "kunyomi": [
+                "うま"
+            ]
+        },
+        "meaning": "horse"
+    },
+    {
+        "kanji": "森",
+        "readings": {
+            "onyomi": [
+                "シン"
+            ],
+            "kunyomi": [
+                "もり"
+            ]
+        },
+        "meaning": "forest"
+    },
+    {
+        "kanji": "竹",
+        "readings": {
+            "onyomi": [
+                "チク"
+            ],
+            "kunyomi": [
+                "たけ"
+            ]
+        },
+        "meaning": "bamboo"
+    },
+    {
+        "kanji": "石",
+        "readings": {
+            "onyomi": [
+                "セキ",
+                "シャク"
+            ],
+            "kunyomi": [
+                "いし"
+            ]
+        },
+        "meaning": "stone"
+    },
+    {
+        "kanji": "金",
+        "readings": {
+            "onyomi": [
+                "キン"
+            ],
+            "kunyomi": [
+                "かね"
+            ]
+        },
+        "meaning": "gold, money"
+    },
+    {
+        "kanji": "山",
+        "readings": {
+            "onyomi": [
+                "サン"
+            ],
+            "kunyomi": [
+                "やま"
+            ]
+        },
+        "meaning": "mountain"
+    },
+    {
+        "kanji": "川",
+        "readings": {
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "かわ"
+            ]
+        },
+        "meaning": "river"
+    },
+    {
+        "kanji": "雨",
+        "readings": {
+            "onyomi": [
+                "ウ"
+            ],
+            "kunyomi": [
+                "あめ"
+            ]
+        },
+        "meaning": "rain"
+    },
+    {
+        "kanji": "雪",
+        "readings": {
+            "onyomi": [
+                "セツ"
+            ],
+            "kunyomi": [
+                "ゆき"
+            ]
+        },
+        "meaning": "snow"
+    },
+    {
+        "kanji": "空",
+        "readings": {
+            "onyomi": [
+                "クウ"
+            ],
+            "kunyomi": [
+                "そら",
+                "あ"
+            ]
+        },
+        "meaning": "sky"
+    },
+    {
+        "kanji": "木",
+        "readings": {
+            "onyomi": [
+                "モク",
+                "ボク"
+            ],
+            "kunyomi": [
+                "き",
+                "こ"
+            ]
+        },
+        "meaning": "tree"
+    },
+    {
+        "kanji": "村",
+        "readings": {
+            "onyomi": [
+                "ソン"
+            ],
+            "kunyomi": [
+                "むら"
+            ]
+        },
+        "meaning": "village"
+    },
+    {
+        "kanji": "町",
+        "readings": {
+            "onyomi": [
+                "チョウ"
+            ],
+            "kunyomi": [
+                "まち"
+            ]
+        },
+        "meaning": "town"
+    },
+    {
+        "kanji": "道",
+        "readings": {
+            "onyomi": [
+                "ドウ"
+            ],
+            "kunyomi": [
+                "みち"
+            ]
+        },
+        "meaning": "road, way"
+    },
+    {
+        "kanji": "家",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "いえ",
+                "や"
+            ]
+        },
+        "meaning": "house"
+    },
+    {
+        "kanji": "父",
+        "readings": {
+            "onyomi": [
+                "フ"
+            ],
+            "kunyomi": [
+                "ちち"
+            ]
+        },
+        "meaning": "father"
+    },
+    {
+        "kanji": "母",
+        "readings": {
+            "onyomi": [
+                "ボ"
+            ],
+            "kunyomi": [
+                "はは"
+            ]
+        },
+        "meaning": "mother"
+    },
+    {
+        "kanji": "校",
+        "readings": {
+            "onyomi": [
+                "コウ"
+            ],
+            "kunyomi": []
+        },
+        "meaning": "school"
+    },
+    {
+        "kanji": "東",
+        "readings": {
+            "onyomi": [
+                "トウ"
+            ],
+            "kunyomi": [
+                "ひがし"
+            ]
+        },
+        "meaning": "east"
+    },
+    {
+        "kanji": "西",
+        "readings": {
+            "onyomi": [
+                "セイ",
+                "サイ"
+            ],
+            "kunyomi": [
+                "にし"
+            ]
+        },
+        "meaning": "west"
+    },
+    {
+        "kanji": "南",
+        "readings": {
+            "onyomi": [
+                "ナン"
+            ],
+            "kunyomi": [
+                "みなみ"
+            ]
+        },
+        "meaning": "south"
+    },
+    {
+        "kanji": "北",
+        "readings": {
+            "onyomi": [
+                "ホク"
+            ],
+            "kunyomi": [
+                "きた"
+            ]
+        },
+        "meaning": "north"
+    },
+    {
+        "kanji": "夕",
+        "readings": {
+            "onyomi": [
+                "セキ"
+            ],
+            "kunyomi": [
+                "ゆう"
+            ]
+        },
+        "meaning": "evening"
+    },
+    {
+        "kanji": "父",
+        "readings": {
+            "onyomi": [
+                "フ"
+            ],
+            "kunyomi": [
+                "ちち"
+            ]
+        },
+        "meaning": "father"
+    },
+    {
+        "kanji": "母",
+        "readings": {
+            "onyomi": [
+                "ボ"
+            ],
+            "kunyomi": [
+                "はは"
+            ]
+        },
+        "meaning": "mother"
+    },
+    {
+        "kanji": "兄",
+        "readings": {
+            "onyomi": [
+                "ケイ",
+                "キョウ"
+            ],
+            "kunyomi": [
+                "あに"
+            ]
+        },
+        "meaning": "older brother"
+    },
+    {
+        "kanji": "姉",
+        "readings": {
+            "onyomi": [
+                "シ"
+            ],
+            "kunyomi": [
+                "あね"
+            ]
+        },
+        "meaning": "older sister"
+    },
+    {
+        "kanji": "弟",
+        "readings": {
+            "onyomi": [
+                "テイ",
+                "ダイ"
+            ],
+            "kunyomi": [
+                "おとうと"
+            ]
+        },
+        "meaning": "younger brother"
+    },
+    {
+        "kanji": "妹",
+        "readings": {
+            "onyomi": [
+                "マイ"
+            ],
+            "kunyomi": [
+                "いもうと"
+            ]
+        },
+        "meaning": "younger sister"
+    },
+    {
+        "kanji": "子",
+        "readings": {
+            "onyomi": [
+                "シ",
+                "ス"
+            ],
+            "kunyomi": [
+                "こ"
+            ]
+        },
+        "meaning": "child"
+    },
+    {
+        "kanji": "男",
+        "readings": {
+            "onyomi": [
+                "ダン",
+                "ナン"
+            ],
+            "kunyomi": [
+                "おとこ"
+            ]
+        },
+        "meaning": "man"
+    },
+    {
+        "kanji": "女",
+        "readings": {
+            "onyomi": [
+                "ジョ",
+                "ニョ"
+            ],
+            "kunyomi": [
+                "おんな"
+            ]
+        },
+        "meaning": "woman"
+    },
+    {
+        "kanji": "友",
+        "readings": {
+            "onyomi": [
+                "ユウ"
+            ],
+            "kunyomi": [
+                "とも"
+            ]
+        },
+        "meaning": "friend"
+    },
+    {
+        "kanji": "花",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "はな"
+            ]
+        },
+        "meaning": "flower"
+    },
+    {
+        "kanji": "草",
+        "readings": {
+            "onyomi": [
+                "ソウ"
+            ],
+            "kunyomi": [
+                "くさ"
+            ]
+        },
+        "meaning": "grass"
+    },
+    {
+        "kanji": "森",
+        "readings": {
+            "onyomi": [
+                "シン"
+            ],
+            "kunyomi": [
+                "もり"
+            ]
+        },
+        "meaning": "forest"
+    },
+    {
+        "kanji": "竹",
+        "readings": {
+            "onyomi": [
+                "チク"
+            ],
+            "kunyomi": [
+                "たけ"
+            ]
+        },
+        "meaning": "bamboo"
+    },
+    {
+        "kanji": "石",
+        "readings": {
+            "onyomi": [
+                "セキ",
+                "シャク"
+            ],
+            "kunyomi": [
+                "いし"
+            ]
+        },
+        "meaning": "stone"
+    },
+    {
+        "kanji": "空",
+        "readings": {
+            "onyomi": [
+                "クウ"
+            ],
+            "kunyomi": [
+                "そら",
+                "から"
+            ]
+        },
+        "meaning": "sky, empty"
+    },
+    {
+        "kanji": "雲",
+        "readings": {
+            "onyomi": [
+                "ウン"
+            ],
+            "kunyomi": [
+                "くも"
+            ]
+        },
+        "meaning": "cloud"
+    },
+    {
+        "kanji": "海",
+        "readings": {
+            "onyomi": [
+                "カイ"
+            ],
+            "kunyomi": [
+                "うみ"
+            ]
+        },
+        "meaning": "sea"
+    },
+    {
+        "kanji": "川",
+        "readings": {
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "かわ"
+            ]
+        },
+        "meaning": "river"
+    },
+    {
+        "kanji": "池",
+        "readings": {
+            "onyomi": [
+                "チ"
+            ],
+            "kunyomi": [
+                "いけ"
+            ]
+        },
+        "meaning": "pond"
+    },
+    {
+        "kanji": "雨",
+        "readings": {
+            "onyomi": [
+                "ウ"
+            ],
+            "kunyomi": [
+                "あめ"
+            ]
+        },
+        "meaning": "rain"
+    },
+    {
+        "kanji": "雪",
+        "readings": {
+            "onyomi": [
+                "セツ"
+            ],
+            "kunyomi": [
+                "ゆき"
+            ]
+        },
+        "meaning": "snow"
+    },
+    {
+        "kanji": "風",
+        "readings": {
+            "onyomi": [
+                "フウ",
+                "フ"
+            ],
+            "kunyomi": [
+                "かぜ"
+            ]
+        },
+        "meaning": "wind"
+    },
+    {
+        "kanji": "月",
+        "readings": {
+            "onyomi": [
+                "ゲツ",
+                "ガツ"
+            ],
+            "kunyomi": [
+                "つき"
+            ]
+        },
+        "meaning": "moon, month"
+    },
+    {
+        "kanji": "火",
+        "readings": {
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "ひ"
+            ]
+        },
+        "meaning": "fire"
+    },
+    {
+        "kanji": "水",
+        "readings": {
+            "onyomi": [
+                "スイ"
+            ],
+            "kunyomi": [
+                "みず"
+            ]
+        },
+        "meaning": "water"
+    },
+    {
+        "kanji": "金",
+        "readings": {
+            "onyomi": [
+                "キン",
+                "コン"
+            ],
+            "kunyomi": [
+                "かね"
+            ]
+        },
+        "meaning": "gold, money"
+    },
+    {
+        "kanji": "土",
+        "readings": {
+            "onyomi": [
+                "ド",
+                "ト"
+            ],
+            "kunyomi": [
+                "つち"
+            ]
+        },
+        "meaning": "earth, soil"
+    }
+]

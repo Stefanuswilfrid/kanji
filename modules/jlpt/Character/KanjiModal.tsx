@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import useSWRImmutable from "swr/immutable";
 import * as React from "react";
-import { LoadingBar, HSKButton, MarkAsCompleted, preloadHanziDetails, Drawer, url, Locale } from "@/components";
+import { LoadingBar } from "@/components/jlpt/Loader";
+// import { LoadingBar, HSKButton, MarkAsCompleted, preloadHanziDetails, Drawer, url, Locale } from "@/components";
 import IdHanziMap from "@/data/id-hanzi-map.json";
 import { KanjiApiResponse } from "./types";
 import { HanziDetails } from "./HanziDetails";
@@ -13,6 +14,7 @@ import { Level } from "@/data";
 import { useAudio } from "@/modules/layout";
 import { motion, AnimatePresence } from "framer-motion";
 import { AddToFlashcard, AddToFlashcardMobile } from "../Flashcard";
+import { Drawer, MarkAsCompleted } from "@/components/jlpt";
 
 export type IdHanziMapKey = keyof typeof IdHanziMap;
 
