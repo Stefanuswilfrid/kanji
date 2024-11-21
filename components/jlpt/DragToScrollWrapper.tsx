@@ -1,4 +1,4 @@
-import { useDragToScroll } from "@/hooks";
+import { useDragToScroll } from "@/hooks/useDragToScroll";
 import { cn } from "@/utils";
 import React from "react";
 
