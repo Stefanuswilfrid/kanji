@@ -5,7 +5,8 @@ import { LoadingBar } from "@/components/jlpt/Loader";
 // import { LoadingBar, HSKButton, MarkAsCompleted, preloadHanziDetails, Drawer, url, Locale } from "@/components";
 import IdHanziMap from "@/data/id-hanzi-map.json";
 import { KanjiApiResponse } from "./types";
-import { HanziDetails } from "./HanziDetails";
+import { KanjiDetails } from "./KanjiDetails/KanjiDetails";
+
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 import { LAST_VIEWED_HANZI_KEY } from "@/store/useLastViewedHanzi";
 import { useWindowSize } from "@/hooks";

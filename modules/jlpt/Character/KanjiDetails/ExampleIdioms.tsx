@@ -4,6 +4,8 @@ import { KanjiApiResponse } from "../types";
 import { useWindowSize } from "@/hooks";
 import clsx from "clsx";
 import { useLocale } from "@/locales/use-locale";
+import { Popover } from "@/components/jlpt/Popover";
+import { Drawer } from "@/components/jlpt/Drawer";
 
 export function ExampleIdioms({ hanzi, idioms }: { hanzi: string; idioms: KanjiApiResponse["idioms"] }) {
   const { width } = useWindowSize();

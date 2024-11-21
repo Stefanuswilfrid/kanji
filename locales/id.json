@@ -1,0 +1,232 @@
+{
+    "practice": "Latihan Soal",
+    "return": "Kembali",
+    "lastVisited": "Terakhir Dikunjungi",
+    "new": "Baru",
+    "newHSK": "HSK Baru",
+    "oldHSK": "HSK Lama",
+    "beta": "Beta",
+    "comingSoon": "Segera Datang",
+    "home": {
+      "hsk": {
+        "title": "Belajar HSK 1-9",
+        "description": "Daftar kosakata HSK baru dan contoh kalimat."
+      },
+      "oldHSK": {
+        "title": "Belajar HSK 1-6",
+        "description": "Daftar kosakata HSK lama dan latihan soal."
+      },
+      "tools": {
+        "title": "Fitur Tambahan",
+        "description": "Fitur lainnya terkait karakter Cina."
+      },
+      "podcast": {
+        "title": "Podcast Bahasa Cina",
+        "description": "Subtitle ganda secara real-time dari podcast."
+      },
+      "explore": {
+        "title": "Jelajahi",
+        "description": "Baca dan dengarkan buku bahasa Cina dengan terjemahan."
+      },
+      "typingTest": {
+        "title": "Latihan Mengetik",
+        "description": "Uji kecepatan mengetik bahasa Cina Anda."
+      },
+      "flashcards": {
+        "title": "Kartu Pengingat",
+        "description": "Kata dan frasa yang disimpan untuk ulasan cepat."
+      },
+      "search": {
+        "title": "Cari Kata",
+        "description": "Telusuri karakter, kata, dan frasa bahasa Cina."
+      },
+      "suggestions": {
+        "title": "Saran",
+        "description": "Fitur baru, perbaikan, atau buku yang ingin Anda tambahkan ke situs."
+      },
+      "teleprompter": {
+        "title": "Teleprompter",
+        "description": "Tingkatkan kecepatan membaca bahasa Cina Anda dengan teleprompter."
+      }
+    },
+    "startReading": "Mulai Membaca",
+    "continueReading": "Lanjutkan Membaca",
+    "suggestions": {
+      "buttons": ["Fitur baru", "Saran perbaikan", "Tambah buku"],
+      "successToast": "Pesan berhasil dikirim!",
+      "errorToast": "Terjadi kesalahan.",
+      "placeholders": [
+        "Deskripsikan fitur baru yang Anda inginkan...",
+        "Sampaikan saran perbaikan Anda...",
+        "Apa buku yang Anda ingin tambahkan? Sertakan juga link nya apabila tersedia :D"
+      ],
+      "submitLoading": "Mengirim...",
+      "submit": "Kirim"
+    },
+    "teleprompter": {
+      "submit": "Mulai",
+      "placeholder": "Masukkan teks bahasa Cina di sini...",
+      "desiredReadingSpeed": "Kecepatan Membaca (CPM):",
+      "readingSpeedInfo": "Rata-rata kecepatan membaca adalah 259 karakter per menit. Sesuaikan kecepatan sesuai preferensi Anda."
+    },
+    "pause": "Jeda",
+    "resume": "Lanjutkan",
+    "sentence": "Kalimat",
+    "definition": "Definisi",
+    "translation": "Terjemahan",
+    "seeTranslation": "Lihat Terjemahan",
+    "hideTranslation": "Sembunyikan",
+    "previous": "Sebelumnya",
+    "next": "Selanjutnya",
+    "all": "Semua",
+    "lastRead": "Terakhir Dibaca",
+    "cards": "kartu",
+    "cardsSingular": "kartu",
+    "emptyFlashcard": "Kartu pengingat Anda kosong. Simpan kata-kata yang tidak dikenal yang Anda temui.",
+    "exportForPleco": "Ekspor untuk Pleco",
+    "loading": "Memuat...",
+    "loadingBookDetails": "Memuat detail buku...",
+    "loadingAllBooks": "Memuat semua buku...",
+    "chapters": "Bab",
+    "words": "kata",
+    "minutesReadingTime": "menit waktu baca",
+    "goToLastReadSentence": "Kalimat terakhir yang dibaca",
+    "onboarding": [
+      "Selamat datang di hanzi.id! 😉",
+      "Ini adalah aplikasi untuk membantu Anda belajar karakter mandarin.",
+      "Karakter HSK 1-9 dan contoh penggunaannya tersedia.",
+      "Kamu juga bisa menjelajahi dan mulai membaca buku bahasa mandarin. 📚",
+      "Progres belajar Anda akan disimpan secara lokal! 🎉",
+      "Ayo mulai!"
+    ],
+    "continue": "Mulai",
+    "exportSuccessful": "Ekspor berhasil!",
+    "searchPlaceholder": "Cari karakter, kata, atau frasa...",
+    "commandMenuChips": ["Terjemahan", "Definisi Kata"],
+    "recentlySearched": "Terakhir dicari",
+    "openCommandMenu": "Buka pencarian kata",
+    "seeDetails": "Lihat definisi",
+    "searchErrorToast": "Harap hanya masukkan karakter Cina.",
+    "keyword": "Pencarian Anda:",
+    "clearHistory": "Hapus Riwayat Pencarian",
+    "nextChapter": "Lanjut ke bab selanjutnya?",
+    "tools": {
+      "title": "Tambahan",
+      "description": "Fitur lainnya yang mungkin Anda butuhkan.",
+      "buttons": ["Ambil Teks dari PDF", "Ambil Teks dari gambar", "Hitung Karakter", "Tulis Hanzi", "Analisis Teks"]
+    },
+    "imagesTool": {
+      "title": "Ambil Teks dari Gambar",
+      "description": "Unggah gambar dan dapatkan teks dalam bahasa Cina."
+    },
+    "pdfTool": {
+      "title": "Ambil Teks dari PDF",
+      "description": "Unggah PDF dan dapatkan teks dalam bahasa Cina."
+    },
+    "characterCountTool": {
+      "title": "Hitung Karakter",
+      "description": "Hitung jumlah karakter dalam teks Cina.",
+      "placeholder": "Masukkan teks Cina di sini...",
+      "characters": "karakter",
+      "uniqueCharacters": "karakter unik",
+      "count": "Jumlah",
+      "export": "Unduh sebagai csv"
+    },
+    "analyzerTool": {
+      "title": "Analisis Teks",
+      "description": "Dapatkan frekuensi kata, analisis kosa kata unik, dan lainnya.",
+      "placeholder": "Masukkan teks Cina di sini...",
+      "words": "kata",
+      "uniqueWords": "kata unik",
+      "count": "Jumlah",
+      "export": "Unduh sebagai csv",
+      "type": "Jenis"
+    },
+    "hanziWriterTool": {
+      "title": "Tulis Hanzi",
+      "description": "Simulasi goresan karakter Cina dan latihan menulis."
+    },
+    "previewText": "Preview file PDF akan tampil di sini",
+    "previewImage": "Preview gambar akan tampil di sini",
+    "copySuccess": "Teks berhasil disalin.",
+    "fileUploadText": ["Pindah file ke sini atau", "pilih file", "untuk mengunggah"],
+    "convertToText": "Konversi ke Teks",
+    "fileMakeSurePDF": ["Pastikan file merupakan format", ".pdf"],
+    "fileMakeSureImage": ["Pastikan file merupakan format", ".jpg/png/gif/webp"],
+    "pagesNotShown": "halaman lagi tidak ditampilkan",
+    "imagesNotShown": "gambar lagi tidak ditampilkan",
+    "page": "Halaman",
+    "image": "Gambar",
+    "moreImages": "gambar lainnya",
+    "audioNotFound": "Sumber audio tidak ditemukan.",
+    "operaNotSupported": "Browser Opera tidak didukung.",
+    "found": "Ditemukan:",
+    "saveToFlashcard": "+ Kartu Pengingat",
+    "removeFromFlashcard": "- Kartu Pengingat",
+    "flashcard": {
+      "cancelText": "Batal",
+      "confirmText": "Hapus",
+      "title": "Hapus Kartu Pengingat",
+      "description": "Apakah Anda yakin ingin menghapus kartu pengingat ini? Tindakan ini tidak dapat dibatalkan.",
+      "successToast": "Kartu pengingat berhasil dihapus."
+    },
+    "hanziStrokePlaceholder": "Masukkan karakter Cina",
+    "showRadical": "Tampilkan Radikal",
+    "hideRadical": "Sembunyikan Radikal",
+    "quiz": "Kuis",
+    "startWriting": "Mulai menulis karakter di bawah ini.",
+    "clickHere": "Klik di sini atau tekan tombol apa saja untuk fokus",
+    "restart": "Ulang",
+    "startTyping": "Mulai mengetik untuk memulai tes.",
+    "showPinyin": "Tampilkan Pinyin",
+    "hidePinyin": "Sembunyikan Pinyin",
+    "settings": "Pengaturan",
+    "wordsAdded": "Kata ditambahkan ke kartu pengingat",
+    "flashcardExists": "Kartu pengingat dengan judul tersebut sudah ada.",
+    "cancel": "Batal",
+    "addToFlashcard": "Tambah ke Kartu Pengingat",
+    "addAllToFlashcard": "Tambah Semua ke Kartu Pengingat",
+    "onlyAddWrongWords": "Tambahkan hanya kata yang salah",
+    "addTheFollowingWordsToFlashcard": "Tambahkan kata-kata berikut ke kartu pengingat?",
+    "exampleSentences": "Kalimat Contoh",
+    "seeExampleSentences": "Lihat Kalimat",
+    "hideExampleSentences": "Sembunyikan",
+    "review": "Ulas",
+    "numOfCards": "Jumlah kartu",
+    "cardNumbers": "Nomor kartu",
+    "random": "Acak",
+    "loadingFlashcards": "Memuat kartu pengingat...",
+    "youDidGreat": "Kamu luar biasa! 🎉",
+    "notBad": "Tidak buruk! 👌",
+    "keepPracticing": "Tetap berlatih! 💪",
+    "correct": "Benar",
+    "wrong": "Salah",
+    "untouched": "Belum",
+    "done": "Selesai",
+    "idiomsOnly": "Hanya Idiom",
+    "showAllWords": "Tampilkan Semua Kata",
+    "yourFilterSettings": "Pengaturan filter Anda:",
+    "dumpConfirmation": ["Ini akan menambah", "kata baru ke kartu pengingat Anda."],
+    "pleaseFill": "Silahkan isi kolom berikut:",
+    "placeholderFlashcardTitle": "Judul kartu pengingat",
+    "placeholderFlashcardDescription": "Deskripsi kartu pengingat",
+    "addNewFlashcardPlaceholder": "Tambahkan kata/frase Cina ke kartu pengingat dipisahkan dengan baris baru, contoh:\n你好\n再见",
+    "add": "Tambah +",
+    "reviewMode": "Mode Ulasan",
+    "reviewModes": ["Definisi Kata", "Menulis Karakter"],
+    "seeVocabularies": "Lihat Kosakata",
+    "youtubePlaceholder": "Masukkan URL video youtube...",
+    "youtubeErrorToast": "Harap masukkan URL youtube yang valid.",
+    "subtitlesErrorToast": "Subtitle tidak ditemukan untuk video ini.",
+    "translationErrorToast": "Terjemahan tidak ditemukan untuk video ini.",
+    "lastWatched": "Terakhir Ditonton",
+    "purpleCulture": "Lihat kalimat dari purpleculture.net",
+    "noExampleSentencesFound": "Tidak ditemukan contoh kalimat untuk",
+    "seeRelated": "Lihat terkait",
+    "relatedTo": "Terkait dengan",
+    "seeIdioms": "Lihat Idiom",
+    "exampleIdiomsOf": "Contoh Idiom dari",
+    "banner": "kamus bergambar",
+    "support": "Soal HSK"
+  }
+  
