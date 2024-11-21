@@ -6,15 +6,18 @@ import { LoadingBar } from "@/components/jlpt/Loader";
 import IdHanziMap from "@/data/id-hanzi-map.json";
 import { KanjiApiResponse } from "./types";
 import { HanziDetails } from "./HanziDetails";
-import { useCompletedCharacters, useCompletedCharactersActions } from "@/store";
+import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 import { LAST_VIEWED_HANZI_KEY } from "@/store/useLastViewedHanzi";
 import { useWindowSize } from "@/hooks";
 import clsx from "clsx";
-import { Level } from "@/data";
-import { useAudio } from "@/modules/layout";
+
+import { Level } from "@/data/constants";
+import { useAudio } from "@/modules/layout/jlpt-layout/audio-provider";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { AddToFlashcard, AddToFlashcardMobile } from "../Flashcard";
-import { Drawer, MarkAsCompleted } from "@/components/jlpt";
+// import { AddToFlashcard, AddToFlashcardMobile } from "../Flashcard";
+import { Drawer, JLPTButton, Locale, MarkAsCompleted, preloadHanziDetails, url } from "@/components/jlpt";
 
 export type IdHanziMapKey = keyof typeof IdHanziMap;
 
@@ -51,7 +54,7 @@ export function KanjiModal() {
 
   const locale = router.locale as Locale;
 
-  const { data, isLoading } = useSWRImmutable<HanziApiResponse>(
+  const { data, isLoading } = useSWRImmutable<KanjiApiResponse>(
     hanzi ? url(hanzi, locale) : null,
     async (url) => {
       const response = await fetch(url);
@@ -127,7 +130,7 @@ export function KanjiModal() {
         />
 
         <div className="absolute bg-black max-sm:py-2 max-sm:grid max-sm:grid-cols-2 flex gap-2 bottom-0 left-0 right-0 px-3 sm:px-4 sm:pb-4">
-          <HSKButton
+          <JLPTButton
             onMouseEnter={() => {
               if (previousHanzi) preloadHanziDetails(previousHanzi, locale);
             }}
@@ -144,9 +147,9 @@ export function KanjiModal() {
             }}
           >
             &#x2190; {previousHanzi}
-          </HSKButton>
+          </JLPTButton>
           <AddToFlashcard hanzi={hanzi} isNewHSK />
-          <HSKButton
+          <JLPTButton
             onMouseEnter={() => {
               if (nextHanzi) preloadHanziDetails(nextHanzi, locale);
             }}
@@ -163,7 +166,7 @@ export function KanjiModal() {
             }}
           >
             {nextHanzi} &#x2192;
-          </HSKButton>
+          </JLPTButton>
           <AddToFlashcardMobile hanzi={hanzi} isNewHSK />
         </div>
       </Drawer.Content>

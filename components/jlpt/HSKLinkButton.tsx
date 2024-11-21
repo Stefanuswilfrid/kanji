@@ -2,13 +2,13 @@ import { cn } from "@/utils/cn";
 import Link, { LinkProps } from "next/link";
 import React from "react";
 
-type HSKLinkButtonProps = {
+type JLPTLinkButtonProps = {
   disabled?: boolean;
   children: React.ReactNode;
   className?: string;
 } & LinkProps;
 
-export function HSKLinkButton({ disabled = false, className, children, ...rest }: HSKLinkButtonProps) {
+export function JLPTLinkButton({ disabled = false, className, children, ...rest }: JLPTLinkButtonProps) {
   return (
     <Link
       aria-disabled={disabled}
@@ -23,13 +23,13 @@ export function HSKLinkButton({ disabled = false, className, children, ...rest }
   );
 }
 
-type HSKButtonProps = {
+type JLPTButtonProps = {
   disabled?: boolean;
   children: React.ReactNode;
   className?: string;
 } & React.ComponentPropsWithoutRef<"button">;
 
-export function HSKButton({ disabled = false, className, children, ...rest }: HSKButtonProps) {
+export function JLPTButton({ disabled = false, className, children, ...rest }: JLPTButtonProps) {
   return (
     <button
       disabled={disabled}
