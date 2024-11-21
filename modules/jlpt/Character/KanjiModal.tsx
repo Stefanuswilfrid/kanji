@@ -8,7 +8,7 @@ import { KanjiApiResponse } from "./types";
 import { KanjiDetails } from "./KanjiDetails/KanjiDetails";
 
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
-import { LAST_VIEWED_HANZI_KEY } from "@/store/useLastViewedHanzi";
+import { LAST_VIEWED_KANJI_KEY } from "@/store/useLasViewedKanji";
 import { useWindowSize } from "@/hooks";
 import clsx from "clsx";
 
@@ -33,7 +33,7 @@ export function KanjiModal() {
     const pathname = `/hsk/${router.query.level}?hanzi=${hanzi}&id=${currentHanziId}&page=${router.query.page}`;
     if (typeof window !== "undefined" && !pathname.includes("undefined")) {
       localStorage.setItem(
-        LAST_VIEWED_HANZI_KEY,
+        LAST_VIEWED_KANJI_KEY,
         JSON.stringify({
           character: hanzi,
           pathname,
@@ -98,7 +98,7 @@ export function KanjiModal() {
           isMobile ? "h-dvh left-0" : "h-dvh rounded-none max-w-xl w-full"
         )}
       >
-        {data && <HanziDetails currentLevel={currentLevel} currentHanzi={hanzi} {...data} />}
+        {data && <KanjiDetails currentLevel={currentLevel} currentHanzi={hanzi} {...data} />}
 
         <div className="absolute top-8 sm:top-4 left-0 right-0 mx-4 bg-gradient-to-b from-black h-6"></div>
         <div className="absolute bottom-24 sm:bottom-12 left-0 right-0 mx-4 bg-gradient-to-t from-black h-12"></div>

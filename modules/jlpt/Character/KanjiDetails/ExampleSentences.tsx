@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import { AudioButton } from "../AudioButton";
 import { KanjiApiResponse } from "../types";
-import { CopyToClipboard } from "@/modules/speech";
+import { CopyToClipboard } from "@/modules/speech/view-definition";
 import { useLocale } from "@/locales/use-locale";
 
 export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: HanziApiResponse["lessons"] }) {
