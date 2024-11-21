@@ -1,14 +1,14 @@
 import * as React from "react";
-import { HanziApiResponse } from "../types";
+import { KanjiApiResponse } from "../types";
 import { BASE_URL } from "@/pages/_app";
 import { AudioButton } from "../AudioButton";
 import clsx from "clsx";
 import { ExampleSentences } from "./ExampleSentences";
 import { HanziDefinition } from "./HanziDefinition";
 import { ExampleIdioms } from "./ExampleIdioms";
-import { RelatedHanzi } from "./RelatedHanzi";
-import { IdHanziMapKey } from "../HanziModal";
-import { Level } from "@/data";
+import { RelatedKanji } from "./RelatedKanji";
+import { IdHanziMapKey } from "../KanjiModal";
+import { Level } from "@/data/constants";
 import { usePreferences } from "@/components";
 
 export function KanjiDetails({
@@ -18,7 +18,7 @@ export function KanjiDetails({
   related,
   currentHanzi,
   currentLevel,
-}: HanziApiResponse & {
+}: KanjiApiResponse & {
   currentHanzi: IdHanziMapKey;
   currentLevel: Level;
 }) {

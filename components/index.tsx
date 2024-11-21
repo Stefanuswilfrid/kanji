@@ -7,5 +7,7 @@ export * from "./icons";
 export * from "./alert-modal";
 export * from "./slider";
 
+export * from "./jlpt";
+
 export * from "./change-locale-button";
 
