@@ -121,7 +121,7 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
     }
   }, [currentPage, currentLevel]);
 
-  const title = `HSK ${props.currentLevel} Page ${currentPage}`;
+  const title = `JLPT ${props.currentLevel} Page ${currentPage}`;
 
   const {
     addCompletedCharacters,

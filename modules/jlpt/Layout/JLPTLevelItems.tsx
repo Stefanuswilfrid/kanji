@@ -50,10 +50,10 @@ function JLPTLevelItem({
       rightItem={<ResetButton disabled={progress === 0} level={level} />}
       key={level}
       isActive={isActive}
-      href={`/hsk/${level}?page=1`}
+      href={`/jlpt/${level}?page=1`}
     >
       <div className={clsx("flex items-center justify-between", progress === 1 && "text-sky-400")}>
-        <span className={clsx("text-sm", progress === 1 && "text-yellow-500")}>HSK {level}</span>
+        <span className={clsx("text-sm", progress === 1 && "text-yellow-500")}>JLPT {level}</span>
         <span className="text-xs">
           <span className={clsx(progress === 0 && "text-sky-400", progress > 0 && progress < 1 && "text-sky-400")}>
             {completedCount}
