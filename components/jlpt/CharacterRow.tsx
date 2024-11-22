@@ -28,7 +28,7 @@ export function CharacterRow({
 
         <div className="overflow-x-hidden flex-1 -space-y-1">
           <div className="text-base font-medium">{pinyin}</div>
-          <div className="text-base line-clamp-1 max-w-[90%]">{translations.join(", ")}</div>
+          {/* <div className="text-base line-clamp-1 max-w-[90%]">{translations.join(", ")}</div> */}
         </div>
 
         <MarkAsCompleted

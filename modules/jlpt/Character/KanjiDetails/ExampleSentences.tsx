@@ -7,7 +7,7 @@ import { KanjiApiResponse } from "../types";
 import { CopyToClipboard } from "@/modules/speech/view-definition";
 import { useLocale } from "@/locales/use-locale";
 
-export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: HanziApiResponse["lessons"] }) {
+export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: KanjiApiResponse["lessons"] }) {
   const [currentLevel, setCurrentLevel] = React.useState<string | null>(null);
 
   React.useEffect(() => {

@@ -1,4 +1,4 @@
-import { RouteDialog, usePreferences } from "@/components";
+import { RouteDialog } from "@/components";
 import { useRouter } from "next/router";
 import { useTypingTestSettings } from "./use-typing-test-settings";
 import { cn } from "@/utils";
@@ -15,7 +15,6 @@ export function TypeSettingsDialog() {
   } = useTypingTestSettings();
 
   const { t } = useLocale();
-  const { isSimplified } = usePreferences();
 
   return (
     <RouteDialog
@@ -43,7 +42,7 @@ export function TypeSettingsDialog() {
         </div>
 
         <div className="space-y-2">
-          <p className="text-center font-medium">{isSimplified ? "计时器" : "計時器"}</p>
+          <p className="text-center font-medium">{ "计时器"}</p>
           {[15, 30, 60, 120].map((value) => {
             return (
               <SelectButton

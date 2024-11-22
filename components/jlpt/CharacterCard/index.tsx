@@ -69,7 +69,7 @@ export function CharacterCard({
               "card-content has-[input:active]:scale-[98%] transition absolute inset-0 border-b-[1.5px] grid place-items-center bg-softblack border-secondary/10"
             )}
           >
-            <span className="font-medium">{character}</span>
+            <span className="font-medium">{character} </span>
 
             <MarkAsCompleted
               className={isCompleted ? "bg-transparent" : ""}
@@ -114,8 +114,8 @@ export function CharacterCard({
               "card-content absolute inset-0 border-b-[1.5px] bg-softblack flex flex-col items-center justify-center text-flipped px-4 border-secondary/10"
             )}
           >
-            <div className="text-3xl">{pinyin}</div>
-            <div className="text-lg text-center">{translations.join(", ")}</div>
+            <div className="text-3xl">{pinyin} saa</div>
+            {/* <div className="text-lg text-center">{translations.join(", ")}</div> */}
           </div>
         </div>
       </div>

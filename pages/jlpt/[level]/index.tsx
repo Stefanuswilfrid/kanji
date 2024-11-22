@@ -7,7 +7,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 import { CharacterCard, Locale } from "@/components/jlpt/CharacterCard";
-import { Pagination } from "@/components/jlpt/Pagination";
+// import { Pagination } from "@/components/jlpt/Pagination";
 // import { MobileSidebar, HanziModal } from "@/modules/hsk";
 import { MobileSidebar } from "@/modules/jlpt";
 
@@ -17,7 +17,7 @@ import { KanjiModal } from "@/modules/jlpt/Character/KanjiModal";
 
 async function getCharactersOnLevel(level: string | number, locale?: string) {
   const file = await fs.readFile(process.cwd() + getFilePath(level, locale), "utf8");
-  const characters: Array<ChineseCharacter> = JSON.parse(file);
+  const characters: Array<any> = JSON.parse(file);
   return characters;
 }
 
@@ -145,7 +145,7 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
   const { width } = useWindowSize();
 
   const router = useRouter();
-
+console.log("chararacters",characters)
 
   return (
     <>
@@ -164,7 +164,7 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
               if (width > 640) {
                 return (
                   <CharacterCard
-                    character={isSimplified ? character.hanzi : character.traditional}
+                    character={character.kanji}
                     locale={router.locale as Locale}
                     hanziHref={`/hsk/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`}
                     isFlipped={flippedCard === character.id}
@@ -191,7 +191,7 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
 
               return (
                 <CharacterRow
-                  character={isSimplified ? character.hanzi : character.traditional}
+                  character={ character.hanzi}
                   onClick={() =>
                     router.push(
                       `/hsk/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`,
@@ -219,14 +219,14 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
         <div className="fixed w-full left-0 max-w-[1440px] mx-auto max-sm:border-t border-t-secondary/10 p-1 max-sm:bg-black bottom-0 md:right-4 md:px-4 flex justify-end mt-8 gap-1">
           <MobileSidebar />
 
-          <Pagination
+          {/* <Pagination
             currentPage={currentPage}
             totalPages={props.totalPages}
             canNextLevel={canNextLevel}
             canPreviousLevel={canPreviousLevel}
             previousHref={previousHref}
             nextHref={nextHref}
-          />
+          /> */}
         </div>
       </div>
     </>

@@ -3,12 +3,24 @@
         "kanji": "日",
         "readings": {
             "onyomi": [
-                "ニチ",
-                "ジツ"
+                {
+                    "reading": "ニチ",
+                    "pinyin": "rì"
+                },
+                {
+                    "reading": "ジツ",
+                    "pinyin": "jitsu"
+                }
             ],
             "kunyomi": [
-                "ひ",
-                "か"
+                {
+                    "reading": "ひ",
+                    "pinyin": "hi"
+                },
+                {
+                    "reading": "か",
+                    "pinyin": "ka"
+                }
             ]
         },
         "meaning": "day, sun"
@@ -17,11 +29,20 @@
         "kanji": "月",
         "readings": {
             "onyomi": [
-                "ゲツ",
-                "ガツ"
+                {
+                    "reading": "ゲツ",
+                    "pinyin": "yuè"
+                },
+                {
+                    "reading": "ガツ",
+                    "pinyin": "yuè"
+                }
             ],
             "kunyomi": [
-                "つき"
+                {
+                    "reading": "つき",
+                    "pinyin": "tsuki"
+                }
             ]
         },
         "meaning": "month, moon"
@@ -30,12 +51,24 @@
         "kanji": "木",
         "readings": {
             "onyomi": [
-                "モク",
-                "ボク"
+                {
+                    "reading": "モク",
+                    "pinyin": "mù"
+                },
+                {
+                    "reading": "ボク",
+                    "pinyin": "mù"
+                }
             ],
             "kunyomi": [
-                "き",
-                "こ"
+                {
+                    "reading": "き",
+                    "pinyin": "ki"
+                },
+                {
+                    "reading": "こ",
+                    "pinyin": "ko"
+                }
             ]
         },
         "meaning": "tree, wood"
@@ -44,10 +77,16 @@
         "kanji": "山",
         "readings": {
             "onyomi": [
-                "サン"
+                {
+                    "reading": "サン",
+                    "pinyin": "shān"
+                }
             ],
             "kunyomi": [
-                "やま"
+                {
+                    "reading": "やま",
+                    "pinyin": "yama"
+                }
             ]
         },
         "meaning": "mountain"
@@ -56,10 +95,16 @@
         "kanji": "川",
         "readings": {
             "onyomi": [
-                "セン"
+                {
+                    "reading": "セン",
+                    "pinyin": "chuān"
+                }
             ],
             "kunyomi": [
-                "かわ"
+                {
+                    "reading": "かわ",
+                    "pinyin": "kawa"
+                }
             ]
         },
         "meaning": "river"
@@ -68,10 +113,16 @@
         "kanji": "田",
         "readings": {
             "onyomi": [
-                "デン"
+                {
+                    "reading": "デン",
+                    "pinyin": "tián"
+                }
             ],
             "kunyomi": [
-                "た"
+                {
+                    "reading": "た",
+                    "pinyin": "ta"
+                }
             ]
         },
         "meaning": "rice field"
@@ -80,11 +131,20 @@
         "kanji": "人",
         "readings": {
             "onyomi": [
-                "ジン",
-                "ニン"
+                {
+                    "reading": "ジン",
+                    "pinyin": "rén"
+                },
+                {
+                    "reading": "ニン",
+                    "pinyin": "rén"
+                }
             ],
             "kunyomi": [
-                "ひと"
+                {
+                    "reading": "ひと",
+                    "pinyin": "hito"
+                }
             ]
         },
         "meaning": "person"
@@ -93,11 +153,20 @@
         "kanji": "口",
         "readings": {
             "onyomi": [
-                "コウ",
-                "ク"
+                {
+                    "reading": "コウ",
+                    "pinyin": "xiào"
+                },
+                {
+                    "reading": "ク",
+                    "pinyin": "kǒu"
+                }
             ],
             "kunyomi": [
-                "くち"
+                {
+                    "reading": "くち",
+                    "pinyin": "kuchi"
+                }
             ]
         },
         "meaning": "mouth"
@@ -106,10 +175,16 @@
         "kanji": "車",
         "readings": {
             "onyomi": [
-                "シャ"
+                {
+                    "reading": "シャ",
+                    "pinyin": "chē"
+                }
             ],
             "kunyomi": [
-                "くるま"
+                {
+                    "reading": "くるま",
+                    "pinyin": "kuruma"
+                }
             ]
         },
         "meaning": "car, vehicle"
@@ -118,10 +193,16 @@
         "kanji": "門",
         "readings": {
             "onyomi": [
-                "モン"
+                {
+                    "reading": "モン",
+                    "pinyin": "mén"
+                }
             ],
             "kunyomi": [
-                "かど"
+                {
+                    "reading": "かど",
+                    "pinyin": "kado"
+                }
             ]
         },
         "meaning": "gate"
@@ -130,10 +211,16 @@
         "kanji": "火",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "ひ"
+                {
+                    "reading": "ひ",
+                    "pinyin": "hi"
+                }
             ]
         },
         "meaning": "fire"
@@ -142,10 +229,16 @@
         "kanji": "水",
         "readings": {
             "onyomi": [
-                "スイ"
+                {
+                    "reading": "スイ",
+                    "pinyin": "shuǐ"
+                }
             ],
             "kunyomi": [
-                "みず"
+                {
+                    "reading": "みず",
+                    "pinyin": "mizu"
+                }
             ]
         },
         "meaning": "water"
@@ -154,11 +247,20 @@
         "kanji": "金",
         "readings": {
             "onyomi": [
-                "キン",
-                "コン"
+                {
+                    "reading": "キン",
+                    "pinyin": "jīn"
+                },
+                {
+                    "reading": "コン",
+                    "pinyin": "jīn"
+                }
             ],
             "kunyomi": [
-                "かね"
+                {
+                    "reading": "かね",
+                    "pinyin": "kane"
+                }
             ]
         },
         "meaning": "gold, money"
@@ -167,11 +269,20 @@
         "kanji": "土",
         "readings": {
             "onyomi": [
-                "ド",
-                "ト"
+                {
+                    "reading": "ド",
+                    "pinyin": "tǔ"
+                },
+                {
+                    "reading": "ト",
+                    "pinyin": "tǔ"
+                }
             ],
             "kunyomi": [
-                "つち"
+                {
+                    "reading": "つち",
+                    "pinyin": "tsuchi"
+                }
             ]
         },
         "meaning": "earth, soil"
@@ -180,11 +291,20 @@
         "kanji": "子",
         "readings": {
             "onyomi": [
-                "シ",
-                "ス"
+                {
+                    "reading": "シ",
+                    "pinyin": "zǐ"
+                },
+                {
+                    "reading": "ス",
+                    "pinyin": "zǐ"
+                }
             ],
             "kunyomi": [
-                "こ"
+                {
+                    "reading": "こ",
+                    "pinyin": "ko"
+                }
             ]
         },
         "meaning": "child"
@@ -193,10 +313,16 @@
         "kanji": "女",
         "readings": {
             "onyomi": [
-                "ジョ"
+                {
+                    "reading": "ジョ",
+                    "pinyin": "nǚ"
+                }
             ],
             "kunyomi": [
-                "おんな"
+                {
+                    "reading": "おんな",
+                    "pinyin": "onna"
+                }
             ]
         },
         "meaning": "woman"
@@ -205,11 +331,20 @@
         "kanji": "男",
         "readings": {
             "onyomi": [
-                "ダン",
-                "ナン"
+                {
+                    "reading": "ダン",
+                    "pinyin": "nán"
+                },
+                {
+                    "reading": "ナン",
+                    "pinyin": "nán"
+                }
             ],
             "kunyomi": [
-                "おとこ"
+                {
+                    "reading": "おとこ",
+                    "pinyin": "otoko"
+                }
             ]
         },
         "meaning": "man"
@@ -218,10 +353,16 @@
         "kanji": "学",
         "readings": {
             "onyomi": [
-                "ガク"
+                {
+                    "reading": "ガク",
+                    "pinyin": "xué"
+                }
             ],
             "kunyomi": [
-                "まな"
+                {
+                    "reading": "まな",
+                    "pinyin": "mana"
+                }
             ]
         },
         "meaning": "study, learning"
@@ -230,7 +371,10 @@
         "kanji": "校",
         "readings": {
             "onyomi": [
-                "コウ"
+                {
+                    "reading": "コウ",
+                    "pinyin": "xiào"
+                }
             ],
             "kunyomi": []
         },
@@ -240,10 +384,16 @@
         "kanji": "先",
         "readings": {
             "onyomi": [
-                "セン"
+                {
+                    "reading": "セン",
+                    "pinyin": "chuān"
+                }
             ],
             "kunyomi": [
-                "さき"
+                {
+                    "reading": "さき",
+                    "pinyin": "saki"
+                }
             ]
         },
         "meaning": "ahead, previous"
@@ -252,13 +402,28 @@
         "kanji": "生",
         "readings": {
             "onyomi": [
-                "セイ",
-                "ショウ"
+                {
+                    "reading": "セイ",
+                    "pinyin": "shēng"
+                },
+                {
+                    "reading": "ショウ",
+                    "pinyin": "shō"
+                }
             ],
             "kunyomi": [
-                "い",
-                "う",
-                "なま"
+                {
+                    "reading": "い",
+                    "pinyin": "i"
+                },
+                {
+                    "reading": "う",
+                    "pinyin": "u"
+                },
+                {
+                    "reading": "なま",
+                    "pinyin": "nama"
+                }
             ]
         },
         "meaning": "life, birth"
@@ -267,11 +432,20 @@
         "kanji": "何",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "なに",
-                "なん"
+                {
+                    "reading": "なに",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "なん",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "what"
@@ -280,10 +454,16 @@
         "kanji": "天",
         "readings": {
             "onyomi": [
-                "テン"
+                {
+                    "reading": "テン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あま"
+                {
+                    "reading": "あま",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "heaven, sky"
@@ -292,10 +472,16 @@
         "kanji": "白",
         "readings": {
             "onyomi": [
-                "ハク"
+                {
+                    "reading": "ハク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "しろ"
+                {
+                    "reading": "しろ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "white"
@@ -304,10 +490,16 @@
         "kanji": "本",
         "readings": {
             "onyomi": [
-                "ホン"
+                {
+                    "reading": "ホン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "もと"
+                {
+                    "reading": "もと",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "book, origin"
@@ -316,10 +508,16 @@
         "kanji": "中",
         "readings": {
             "onyomi": [
-                "チュウ"
+                {
+                    "reading": "チュウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "なか"
+                {
+                    "reading": "なか",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "middle, inside"
@@ -328,11 +526,20 @@
         "kanji": "大",
         "readings": {
             "onyomi": [
-                "ダイ",
-                "タイ"
+                {
+                    "reading": "ダイ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "タイ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "おお"
+                {
+                    "reading": "おお",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "big, large"
@@ -341,11 +548,20 @@
         "kanji": "小",
         "readings": {
             "onyomi": [
-                "ショウ"
+                {
+                    "reading": "ショウ",
+                    "pinyin": "shō"
+                }
             ],
             "kunyomi": [
-                "ちい",
-                "こ"
+                {
+                    "reading": "ちい",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "こ",
+                    "pinyin": "ko"
+                }
             ]
         },
         "meaning": "small, little"
@@ -354,11 +570,20 @@
         "kanji": "上",
         "readings": {
             "onyomi": [
-                "ジョウ"
+                {
+                    "reading": "ジョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "うえ",
-                "あ"
+                {
+                    "reading": "うえ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "あ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "above, up"
@@ -367,12 +592,24 @@
         "kanji": "下",
         "readings": {
             "onyomi": [
-                "カ",
-                "ゲ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                },
+                {
+                    "reading": "ゲ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "した",
-                "さ"
+                {
+                    "reading": "した",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "さ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "below, down"
@@ -381,11 +618,20 @@
         "kanji": "右",
         "readings": {
             "onyomi": [
-                "ウ",
-                "ユウ"
+                {
+                    "reading": "ウ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "ユウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "みぎ"
+                {
+                    "reading": "みぎ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "right"
@@ -394,10 +640,16 @@
         "kanji": "左",
         "readings": {
             "onyomi": [
-                "サ"
+                {
+                    "reading": "サ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ひだり"
+                {
+                    "reading": "ひだり",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "left"
@@ -406,11 +658,20 @@
         "kanji": "名",
         "readings": {
             "onyomi": [
-                "メイ",
-                "ミョウ"
+                {
+                    "reading": "メイ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "ミョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "な"
+                {
+                    "reading": "な",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "name"
@@ -419,10 +680,16 @@
         "kanji": "年",
         "readings": {
             "onyomi": [
-                "ネン"
+                {
+                    "reading": "ネン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "とし"
+                {
+                    "reading": "とし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "year"
@@ -431,10 +698,16 @@
         "kanji": "時",
         "readings": {
             "onyomi": [
-                "ジ"
+                {
+                    "reading": "ジ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "とき"
+                {
+                    "reading": "とき",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "time, hour"
@@ -443,11 +716,20 @@
         "kanji": "今",
         "readings": {
             "onyomi": [
-                "コン",
-                "キン"
+                {
+                    "reading": "コン",
+                    "pinyin": "jīn"
+                },
+                {
+                    "reading": "キン",
+                    "pinyin": "jīn"
+                }
             ],
             "kunyomi": [
-                "いま"
+                {
+                    "reading": "いま",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "now"
@@ -456,11 +738,20 @@
         "kanji": "会",
         "readings": {
             "onyomi": [
-                "カイ",
-                "エ"
+                {
+                    "reading": "カイ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "エ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あ"
+                {
+                    "reading": "あ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "meet, society"
@@ -469,10 +760,16 @@
         "kanji": "国",
         "readings": {
             "onyomi": [
-                "コク"
+                {
+                    "reading": "コク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "くに"
+                {
+                    "reading": "くに",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "country"
@@ -481,7 +778,10 @@
         "kanji": "京",
         "readings": {
             "onyomi": [
-                "キョウ"
+                {
+                    "reading": "キョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": []
         },
@@ -491,7 +791,10 @@
         "kanji": "電",
         "readings": {
             "onyomi": [
-                "デン"
+                {
+                    "reading": "デン",
+                    "pinyin": "tián"
+                }
             ],
             "kunyomi": []
         },
@@ -501,11 +804,20 @@
         "kanji": "話",
         "readings": {
             "onyomi": [
-                "ワ"
+                {
+                    "reading": "ワ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "はな",
-                "はなし"
+                {
+                    "reading": "はな",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "はなし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "talk, story"
@@ -514,10 +826,16 @@
         "kanji": "書",
         "readings": {
             "onyomi": [
-                "ショ"
+                {
+                    "reading": "ショ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "か"
+                {
+                    "reading": "か",
+                    "pinyin": "ka"
+                }
             ]
         },
         "meaning": "write"
@@ -526,11 +844,20 @@
         "kanji": "聞",
         "readings": {
             "onyomi": [
-                "ブン",
-                "モン"
+                {
+                    "reading": "ブン",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "モン",
+                    "pinyin": "mén"
+                }
             ],
             "kunyomi": [
-                "き"
+                {
+                    "reading": "き",
+                    "pinyin": "ki"
+                }
             ]
         },
         "meaning": "hear, ask"
@@ -539,10 +866,16 @@
         "kanji": "食",
         "readings": {
             "onyomi": [
-                "ショク"
+                {
+                    "reading": "ショク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "た"
+                {
+                    "reading": "た",
+                    "pinyin": "ta"
+                }
             ]
         },
         "meaning": "eat, food"
@@ -551,10 +884,16 @@
         "kanji": "飲",
         "readings": {
             "onyomi": [
-                "イン"
+                {
+                    "reading": "イン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "の"
+                {
+                    "reading": "の",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "drink"
@@ -563,12 +902,24 @@
         "kanji": "行",
         "readings": {
             "onyomi": [
-                "コウ",
-                "ギョウ"
+                {
+                    "reading": "コウ",
+                    "pinyin": "xiào"
+                },
+                {
+                    "reading": "ギョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "い",
-                "おこな"
+                {
+                    "reading": "い",
+                    "pinyin": "i"
+                },
+                {
+                    "reading": "おこな",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "go"
@@ -577,11 +928,20 @@
         "kanji": "来",
         "readings": {
             "onyomi": [
-                "ライ"
+                {
+                    "reading": "ライ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "く",
-                "きた"
+                {
+                    "reading": "く",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "きた",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "come"
@@ -590,10 +950,16 @@
         "kanji": "見",
         "readings": {
             "onyomi": [
-                "ケン"
+                {
+                    "reading": "ケン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "み"
+                {
+                    "reading": "み",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "see, look"
@@ -602,10 +968,16 @@
         "kanji": "立",
         "readings": {
             "onyomi": [
-                "リツ"
+                {
+                    "reading": "リツ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "た"
+                {
+                    "reading": "た",
+                    "pinyin": "ta"
+                }
             ]
         },
         "meaning": "stand"
@@ -614,10 +986,16 @@
         "kanji": "休",
         "readings": {
             "onyomi": [
-                "キュウ"
+                {
+                    "reading": "キュウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "やす"
+                {
+                    "reading": "やす",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "rest"
@@ -626,7 +1004,10 @@
         "kanji": "気",
         "readings": {
             "onyomi": [
-                "キ"
+                {
+                    "reading": "キ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": []
         },
@@ -636,11 +1017,20 @@
         "kanji": "空",
         "readings": {
             "onyomi": [
-                "クウ"
+                {
+                    "reading": "クウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "そら",
-                "あ"
+                {
+                    "reading": "そら",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "あ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "sky, empty"
@@ -649,10 +1039,16 @@
         "kanji": "雨",
         "readings": {
             "onyomi": [
-                "ウ"
+                {
+                    "reading": "ウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あめ"
+                {
+                    "reading": "あめ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "rain"
@@ -661,10 +1057,16 @@
         "kanji": "手",
         "readings": {
             "onyomi": [
-                "シュ"
+                {
+                    "reading": "シュ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "て"
+                {
+                    "reading": "て",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "hand"
@@ -673,11 +1075,20 @@
         "kanji": "足",
         "readings": {
             "onyomi": [
-                "ソク"
+                {
+                    "reading": "ソク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あし",
-                "た"
+                {
+                    "reading": "あし",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "た",
+                    "pinyin": "ta"
+                }
             ]
         },
         "meaning": "foot, leg"
@@ -686,10 +1097,16 @@
         "kanji": "目",
         "readings": {
             "onyomi": [
-                "モク"
+                {
+                    "reading": "モク",
+                    "pinyin": "mù"
+                }
             ],
             "kunyomi": [
-                "め"
+                {
+                    "reading": "め",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "eye"
@@ -698,10 +1115,16 @@
         "kanji": "耳",
         "readings": {
             "onyomi": [
-                "ジ"
+                {
+                    "reading": "ジ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "みみ"
+                {
+                    "reading": "みみ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "ear"
@@ -710,11 +1133,20 @@
         "kanji": "口",
         "readings": {
             "onyomi": [
-                "コウ",
-                "ク"
+                {
+                    "reading": "コウ",
+                    "pinyin": "xiào"
+                },
+                {
+                    "reading": "ク",
+                    "pinyin": "kǒu"
+                }
             ],
             "kunyomi": [
-                "くち"
+                {
+                    "reading": "くち",
+                    "pinyin": "kuchi"
+                }
             ]
         },
         "meaning": "mouth"
@@ -723,11 +1155,20 @@
         "kanji": "力",
         "readings": {
             "onyomi": [
-                "リョク",
-                "リキ"
+                {
+                    "reading": "リョク",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "リキ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ちから"
+                {
+                    "reading": "ちから",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "power, strength"
@@ -736,10 +1177,16 @@
         "kanji": "花",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "はな"
+                {
+                    "reading": "はな",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "flower"
@@ -748,11 +1195,20 @@
         "kanji": "魚",
         "readings": {
             "onyomi": [
-                "ギョ"
+                {
+                    "reading": "ギョ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "さかな",
-                "うお"
+                {
+                    "reading": "さかな",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "うお",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "fish"
@@ -761,10 +1217,16 @@
         "kanji": "犬",
         "readings": {
             "onyomi": [
-                "ケン"
+                {
+                    "reading": "ケン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "いぬ"
+                {
+                    "reading": "いぬ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "dog"
@@ -773,10 +1235,16 @@
         "kanji": "鳥",
         "readings": {
             "onyomi": [
-                "チョウ"
+                {
+                    "reading": "チョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "とり"
+                {
+                    "reading": "とり",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "bird"
@@ -785,10 +1253,16 @@
         "kanji": "牛",
         "readings": {
             "onyomi": [
-                "ギュウ"
+                {
+                    "reading": "ギュウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "うし"
+                {
+                    "reading": "うし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "cow"
@@ -797,10 +1271,16 @@
         "kanji": "馬",
         "readings": {
             "onyomi": [
-                "バ"
+                {
+                    "reading": "バ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "うま"
+                {
+                    "reading": "うま",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "horse"
@@ -809,10 +1289,16 @@
         "kanji": "森",
         "readings": {
             "onyomi": [
-                "シン"
+                {
+                    "reading": "シン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "もり"
+                {
+                    "reading": "もり",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "forest"
@@ -821,10 +1307,16 @@
         "kanji": "竹",
         "readings": {
             "onyomi": [
-                "チク"
+                {
+                    "reading": "チク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "たけ"
+                {
+                    "reading": "たけ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "bamboo"
@@ -833,11 +1325,20 @@
         "kanji": "石",
         "readings": {
             "onyomi": [
-                "セキ",
-                "シャク"
+                {
+                    "reading": "セキ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "シャク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "いし"
+                {
+                    "reading": "いし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "stone"
@@ -846,10 +1347,16 @@
         "kanji": "金",
         "readings": {
             "onyomi": [
-                "キン"
+                {
+                    "reading": "キン",
+                    "pinyin": "jīn"
+                }
             ],
             "kunyomi": [
-                "かね"
+                {
+                    "reading": "かね",
+                    "pinyin": "kane"
+                }
             ]
         },
         "meaning": "gold, money"
@@ -858,10 +1365,16 @@
         "kanji": "山",
         "readings": {
             "onyomi": [
-                "サン"
+                {
+                    "reading": "サン",
+                    "pinyin": "shān"
+                }
             ],
             "kunyomi": [
-                "やま"
+                {
+                    "reading": "やま",
+                    "pinyin": "yama"
+                }
             ]
         },
         "meaning": "mountain"
@@ -870,10 +1383,16 @@
         "kanji": "川",
         "readings": {
             "onyomi": [
-                "セン"
+                {
+                    "reading": "セン",
+                    "pinyin": "chuān"
+                }
             ],
             "kunyomi": [
-                "かわ"
+                {
+                    "reading": "かわ",
+                    "pinyin": "kawa"
+                }
             ]
         },
         "meaning": "river"
@@ -882,10 +1401,16 @@
         "kanji": "雨",
         "readings": {
             "onyomi": [
-                "ウ"
+                {
+                    "reading": "ウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あめ"
+                {
+                    "reading": "あめ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "rain"
@@ -894,10 +1419,16 @@
         "kanji": "雪",
         "readings": {
             "onyomi": [
-                "セツ"
+                {
+                    "reading": "セツ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ゆき"
+                {
+                    "reading": "ゆき",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "snow"
@@ -906,11 +1437,20 @@
         "kanji": "空",
         "readings": {
             "onyomi": [
-                "クウ"
+                {
+                    "reading": "クウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "そら",
-                "あ"
+                {
+                    "reading": "そら",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "あ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "sky"
@@ -919,12 +1459,24 @@
         "kanji": "木",
         "readings": {
             "onyomi": [
-                "モク",
-                "ボク"
+                {
+                    "reading": "モク",
+                    "pinyin": "mù"
+                },
+                {
+                    "reading": "ボク",
+                    "pinyin": "mù"
+                }
             ],
             "kunyomi": [
-                "き",
-                "こ"
+                {
+                    "reading": "き",
+                    "pinyin": "ki"
+                },
+                {
+                    "reading": "こ",
+                    "pinyin": "ko"
+                }
             ]
         },
         "meaning": "tree"
@@ -933,10 +1485,16 @@
         "kanji": "村",
         "readings": {
             "onyomi": [
-                "ソン"
+                {
+                    "reading": "ソン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "むら"
+                {
+                    "reading": "むら",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "village"
@@ -945,10 +1503,16 @@
         "kanji": "町",
         "readings": {
             "onyomi": [
-                "チョウ"
+                {
+                    "reading": "チョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "まち"
+                {
+                    "reading": "まち",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "town"
@@ -957,10 +1521,16 @@
         "kanji": "道",
         "readings": {
             "onyomi": [
-                "ドウ"
+                {
+                    "reading": "ドウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "みち"
+                {
+                    "reading": "みち",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "road, way"
@@ -969,11 +1539,20 @@
         "kanji": "家",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "いえ",
-                "や"
+                {
+                    "reading": "いえ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "や",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "house"
@@ -982,10 +1561,16 @@
         "kanji": "父",
         "readings": {
             "onyomi": [
-                "フ"
+                {
+                    "reading": "フ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ちち"
+                {
+                    "reading": "ちち",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "father"
@@ -994,10 +1579,16 @@
         "kanji": "母",
         "readings": {
             "onyomi": [
-                "ボ"
+                {
+                    "reading": "ボ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "はは"
+                {
+                    "reading": "はは",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "mother"
@@ -1006,7 +1597,10 @@
         "kanji": "校",
         "readings": {
             "onyomi": [
-                "コウ"
+                {
+                    "reading": "コウ",
+                    "pinyin": "xiào"
+                }
             ],
             "kunyomi": []
         },
@@ -1016,10 +1610,16 @@
         "kanji": "東",
         "readings": {
             "onyomi": [
-                "トウ"
+                {
+                    "reading": "トウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ひがし"
+                {
+                    "reading": "ひがし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "east"
@@ -1028,11 +1628,20 @@
         "kanji": "西",
         "readings": {
             "onyomi": [
-                "セイ",
-                "サイ"
+                {
+                    "reading": "セイ",
+                    "pinyin": "shēng"
+                },
+                {
+                    "reading": "サイ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "にし"
+                {
+                    "reading": "にし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "west"
@@ -1041,10 +1650,16 @@
         "kanji": "南",
         "readings": {
             "onyomi": [
-                "ナン"
+                {
+                    "reading": "ナン",
+                    "pinyin": "nán"
+                }
             ],
             "kunyomi": [
-                "みなみ"
+                {
+                    "reading": "みなみ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "south"
@@ -1053,10 +1668,16 @@
         "kanji": "北",
         "readings": {
             "onyomi": [
-                "ホク"
+                {
+                    "reading": "ホク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "きた"
+                {
+                    "reading": "きた",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "north"
@@ -1065,10 +1686,16 @@
         "kanji": "夕",
         "readings": {
             "onyomi": [
-                "セキ"
+                {
+                    "reading": "セキ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ゆう"
+                {
+                    "reading": "ゆう",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "evening"
@@ -1077,10 +1704,16 @@
         "kanji": "父",
         "readings": {
             "onyomi": [
-                "フ"
+                {
+                    "reading": "フ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ちち"
+                {
+                    "reading": "ちち",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "father"
@@ -1089,10 +1722,16 @@
         "kanji": "母",
         "readings": {
             "onyomi": [
-                "ボ"
+                {
+                    "reading": "ボ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "はは"
+                {
+                    "reading": "はは",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "mother"
@@ -1101,11 +1740,20 @@
         "kanji": "兄",
         "readings": {
             "onyomi": [
-                "ケイ",
-                "キョウ"
+                {
+                    "reading": "ケイ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "キョウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あに"
+                {
+                    "reading": "あに",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "older brother"
@@ -1114,10 +1762,16 @@
         "kanji": "姉",
         "readings": {
             "onyomi": [
-                "シ"
+                {
+                    "reading": "シ",
+                    "pinyin": "zǐ"
+                }
             ],
             "kunyomi": [
-                "あね"
+                {
+                    "reading": "あね",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "older sister"
@@ -1126,11 +1780,20 @@
         "kanji": "弟",
         "readings": {
             "onyomi": [
-                "テイ",
-                "ダイ"
+                {
+                    "reading": "テイ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "ダイ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "おとうと"
+                {
+                    "reading": "おとうと",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "younger brother"
@@ -1139,10 +1802,16 @@
         "kanji": "妹",
         "readings": {
             "onyomi": [
-                "マイ"
+                {
+                    "reading": "マイ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "いもうと"
+                {
+                    "reading": "いもうと",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "younger sister"
@@ -1151,11 +1820,20 @@
         "kanji": "子",
         "readings": {
             "onyomi": [
-                "シ",
-                "ス"
+                {
+                    "reading": "シ",
+                    "pinyin": "zǐ"
+                },
+                {
+                    "reading": "ス",
+                    "pinyin": "zǐ"
+                }
             ],
             "kunyomi": [
-                "こ"
+                {
+                    "reading": "こ",
+                    "pinyin": "ko"
+                }
             ]
         },
         "meaning": "child"
@@ -1164,11 +1842,20 @@
         "kanji": "男",
         "readings": {
             "onyomi": [
-                "ダン",
-                "ナン"
+                {
+                    "reading": "ダン",
+                    "pinyin": "nán"
+                },
+                {
+                    "reading": "ナン",
+                    "pinyin": "nán"
+                }
             ],
             "kunyomi": [
-                "おとこ"
+                {
+                    "reading": "おとこ",
+                    "pinyin": "otoko"
+                }
             ]
         },
         "meaning": "man"
@@ -1177,11 +1864,20 @@
         "kanji": "女",
         "readings": {
             "onyomi": [
-                "ジョ",
-                "ニョ"
+                {
+                    "reading": "ジョ",
+                    "pinyin": "nǚ"
+                },
+                {
+                    "reading": "ニョ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "おんな"
+                {
+                    "reading": "おんな",
+                    "pinyin": "onna"
+                }
             ]
         },
         "meaning": "woman"
@@ -1190,10 +1886,16 @@
         "kanji": "友",
         "readings": {
             "onyomi": [
-                "ユウ"
+                {
+                    "reading": "ユウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "とも"
+                {
+                    "reading": "とも",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "friend"
@@ -1202,10 +1904,16 @@
         "kanji": "花",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "はな"
+                {
+                    "reading": "はな",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "flower"
@@ -1214,10 +1922,16 @@
         "kanji": "草",
         "readings": {
             "onyomi": [
-                "ソウ"
+                {
+                    "reading": "ソウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "くさ"
+                {
+                    "reading": "くさ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "grass"
@@ -1226,10 +1940,16 @@
         "kanji": "森",
         "readings": {
             "onyomi": [
-                "シン"
+                {
+                    "reading": "シン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "もり"
+                {
+                    "reading": "もり",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "forest"
@@ -1238,10 +1958,16 @@
         "kanji": "竹",
         "readings": {
             "onyomi": [
-                "チク"
+                {
+                    "reading": "チク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "たけ"
+                {
+                    "reading": "たけ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "bamboo"
@@ -1250,11 +1976,20 @@
         "kanji": "石",
         "readings": {
             "onyomi": [
-                "セキ",
-                "シャク"
+                {
+                    "reading": "セキ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "シャク",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "いし"
+                {
+                    "reading": "いし",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "stone"
@@ -1263,11 +1998,20 @@
         "kanji": "空",
         "readings": {
             "onyomi": [
-                "クウ"
+                {
+                    "reading": "クウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "そら",
-                "から"
+                {
+                    "reading": "そら",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "から",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "sky, empty"
@@ -1276,10 +2020,16 @@
         "kanji": "雲",
         "readings": {
             "onyomi": [
-                "ウン"
+                {
+                    "reading": "ウン",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "くも"
+                {
+                    "reading": "くも",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "cloud"
@@ -1288,10 +2038,16 @@
         "kanji": "海",
         "readings": {
             "onyomi": [
-                "カイ"
+                {
+                    "reading": "カイ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "うみ"
+                {
+                    "reading": "うみ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "sea"
@@ -1300,10 +2056,16 @@
         "kanji": "川",
         "readings": {
             "onyomi": [
-                "セン"
+                {
+                    "reading": "セン",
+                    "pinyin": "chuān"
+                }
             ],
             "kunyomi": [
-                "かわ"
+                {
+                    "reading": "かわ",
+                    "pinyin": "kawa"
+                }
             ]
         },
         "meaning": "river"
@@ -1312,10 +2074,16 @@
         "kanji": "池",
         "readings": {
             "onyomi": [
-                "チ"
+                {
+                    "reading": "チ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "いけ"
+                {
+                    "reading": "いけ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "pond"
@@ -1324,10 +2092,16 @@
         "kanji": "雨",
         "readings": {
             "onyomi": [
-                "ウ"
+                {
+                    "reading": "ウ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "あめ"
+                {
+                    "reading": "あめ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "rain"
@@ -1336,10 +2110,16 @@
         "kanji": "雪",
         "readings": {
             "onyomi": [
-                "セツ"
+                {
+                    "reading": "セツ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "ゆき"
+                {
+                    "reading": "ゆき",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "snow"
@@ -1348,11 +2128,20 @@
         "kanji": "風",
         "readings": {
             "onyomi": [
-                "フウ",
-                "フ"
+                {
+                    "reading": "フウ",
+                    "pinyin": ""
+                },
+                {
+                    "reading": "フ",
+                    "pinyin": ""
+                }
             ],
             "kunyomi": [
-                "かぜ"
+                {
+                    "reading": "かぜ",
+                    "pinyin": ""
+                }
             ]
         },
         "meaning": "wind"
@@ -1361,11 +2150,20 @@
         "kanji": "月",
         "readings": {
             "onyomi": [
-                "ゲツ",
-                "ガツ"
+                {
+                    "reading": "ゲツ",
+                    "pinyin": "yuè"
+                },
+                {
+                    "reading": "ガツ",
+                    "pinyin": "yuè"
+                }
             ],
             "kunyomi": [
-                "つき"
+                {
+                    "reading": "つき",
+                    "pinyin": "tsuki"
+                }
             ]
         },
         "meaning": "moon, month"
@@ -1374,10 +2172,16 @@
         "kanji": "火",
         "readings": {
             "onyomi": [
-                "カ"
+                {
+                    "reading": "カ",
+                    "pinyin": "huǒ"
+                }
             ],
             "kunyomi": [
-                "ひ"
+                {
+                    "reading": "ひ",
+                    "pinyin": "hi"
+                }
             ]
         },
         "meaning": "fire"
@@ -1386,10 +2190,16 @@
         "kanji": "水",
         "readings": {
             "onyomi": [
-                "スイ"
+                {
+                    "reading": "スイ",
+                    "pinyin": "shuǐ"
+                }
             ],
             "kunyomi": [
-                "みず"
+                {
+                    "reading": "みず",
+                    "pinyin": "mizu"
+                }
             ]
         },
         "meaning": "water"
@@ -1398,11 +2208,20 @@
         "kanji": "金",
         "readings": {
             "onyomi": [
-                "キン",
-                "コン"
+                {
+                    "reading": "キン",
+                    "pinyin": "jīn"
+                },
+                {
+                    "reading": "コン",
+                    "pinyin": "jīn"
+                }
             ],
             "kunyomi": [
-                "かね"
+                {
+                    "reading": "かね",
+                    "pinyin": "kane"
+                }
             ]
         },
         "meaning": "gold, money"
@@ -1411,11 +2230,20 @@
         "kanji": "土",
         "readings": {
             "onyomi": [
-                "ド",
-                "ト"
+                {
+                    "reading": "ド",
+                    "pinyin": "tǔ"
+                },
+                {
+                    "reading": "ト",
+                    "pinyin": "tǔ"
+                }
             ],
             "kunyomi": [
-                "つち"
+                {
+                    "reading": "つち",
+                    "pinyin": "tsuchi"
+                }
             ]
         },
         "meaning": "earth, soil"
