@@ -3,34 +3,30 @@
     "return": "Kembali",
     "lastVisited": "Terakhir Dikunjungi",
     "new": "Baru",
-    "newHSK": "HSK Baru",
-    "oldHSK": "HSK Lama",
+    "newJLPT": "JLPT Baru",
     "beta": "Beta",
     "comingSoon": "Segera Datang",
     "home": {
-      "hsk": {
-        "title": "Belajar HSK 1-9",
-        "description": "Daftar kosakata HSK baru dan contoh kalimat."
+      "jlpt": {
+        "title": "Belajar JLPT 1-5",
+        "description": "Daftar kosakata JLPT baru dan contoh kalimat."
       },
-      "oldHSK": {
-        "title": "Belajar HSK 1-6",
-        "description": "Daftar kosakata HSK lama dan latihan soal."
-      },
+      
       "tools": {
         "title": "Fitur Tambahan",
-        "description": "Fitur lainnya terkait karakter Cina."
+        "description": "Fitur lainnya terkait karakter Jepang."
       },
       "podcast": {
-        "title": "Podcast Bahasa Cina",
+        "title": "Podcast Bahasa Jepang",
         "description": "Subtitle ganda secara real-time dari podcast."
       },
       "explore": {
         "title": "Jelajahi",
-        "description": "Baca dan dengarkan buku bahasa Cina dengan terjemahan."
+        "description": "Baca dan dengarkan buku bahasa Jepang dengan terjemahan."
       },
       "typingTest": {
         "title": "Latihan Mengetik",
-        "description": "Uji kecepatan mengetik bahasa Cina Anda."
+        "description": "Uji kecepatan mengetik bahasa Jepang Anda."
       },
       "flashcards": {
         "title": "Kartu Pengingat",
@@ -38,7 +34,7 @@
       },
       "search": {
         "title": "Cari Kata",
-        "description": "Telusuri karakter, kata, dan frasa bahasa Cina."
+        "description": "Telusuri karakter, kata, dan frasa bahasa Jepang."
       },
       "suggestions": {
         "title": "Saran",
@@ -46,7 +42,7 @@
       },
       "teleprompter": {
         "title": "Teleprompter",
-        "description": "Tingkatkan kecepatan membaca bahasa Cina Anda dengan teleprompter."
+        "description": "Tingkatkan kecepatan membaca bahasa Jepang Anda dengan teleprompter."
       }
     },
     "startReading": "Mulai Membaca",
@@ -65,7 +61,7 @@
     },
     "teleprompter": {
       "submit": "Mulai",
-      "placeholder": "Masukkan teks bahasa Cina di sini...",
+      "placeholder": "Masukkan teks bahasa Jepang di sini...",
       "desiredReadingSpeed": "Kecepatan Membaca (CPM):",
       "readingSpeedInfo": "Rata-rata kecepatan membaca adalah 259 karakter per menit. Sesuaikan kecepatan sesuai preferensi Anda."
     },
@@ -94,7 +90,7 @@
     "onboarding": [
       "Selamat datang di hanzi.id! 😉",
       "Ini adalah aplikasi untuk membantu Anda belajar karakter mandarin.",
-      "Karakter HSK 1-9 dan contoh penggunaannya tersedia.",
+      "Karakter JLPT 1-9 dan contoh penggunaannya tersedia.",
       "Kamu juga bisa menjelajahi dan mulai membaca buku bahasa mandarin. 📚",
       "Progres belajar Anda akan disimpan secara lokal! 🎉",
       "Ayo mulai!"
@@ -106,7 +102,7 @@
     "recentlySearched": "Terakhir dicari",
     "openCommandMenu": "Buka pencarian kata",
     "seeDetails": "Lihat definisi",
-    "searchErrorToast": "Harap hanya masukkan karakter Cina.",
+    "searchErrorToast": "Harap hanya masukkan karakter Jepang.",
     "keyword": "Pencarian Anda:",
     "clearHistory": "Hapus Riwayat Pencarian",
     "nextChapter": "Lanjut ke bab selanjutnya?",
@@ -117,16 +113,16 @@
     },
     "imagesTool": {
       "title": "Ambil Teks dari Gambar",
-      "description": "Unggah gambar dan dapatkan teks dalam bahasa Cina."
+      "description": "Unggah gambar dan dapatkan teks dalam bahasa Jepang."
     },
     "pdfTool": {
       "title": "Ambil Teks dari PDF",
-      "description": "Unggah PDF dan dapatkan teks dalam bahasa Cina."
+      "description": "Unggah PDF dan dapatkan teks dalam bahasa Jepang."
     },
     "characterCountTool": {
       "title": "Hitung Karakter",
-      "description": "Hitung jumlah karakter dalam teks Cina.",
-      "placeholder": "Masukkan teks Cina di sini...",
+      "description": "Hitung jumlah karakter dalam teks Jepang.",
+      "placeholder": "Masukkan teks Jepang di sini...",
       "characters": "karakter",
       "uniqueCharacters": "karakter unik",
       "count": "Jumlah",
@@ -135,7 +131,7 @@
     "analyzerTool": {
       "title": "Analisis Teks",
       "description": "Dapatkan frekuensi kata, analisis kosa kata unik, dan lainnya.",
-      "placeholder": "Masukkan teks Cina di sini...",
+      "placeholder": "Masukkan teks Jepang di sini...",
       "words": "kata",
       "uniqueWords": "kata unik",
       "count": "Jumlah",
@@ -144,7 +140,7 @@
     },
     "hanziWriterTool": {
       "title": "Tulis Hanzi",
-      "description": "Simulasi goresan karakter Cina dan latihan menulis."
+      "description": "Simulasi goresan karakter Jepang dan latihan menulis."
     },
     "previewText": "Preview file PDF akan tampil di sini",
     "previewImage": "Preview gambar akan tampil di sini",
@@ -170,7 +166,7 @@
       "description": "Apakah Anda yakin ingin menghapus kartu pengingat ini? Tindakan ini tidak dapat dibatalkan.",
       "successToast": "Kartu pengingat berhasil dihapus."
     },
-    "hanziStrokePlaceholder": "Masukkan karakter Cina",
+    "hanziStrokePlaceholder": "Masukkan karakter Jepang",
     "showRadical": "Tampilkan Radikal",
     "hideRadical": "Sembunyikan Radikal",
     "quiz": "Kuis",
@@ -210,7 +206,7 @@
     "pleaseFill": "Silahkan isi kolom berikut:",
     "placeholderFlashcardTitle": "Judul kartu pengingat",
     "placeholderFlashcardDescription": "Deskripsi kartu pengingat",
-    "addNewFlashcardPlaceholder": "Tambahkan kata/frase Cina ke kartu pengingat dipisahkan dengan baris baru, contoh:\n你好\n再见",
+    "addNewFlashcardPlaceholder": "Tambahkan kata/frase Jepang ke kartu pengingat dipisahkan dengan baris baru, contoh:\n你好\n再见",
     "add": "Tambah +",
     "reviewMode": "Mode Ulasan",
     "reviewModes": ["Definisi Kata", "Menulis Karakter"],
@@ -227,6 +223,6 @@
     "seeIdioms": "Lihat Idiom",
     "exampleIdiomsOf": "Contoh Idiom dari",
     "banner": "kamus bergambar",
-    "support": "Soal HSK"
+    "support": "Soal JLPT"
   }
   

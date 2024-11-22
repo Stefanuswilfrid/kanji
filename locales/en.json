@@ -8,29 +8,26 @@
     "beta": "Beta",
     "comingSoon": "Coming Soon",
     "home": {
-      "hsk": {
-        "title": "Learn HSK 1-9",
-        "description": "New HSK vocabulary lists and example sentences."
+      "jlpt": {
+        "title": "Learn JLPT 1-5",
+        "description": "New JLPT vocabulary lists and example sentences."
       },
-      "oldHSK": {
-        "title": "Learn HSK 1-6",
-        "description": "Old HSK vocabulary lists and practice exams."
-      },
+     
       "podcast": {
-        "title": "Chinese Podcast",
+        "title": "Japanese Podcast",
         "description": "Realtime dual-subtitle from podcasts."
       },
       "tools": {
         "title": "Tools",
-        "description": "Chinese character tools and resources."
+        "description": "Japanese character tools and resources."
       },
       "explore": {
         "title": "Explore",
-        "description": "Read and listen to Chinese books with translations."
+        "description": "Read and listen to Japanese books with translations."
       },
       "typingTest": {
         "title": "Typing Practice",
-        "description": "Improve your Chinese typing speed."
+        "description": "Improve your Japanese typing speed."
       },
       "flashcards": {
         "title": "Flashcards",
@@ -38,7 +35,7 @@
       },
       "search": {
         "title": "Search",
-        "description": "Browse Chinese characters, words, and phrases."
+        "description": "Browse Japanese characters, words, and phrases."
       },
       "suggestions": {
         "title": "Suggestions",
@@ -46,7 +43,7 @@
       },
       "teleprompter": {
         "title": "Teleprompter",
-        "description": "Improve your Chinese reading speed with a teleprompter."
+        "description": "Improve your Japanese reading speed with a teleprompter."
       }
     },
     "startReading": "Start Reading",
@@ -65,7 +62,7 @@
     },
     "teleprompter": {
       "submit": "Start",
-      "placeholder": "Enter Chinese text here...",
+      "placeholder": "Enter Japanese text here...",
       "desiredReadingSpeed": "Desired Reading Speed (CPM):",
       "readingSpeedInfo": "The average reading speed is 259 characters per minute. Adjust the speed to your preference."
     },
@@ -93,9 +90,9 @@
     "goToLastReadSentence": "Go to last read sentence",
     "onboarding": [
       "Welcome to hanzi.id! 😉",
-      "This is an app to help you learn Chinese characters.",
+      "This is an app to help you learn Japanese characters.",
       "HSK 1-9 characters and their example usages are available.",
-      "You can also browse and start reading Chinese books. 📚",
+      "You can also browse and start reading Japanese books. 📚",
       "Your learning progress will be saved locally! 🎉",
       "Let's get started!"
     ],
@@ -106,7 +103,7 @@
     "recentlySearched": "Recently searched",
     "openCommandMenu": "Open search command",
     "seeDetails": "See details",
-    "searchErrorToast": "Please only enter Chinese characters.",
+    "searchErrorToast": "Please only enter Japanese characters.",
     "keyword": "You searched for:",
     "clearHistory": "Clear Search History",
     "nextChapter": "Read next chapter?",
@@ -123,16 +120,16 @@
     },
     "imagesTool": {
       "title": "Extract Text from Image/s",
-      "description": "Upload images and get extracted text in Chinese."
+      "description": "Upload images and get extracted text in Japanese."
     },
     "pdfTool": {
       "title": "Extract Text from PDF",
-      "description": "Upload PDF and get extracted text in Chinese."
+      "description": "Upload PDF and get extracted text in Japanese."
     },
     "characterCountTool": {
       "title": "Character Counter",
-      "description": "Count the number of characters in Chinese text.",
-      "placeholder": "Enter Chinese text here...",
+      "description": "Count the number of characters in Japanese text.",
+      "placeholder": "Enter Japanese text here...",
       "characters": "characters",
       "uniqueCharacters": "unique characters",
       "count": "Count",
@@ -140,8 +137,8 @@
     },
     "analyzerTool": {
       "title": "Text Analyzer",
-      "description": "Analyze Chinese text and get word frequency, unique words, and more.",
-      "placeholder": "Enter Chinese text here...",
+      "description": "Analyze Japanese text and get word frequency, unique words, and more.",
+      "placeholder": "Enter Japanese text here...",
       "words": "words",
       "uniqueWords": "unique words",
       "count": "Count",
@@ -150,7 +147,7 @@
     },
     "hanziWriterTool": {
       "title": "Hanzi Writer",
-      "description": "Simulate Chinese character strokes and practice writing."
+      "description": "Simulate Japanese character strokes and practice writing."
     },
     "previewText": "PDF Preview will be displayed here",
     "previewImage": "Image preview will be displayed here",
@@ -176,7 +173,7 @@
       "description": "Are you sure you want to delete this flashcard? This action cannot be undone.",
       "successToast": "Flashcard deleted."
     },
-    "hanziStrokePlaceholder": "Enter Chinese character/s",
+    "hanziStrokePlaceholder": "Enter Japanese character/s",
     "showRadical": "Show Radical",
     "hideRadical": "Hide Radical",
     "quiz": "Quiz",
@@ -216,7 +213,7 @@
     "pleaseFill": "Please fill the following:",
     "placeholderFlashcardTitle": "Enter flashcard title",
     "placeholderFlashcardDescription": "Enter flashcard description",
-    "addNewFlashcardPlaceholder": "Enter chinese character/word/phrase separated by new line, like so:\n你好\n再见",
+    "addNewFlashcardPlaceholder": "Enter Japanese character/word/phrase separated by new line, like so:\n你好\n再见",
     "add": "Add +",
     "reviewMode": "Review Mode",
     "reviewModes": ["Word Definition", "Practice Writing"],

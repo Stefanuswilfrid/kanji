@@ -4,6 +4,7 @@ import {
   BookAIcon,
   ClapperboardIcon,
   FilePlus2Icon,
+  GraduationCap,
   KeyboardIcon,
   LibraryBigIcon,
   LightbulbIcon,
@@ -15,10 +16,13 @@ import {  Divider } from "@/components";
 import { AuthButton } from "./auth-button";
 import { useRouter } from "next/router";
 import { useWindowSize } from "@/hooks";
+import { useLocale } from "@/locales/use-locale";
 
 const isAdmin = true;
 
 export function HomeTodo() {
+
+  const { t } = useLocale();
 
   const { width } = useWindowSize();
   const router = useRouter();
@@ -69,27 +73,20 @@ export function HomeTodo() {
       <div className="grid md:grid-cols-2 gap-4">
         <Button
           className="relative hover:bg-sky-200/5"
-          icon={<div className="w-12 shrink-0 text-3xl font-bold text-sky-500">3.0</div>}
+          icon={<div className="w-12 shrink-0 text-3xl font-bold text-sky-500">
+                        <GraduationCap size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+
+          </div>}
           path="/jlpt/1"
-          title={"t.home.jlpt.title"}
-          description={"t.home.jlpt.description"}
+          title={t.home.jlpt.title}
+          description={t.home.jlpt.description}
         >
           <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md bg-sky-500/10 px-2 py-1 font-medium text-sky-500 ring-1 ring-inset ring-sky-500/20">
-            2024
+            2010+
           </div>
         </Button>
 
-        <Button
-          className="relative hover:bg-sky-200/5 disabled:pointer-events-none disabled:opacity-50"
-          icon={<div className="w-12 shrink-0 text-3xl font-bold text-amber-500">2.0</div>}
-          path="/old-hsk/1"
-          title={"t.home.jlpt.title"}
-          description={"t.home.jlpt.description"}
-        >
-          <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-amber-500/10 px-2 py-1 font-medium text-amber-500 ring-1 ring-inset ring-amber-500/20">
-            old jlpt
-          </div>
-        </Button>
+
 
         <Button
           path="/teleprompter"
@@ -97,11 +94,11 @@ export function HomeTodo() {
           icon={
             <ClapperboardIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
           }
-          title={"t.home.teleprompter.title"}
-          description={"t.home.teleprompter.description"}
+          title={t.home.teleprompter.title}
+          description={t.home.teleprompter.description}
         >
           <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-emerald-500/10 px-2 py-1 font-medium text-emerald-500 ring-1 ring-inset ring-emerald-500/20">
-            {"t.new"}
+            {t.new}
           </div>
         </Button>
 
@@ -111,8 +108,8 @@ export function HomeTodo() {
           icon={
             <LucidePodcast size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
           }
-          title={"t.home.podcast.title"}
-          description={"t.home.podcast.description"}
+          title={t.home.podcast.title}
+          description={t.home.podcast.description}
         />
 
         {isAdmin && (
@@ -133,32 +130,32 @@ export function HomeTodo() {
           icon={
             <LibraryBigIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
           }
-          title={"t.home.explore.title"}
-          description={"t.home.explore.description"}
+          title={t.home.explore.title}
+          description={t.home.explore.description}
         />
 
         <Button
           path="/flashcards"
           className="hover:bg-sky-200/5"
           icon={<BookAIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />}
-          title={"t.home.flashcards.title"}
-          description={"t.home.flashcards.description"}
+          title={t.home.flashcards.title}
+          description={t.home.flashcards.description}
         />
 
         <Button
           path="/typing-test"
           className="hover:bg-sky-200/5 relative disabled:pointer-events-none disabled:opacity-50"
           icon={<KeyboardIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />}
-          title={"t.home.typingTest.title"}
-          description={"t.home.typingTest.description"}
+          title={t.home.typingTest.title}
+          description={t.home.typingTest.description}
         />
 
         <Button
           path="/tools"
           className="hover:bg-sky-200/5 relative disabled:pointer-events-none disabled:opacity-50"
           icon={<PickaxeIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />}
-          title={"t.home.tools.title"}
-          description={"t.home.tools.description"}
+          title={t.home.tools.title}
+          description={t.home.tools.description}
         />
 
         <Button
@@ -167,8 +164,8 @@ export function HomeTodo() {
           icon={
             <LightbulbIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
           }
-          title={"t.home.suggestions.title"}
-          description={"t.home.suggestions.description"}
+          title={t.home.suggestions.title}
+          description={t.home.suggestions.description}
         />
       </div>
     </React.Fragment>

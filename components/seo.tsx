@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const defaultMeta = {
-  title: "kanji",
+  title: "kanji.au",
   siteName: "kanji",
   description: "kanji, learn  characters and read chinese books.",
   url: "https://kanji",

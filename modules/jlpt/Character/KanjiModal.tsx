@@ -18,7 +18,7 @@ import { useAudio } from "@/modules/layout/jlpt-layout/audio-provider";
 import { motion, AnimatePresence } from "framer-motion";
 import { AddToFlashcard, AddToFlashcardMobile } from "../Flashcard";
 // import { AddToFlashcard, AddToFlashcardMobile } from "../Flashcard";
-import { Drawer, JLPTButton, Locale, MarkAsCompleted, preloadHanziDetails, url } from "@/components/jlpt";
+import { Drawer, JLPTButton, Locale, MarkAsCompleted } from "@/components/jlpt";
 
 export type IdHanziMapKey = keyof typeof IdHanziMap;
 

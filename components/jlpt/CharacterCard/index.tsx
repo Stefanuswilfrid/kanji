@@ -8,29 +8,33 @@ import { preload } from "swr";
 
 export type Locale = "en" | "id";
 
-export const url = (hanzi: string, locale: Locale) => `https://content.hanzi.id/character/${locale}/${hanzi}.json`;
+// export const url = (hanzi: string, locale: Locale) => `https://content.hanzi.id/character/${locale}/${hanzi}.json`;
 
-export async function preloadHanziDetails(hanzi: string, locale: Locale) {
-  await preload(url(hanzi, locale), async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  });
-}
+// export async function preloadHanziDetails(hanzi: string, locale: Locale) {
+//   await preload(url(hanzi, locale), async (url) => {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     return data;
+//   });
+// }
 
 export function CharacterCard({
   id,
   character,
-  pinyin,
-  translations,
+  furigana,
+  meaning,
   isFlipped,
   isCompleted,
   hanziHref,
   locale,
+  romaji,
   onFlip,
   onCompleteToggle,
 }: ChineseCharacter & {
   character: string;
+  romaji : string;
+  furigana : string;
+  meaning : string;
   hanziHref: string;
   isCompleted: boolean;
   onCompleteToggle: () => void;
@@ -84,7 +88,7 @@ export function CharacterCard({
               )}
             >
               <Link
-                onMouseEnter={() => preloadHanziDetails(character, locale)}
+                // onMouseEnter={() => preloadHanziDetails(character, locale)}
                 onClick={(e) => e.stopPropagation()}
                 href={hanziHref}
                 shallow
@@ -114,8 +118,10 @@ export function CharacterCard({
               "card-content absolute inset-0 border-b-[1.5px] bg-softblack flex flex-col items-center justify-center text-flipped px-4 border-secondary/10"
             )}
           >
-            <div className="text-3xl">{pinyin} saa</div>
-            {/* <div className="text-lg text-center">{translations.join(", ")}</div> */}
+            <div className="text-3xl">{romaji}</div>
+            <div className="text-lg text-center">{furigana}</div>
+            <div className="text-lg text-center">{meaning}</div>
+
           </div>
         </div>
       </div>

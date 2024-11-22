@@ -88,10 +88,10 @@ function usePagination({
   const canPreviousLevel = Boolean(currentPage && parseInt(currentPage) === 1 && hasPreviousLevel);
 
   const previousHref = canPreviousLevel
-    ? `/hsk/${currentLevel - 1}?page=${previousLevelTotalPages}`
-    : `/hsk/${currentLevel}?page=${parseInt(currentPage) - 1}`;
+    ? `/jlpt/${currentLevel - 1}?page=${previousLevelTotalPages}`
+    : `/jlpt/${currentLevel}?page=${parseInt(currentPage) - 1}`;
 
-  const nextHref = canNextLevel ? `/hsk/${currentLevel + 1}` : `/hsk/${currentLevel}?page=${parseInt(currentPage) + 1}`;
+  const nextHref = canNextLevel ? `/jlpt/${currentLevel + 1}` : `/jlpt/${currentLevel}?page=${parseInt(currentPage) + 1}`;
 
   return {
     characters,
@@ -166,7 +166,7 @@ console.log("chararacters",characters)
                   <CharacterCard
                     character={character.word}
                     locale={router.locale as Locale}
-                    hanziHref={`/hsk/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`}
+                    hanziHref={`/jlpt/${props.currentLevel}/?hanzi=${character.word}&id=${character.id}&page=${currentPage}`}
                     isFlipped={flippedCard === character.id}
                     isCompleted={currentCompletedCharacters.includes(character.id)}
                     onCompleteToggle={() => {
@@ -194,7 +194,7 @@ console.log("chararacters",characters)
                   character={ character.hanzi}
                   onClick={() =>
                     router.push(
-                      `/hsk/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`,
+                      `/jlpt/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`,
                       undefined,
                       {
                         shallow: true,
