@@ -10,13 +10,13 @@ import { SessionProvider } from "next-auth/react";
 import { AuthProvider } from "@/modules/auth";
 import { ConfettiProvider, NewReadingLayout } from "@/modules/layout/new-reading-layout";
 import { JLPTLayout } from "@/modules/layout/jlpt-layout/jlpt-layout";
+import { ToolsLayout } from "@/modules/layout/tools-layout";
 export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const isNewReading = router.pathname.startsWith("/new");
   const isTools = router.pathname.startsWith("/tools");
   const isJlpt = router.pathname.startsWith("/jlpt");
-  const isOldHsk = router.pathname.startsWith("/old-hsk");
   const isReading = router.pathname.startsWith("/read");
   
   return (
@@ -42,6 +42,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
                   <JLPTLayout key="jlpt">
                   <Component key={router.pathname} {...pageProps} />
                 </JLPTLayout>
+                ): isTools ? (
+                  <ToolsLayout key="tools">
+                  <Component key={router.pathname} {...pageProps} />
+                </ToolsLayout>
                 ):
                 
                 (
