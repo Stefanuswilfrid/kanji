@@ -41,7 +41,7 @@ export const getStaticPaths = (async ({ locales }) => {
 }) satisfies GetStaticPaths;
 
 const getFilePath = (level: string | number, locale?: string) =>
-  `/data/${locale === "id" ? "id" : "en"}/jlpt-level-${level}.json`;
+  `/data/${locale === "id" ? "id" : "en"}/n${level}.json`;
 
 export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) => {
   const level = params?.level as string;
@@ -164,7 +164,7 @@ console.log("chararacters",characters)
               if (width > 640) {
                 return (
                   <CharacterCard
-                    character={character.kanji}
+                    character={character.word}
                     locale={router.locale as Locale}
                     hanziHref={`/hsk/${props.currentLevel}/?hanzi=${character.hanzi}&id=${character.id}&page=${currentPage}`}
                     isFlipped={flippedCard === character.id}

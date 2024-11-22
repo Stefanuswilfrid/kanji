@@ -8,8 +8,9 @@ import { ReplaceRouteButton } from "@/components/route-button";
 // import { ReplaceRouteButton } from "@/components";
 // import { useLocale } from "@/locales/use-locale";
 import { AudioProvider } from "./audio-provider";
+import { LastViewedHanzi } from "@/modules/jlpt/Character/LastViewedKanji";
 
-export function HSKLayout({ children }: { children: React.ReactNode }) {
+export function JLPTLayout({ children }: { children: React.ReactNode }) {
 //   const { t } = useLocale();
   return (
     <Layout>
