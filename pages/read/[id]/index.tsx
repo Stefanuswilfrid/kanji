@@ -8,6 +8,8 @@ import useSWRImmutable from "swr/immutable";
 import { useRouter } from "next/router";
 import { useRouter as useNavigationRouter } from "next/navigation";
 import { GetBookByIdResponse } from "@/pages/api/book/[id]";
+
+// import { GetBookByIdResponse } from "@/pages/api/book/[id]";
 import { LucideBookOpen, LucideLanguages } from "lucide-react";
 import { useScrollToTop } from "@/modules/new";
 import { LastRead, useLastReadChapterId } from "@/modules/home/explore";
@@ -28,12 +30,11 @@ function BookDetails() {
 
   const id = router.query.id as string;
 
-  const { isSimplified } = usePreferences();
-  const { data: book, isLoading } = useBookDetails(id, isSimplified);
+  const { data: book, isLoading } = useBookDetails(id, true);
   const { t, locale } = useLocale();
 
   const source = book?.image?.source;
-  const title = isSimplified ? book?.title : book?.titleTraditional;
+  const title = true;
   const description = locale === "en" ? book?.description : book?.descriptionId;
   const chapters = book?.chapters || [];
 

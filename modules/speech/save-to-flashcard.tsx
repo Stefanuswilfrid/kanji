@@ -4,9 +4,10 @@ import { CircleCheckIcon, CirclePlusIcon } from "lucide-react";
 import React from "react";
 import { useReading } from "@/modules/layout";
 import useSWRImmutable from "swr/immutable";
-import { GetChapterByIdResponse } from "@/pages/api/chapter/[id]";
+// import { GetChapterByIdResponse } from "@/pages/api/chapter/[id]";
 import { useRouter } from "next/router";
-import { useFlashcardContext } from "@/modules/flashcards";
+import useFlashC
+// import { useFlashcardContext } from "@/modules/flashcards";
 
 export function useChapterById(bookId: string, chapterId: string, isSimplified: boolean) {
   const content = isSimplified ? "content-sim" : "content-trad";
