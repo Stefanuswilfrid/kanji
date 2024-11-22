@@ -1,6 +1,6 @@
 import { Layout } from "@/modules/layout";
-import React from "react";
 import { CharacterCountTool } from "@/modules/tools";
+import React from "react";
 
 export default function CharacterCountToolPage() {
   return (
