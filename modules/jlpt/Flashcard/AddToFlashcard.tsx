@@ -1,7 +1,8 @@
 import React from "react";
 import { useHskFlashcard } from "./useHskFlashcard";
 import { useRouter } from "next/router";
-import { HSKButton } from "@/components";
+import { JLPTButton } from "@/components";
+// import { HSKButton } from "@/components";
 import { useLocale } from "@/locales/use-locale";
 import { cn } from "@/utils";
 

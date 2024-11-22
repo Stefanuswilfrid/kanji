@@ -1,7 +1,7 @@
 import { RouteDialog } from "@/components";
 import { useRouter } from "next/router";
 import React from "react";
-import { SelectButton } from "../typing-test";
+import { SelectButton } from "../typing-test/type-settings-dialog";
 import { useLocale } from "@/locales/use-locale";
 import { cn } from "@/utils";
 import { Flashcard } from "../layout";

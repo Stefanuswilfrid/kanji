@@ -4,10 +4,9 @@ import { CircleCheckIcon, CirclePlusIcon } from "lucide-react";
 import React from "react";
 import { useReading } from "@/modules/layout";
 import useSWRImmutable from "swr/immutable";
-// import { GetChapterByIdResponse } from "@/pages/api/chapter/[id]";
+import { GetChapterByIdResponse } from "@/pages/api/chapter/[id]";
 import { useRouter } from "next/router";
-import useFlashC
-// import { useFlashcardContext } from "@/modules/flashcards";
+import { useFlashcardContext } from "../flashcards";
 
 export function useChapterById(bookId: string, chapterId: string, isSimplified: boolean) {
   const content = isSimplified ? "content-sim" : "content-trad";
@@ -26,7 +25,7 @@ export function SaveToFlashcard({ word }: { word?: string }) {
   const bookId = router.query.id as string;
   const chapterId = router.query.chapterId as string;
 
-  const { data: chapter } = useChapterById(bookId, chapterId, isSimplified);
+  const { data: chapter } = useChapterById(bookId, chapterId, true);
 
   const chapterName = `${chapter?.book.title}-${chapter?.title}`;
 

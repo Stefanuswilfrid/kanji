@@ -8,7 +8,7 @@ export * from "./alert-modal";
 export * from "./slider";
 
 export * from "./jlpt";
-
+export * from "./route-dialog"
 export * from "./change-locale-button";
 export * from "./virtualized-list";
 
