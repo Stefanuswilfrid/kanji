@@ -7,8 +7,9 @@ import React from "react";
 import { useParagraphs } from "./use-paragraphs";
 import { useReading } from "@/modules/layout";
 import { useRouter } from "next/router";
-import { useChapterById } from "@/modules/speech";
-import { useBookDetails } from "@/pages/read/[id]";
+import { useChapterById } from "@/modules/speech/save-to-flashcard";
+
+// import { useBookDetails } from "@/pages/read/[id]";
 import { useLocale } from "@/locales/use-locale";
 
 const useSpeechManager = (

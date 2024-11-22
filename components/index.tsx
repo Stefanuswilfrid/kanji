@@ -10,4 +10,5 @@ export * from "./slider";
 export * from "./jlpt";
 
 export * from "./change-locale-button";
+export * from "./virtualized-list";
 

@@ -32,7 +32,7 @@ export function ExampleIdioms({ hanzi, idioms }: { hanzi: string; idioms: KanjiA
           )}
           <ul>
             {idioms.map((idiom, index) => {
-              const splitted = isSimplified ? idiom.simplified.split(regex) : idiom.traditional.split(regex);
+              const splitted = idiom.simplified.split(regex);
 
               return (
                 <li key={index} className="list-none">
