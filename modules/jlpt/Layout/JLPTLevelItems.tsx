@@ -1,4 +1,4 @@
-import { CHARACTERS_PER_LEVEL, HSK_LEVELS,Level } from "@/data/constants";
+import { CHARACTERS_PER_LEVEL,JLPT_LEVELS,Level } from "@/data/constants";
 import { useCompletedCharacters } from "@/store/useCompletedCharactersStore";
 import { SidebarItem } from "./Sidebar";
 import clsx from "clsx";
@@ -12,7 +12,7 @@ export function JLPTLevelItems({ isDrawer = false }: { isDrawer?: boolean }) {
   const params = useParams();
   const currentLevel = params?.level as unknown as Level;
 
-  return HSK_LEVELS.map((level) => {
+  return JLPT_LEVELS.map((level) => {
     const progress = completedCharacters[level].length / CHARACTERS_PER_LEVEL[level];
     const completedCount = completedCharacters[level].length;
 

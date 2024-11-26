@@ -1,19 +1,15 @@
 import type { InferGetStaticPropsType, GetStaticPaths, GetStaticPropsContext } from "next";
 import { promises as fs } from "fs";
-import { CHARACTERS_PER_PAGE, ChineseCharacter, HSK_LEVELS, Level } from "@/data/constants";
+import { CHARACTERS_PER_PAGE,  JLPT_LEVELS, Level } from "@/data/constants";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import * as React from "react";
 import Head from "next/head";
 import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
-import { CharacterCard, Locale } from "@/components/jlpt/CharacterCard";
-// import { Pagination } from "@/components/jlpt/Pagination";
-// import { MobileSidebar, HanziModal } from "@/modules/hsk";
-import { MobileSidebar } from "@/modules/jlpt";
+import { MobileSidebar, KanjiModal } from "@/modules/jlpt";
 
 import { useWindowSize } from "@/hooks";
-import { CharacterRow } from "@/components/jlpt/CharacterRow";
-import { KanjiModal } from "@/modules/jlpt/Character/KanjiModal";
+import { Pagination , CharacterRow, CharacterCard,Locale} from "@/components";
 
 async function getCharactersOnLevel(level: string | number, locale?: string) {
   const file = await fs.readFile(process.cwd() + getFilePath(level, locale), "utf8");
@@ -26,7 +22,7 @@ export const getStaticPaths = (async ({ locales }) => {
     throw new Error("No locales provided");
   }
   return {
-    paths: HSK_LEVELS.map((level) => {
+    paths: JLPT_LEVELS.map((level) => {
       return locales.map((locale) => {
         return {
           params: {
@@ -219,14 +215,14 @@ console.log("chararacters",characters)
         <div className="fixed w-full left-0 max-w-[1440px] mx-auto max-sm:border-t border-t-secondary/10 p-1 max-sm:bg-black bottom-0 md:right-4 md:px-4 flex justify-end mt-8 gap-1">
           <MobileSidebar />
 
-          {/* <Pagination
+          <Pagination
             currentPage={currentPage}
             totalPages={props.totalPages}
             canNextLevel={canNextLevel}
             canPreviousLevel={canPreviousLevel}
             previousHref={previousHref}
             nextHref={nextHref}
-          /> */}
+          />
         </div>
       </div>
     </>

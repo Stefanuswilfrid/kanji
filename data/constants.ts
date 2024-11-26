@@ -1,4 +1,4 @@
-export const HSK_LEVELS = [1, 2, 3, 4, 5] as const;
+export const JLPT_LEVELS = [1, 2, 3, 4, 5] as const;
 export const CHARACTERS_PER_PAGE = 48;
 export const CHARACTERS_PER_LEVEL = {
   1: 3463,

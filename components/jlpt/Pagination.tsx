@@ -1,5 +1,5 @@
 import React from "react";
-import { HSKLinkButton } from "./HSKLinkButton";
+import { JLPTLinkButton } from "./HSKLinkButton";
 
 type PaginationProps = {
   currentPage: number;
@@ -20,23 +20,23 @@ export function Pagination({
 }: PaginationProps) {
   return (
     <div className="max-sm:w-full flex justify-center items-center gap-1 bg-black sm:p-1">
-      <HSKLinkButton
+      <JLPTLinkButton
         prefetch={false}
         shallow={currentPage !== 1}
         href={previousHref}
         disabled={currentPage === 1 && !canPreviousLevel}
       >
         &#x2190;
-      </HSKLinkButton>
+      </JLPTLinkButton>
 
-      <HSKLinkButton
+      <JLPTLinkButton
         prefetch={false}
         shallow={currentPage !== totalPages}
         href={nextHref}
         disabled={currentPage === totalPages && !canNextLevel}
       >
         &#x2192;
-      </HSKLinkButton>
+      </JLPTLinkButton>
     </div>
   );
 }
