@@ -143,6 +143,8 @@ export default function Page(props: InferGetStaticPropsType<typeof getStaticProp
   const router = useRouter();
 console.log("chararacters",characters)
 
+
+
   return (
     <>
       <Head>
