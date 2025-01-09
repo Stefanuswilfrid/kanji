@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import { AudioButton } from "../AudioButton";
 import { KanjiApiResponse } from "../types";
-import { CopyToClipboard } from "@/modules/speech/view-definition";
+// import { CopyToClipboard } from "@/modules/speech/view-definition";
 import { useLocale } from "@/locales/use-locale";
 
 export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: KanjiApiResponse["lessons"] }) {
@@ -67,8 +67,8 @@ export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: K
       )}
       <ul className="relative space-y-2 px-4">
         {currentLesson.map((lesson, index) => {
-          const splitted = isSimplified ? lesson.simplified.split(regex) : lesson.traditional.split(regex);
-
+          // const splitted = isSimplified ? lesson.simplified.split(regex) : lesson.traditional.split(regex);
+          const splitted = lesson.simplified.split(regex) ;
           return (
             <li key={index} className="list-none">
               <Popover>
@@ -83,7 +83,7 @@ export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: K
                         );
                       return <React.Fragment key={index}>{part}</React.Fragment>;
                     })}
-                    <CopyToClipboard
+                    {/* <CopyToClipboard
                       className="inline-flex align-middle max-sm:mb-0.5 active:bg-transparent md:w-9 md:h-9"
                       text={isSimplified ? lesson.simplified : lesson.traditional}
                       size={16}
@@ -93,7 +93,7 @@ export function ExampleSentences({ hanzi, lessons }: { hanzi: string; lessons: K
                       key={lesson.audioUrl}
                       text={isSimplified ? lesson.simplified : lesson.traditional}
                       speed={1.3}
-                    />
+                    /> */}
                   </div>
                 </Popover.Trigger>
                 <Popover.Content
