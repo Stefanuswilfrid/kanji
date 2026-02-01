@@ -1,4 +1,4 @@
-import { DesktopSidebar } from "@/modules/hsk/layout/sidebar";
+import { DesktopSidebar } from "@/modules/jlpt/layout/sidebar";
 import { AnimatePresence } from "framer-motion";
 
 function JLPTLayout({ children }: { children: React.ReactNode }) {
