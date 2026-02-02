@@ -1,6 +1,8 @@
 {
-    "home": {
-        "jlpt": {
+    "return": "Return",
+
+  "home": {
+    "jlpt": {
       "title": "Learn JLPT 1-5",
       "description": "New JLPT vocabulary lists and example sentences."
     },
@@ -36,6 +38,5 @@
       "title": "Teleprompter",
       "description": "Improve your Japanese reading speed with a teleprompter."
     }
-
-    }
+  }
 }
