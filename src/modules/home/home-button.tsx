@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { push } from "@/lib/utils/page-router";
-import { useLocale } from "@/locales/use-locale";
 import { useRouter } from "next/navigation";
 type AdditionalProps = {
   title: string;
@@ -23,23 +22,13 @@ export function HomeButton({
   ...props
 }: React.ComponentPropsWithoutRef<"button"> & AdditionalProps) {
   const router = useRouter();
-  const { locale } = useLocale();
-
-  const href = (() => {
-    // Preserve locale in navigation:
-    // - id (default): `/...`
-    // - en: `/en/...`
-    if (locale !== "en") return path;
-    if (path === "/") return "/en";
-    return path.startsWith("/en/") || path === "/en" ? path : `/en${path}`;
-  })();
 
   return (
     <button
       className={cn(buttonClassNames, "text-left", className)}
       onClick={(e) => {
         onClick?.(e);
-        push(router, href);
+        push(router, path);
       }}
       {...props}
     >

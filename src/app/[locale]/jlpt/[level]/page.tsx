@@ -1,5 +1,4 @@
 import { CHARACTERS_PER_PAGE, JLPT_LEVELS, type Level } from "@/data/constants";
-import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -17,7 +16,15 @@ type JlptWord = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return JLPT_LEVELS.map((level) => ({ level: String(level) }));
+  const locales: Locale[] = ["en", "id"];
+  return locales.flatMap((locale) =>
+    JLPT_LEVELS.map((level) => ({ locale, level: String(level) })),
+  );
+}
+
+function parseLocaleParam(value: string | undefined): Locale | null {
+  if (value === "en" || value === "id") return value;
+  return null;
 }
 
 function parseLevelParam(value: string | undefined): Level | null {
@@ -38,14 +45,12 @@ async function getWordsOnLevel(level: Level, locale: Locale): Promise<JlptWord[]
 export default async function JlptLevelPage({
   params,
 }: {
-  params: Promise<{ level: string }>;
+  params: Promise<{ locale: string; level: string }>;
 }) {
-  const { level: levelParam } = await params;
+  const { locale: localeParam, level: levelParam } = await params;
+  const locale = parseLocaleParam(localeParam);
   const level = parseLevelParam(levelParam);
-  if (!level) notFound();
-
-  const cookieLocale = (await cookies()).get("locale")?.value;
-  const locale: Locale = cookieLocale === "en" ? "en" : "id";
+  if (!locale || !level) notFound();
 
   const allWords = await getWordsOnLevel(level, locale);
   const totalPages = Math.ceil(allWords.length / CHARACTERS_PER_PAGE);
@@ -63,7 +68,10 @@ export default async function JlptLevelPage({
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-1">
             {allWords.slice(0, CHARACTERS_PER_PAGE).map((w) => (
-              <div key={`${w.word}-${w.reading}`} className="rounded-md border border-secondary/10 bg-softblack p-3">
+              <div
+                key={`${w.word}-${w.reading}`}
+                className="rounded-md border border-secondary/10 bg-softblack p-3"
+              >
                 <div className="flex items-baseline justify-between gap-2">
                   <span className="font-semibold">{w.word}</span>
                   <span className="text-xs text-secondary">{w.romaji}</span>
@@ -78,3 +86,4 @@ export default async function JlptLevelPage({
     </div>
   );
 }
+

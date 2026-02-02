@@ -1,7 +1,7 @@
 import { CHARACTERS_PER_LEVEL, JLPT_LEVELS, Level } from "@/data/constants";
 import { SidebarItem } from "./sidebar";
 import clsx from "clsx";
-import { ResetButton } from "@/components/hsk/reset-button";
+import { ResetButton } from "@/components/jlpt/reset-button";
 import { ProgressBar } from "@/components/progress-bar";
 
 export function JLPTLevelItems({ isDrawer = false }: { isDrawer?: boolean }) {
@@ -42,7 +42,7 @@ function JLPTLevelItem({
     }
       key={level}
       isActive={isActive}
-      href={`/hsk/${level}?page=1`}
+      href={`/jlpt/${level}?page=1`}
     >
       <div className={clsx("flex items-center justify-between", progress === 1 && "text-sky-400")}>
         <span className={clsx("text-sm", progress === 1 && "text-yellow-500")}>JLPT {level}</span>

@@ -11,8 +11,8 @@ const contents = {
 export function useLocale(){
   const pathname = usePathname();
 
-  
-  const locale: "en" | "id" = pathname.startsWith("/en") ? "en" : "id";
+  const firstSegment = pathname.split("/")[1] || "";
+  const locale: "en" | "id" = firstSegment === "en" || firstSegment === "id" ? firstSegment : "id";
 
   return {
     t: contents[locale],
