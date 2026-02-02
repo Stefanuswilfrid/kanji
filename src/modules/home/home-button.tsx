@@ -28,13 +28,20 @@ export function HomeButton({
   const { locale } = useLocale();
 
   const href = (() => {
-    // If the caller already provided a locale-prefixed path, keep it.
-    if (path === "/en" || path === "/id" || path.startsWith("/en/") || path.startsWith("/id/")) {
+    // If the caller already provided `/en/...`, keep it.
+    if (path === "/en" || path.startsWith("/en/")) {
       return path;
     }
-    // Always target the locale routes we created under `app/[locale]/**`.
-    if (path === "/") return `/${locale}`;
-    return `/${locale}${path}`;
+
+    // URL scheme:
+    // - Indonesian (default): `/...` (no prefix)
+    // - English: `/en/...`
+    if (locale === "en") {
+      if (path === "/") return "/en";
+      return `/en${path}`;
+    }
+
+    return path;
   })();
 
   return (

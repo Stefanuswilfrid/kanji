@@ -1,39 +1,8 @@
 import { CHARACTERS_PER_PAGE, JLPT_LEVELS, type Level } from "@/data/constants";
-import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-
-type Locale = "en" | "id";
-
-type JlptWord = {
-  word: string;
-  reading: string;
-  meaning: string;
-  level: number;
-  romaji: string;
-};
-
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  return JLPT_LEVELS.map((level) => ({ level: String(level) }));
-}
-
-function parseLevelParam(value: string | undefined): Level | null {
-  if (!value) return null;
-  const normalized = value.startsWith("n") ? value.slice(1) : value;
-  const n = Number.parseInt(normalized, 10);
-  if (!Number.isFinite(n)) return null;
-  if (!JLPT_LEVELS.includes(n as any)) return null;
-  return n as Level;
-}
-
-async function getWordsOnLevel(level: Level, locale: Locale): Promise<JlptWord[]> {
-  const filePath = path.join(process.cwd(), "src", "data", locale, `n${level}.json`);
-  const raw = await readFile(filePath, "utf8");
-  return JSON.parse(raw) as JlptWord[];
-}
 
 export default async function JlptLevelPage({
   params,
@@ -41,13 +10,29 @@ export default async function JlptLevelPage({
   params: Promise<{ level: string }>;
 }) {
   const { level: levelParam } = await params;
-  const level = parseLevelParam(levelParam);
+  const h = await headers();
+  const localeDir = h.get("x-locale") === "en" ? "en" : "id";
+
+  const level = (() => {
+    const normalized = levelParam.startsWith("n") ? levelParam.slice(1) : levelParam;
+    const n = Number.parseInt(normalized, 10);
+    if (!Number.isFinite(n)) return null;
+    if (!JLPT_LEVELS.includes(n as any)) return null;
+    return n as Level;
+  })();
+
   if (!level) notFound();
 
-  const cookieLocale = (await cookies()).get("locale")?.value;
-  const locale: Locale = cookieLocale === "en" ? "en" : "id";
+  const filePath = path.join(process.cwd(), "src", "data", localeDir, `n${level}.json`);
+  const raw = await readFile(filePath, "utf8");
+  const allWords = JSON.parse(raw) as Array<{
+    word: string;
+    reading: string;
+    meaning: string;
+    level: number;
+    romaji: string;
+  }>;
 
-  const allWords = await getWordsOnLevel(level, locale);
   const totalPages = Math.ceil(allWords.length / CHARACTERS_PER_PAGE);
 
   return (
@@ -55,7 +40,7 @@ export default async function JlptLevelPage({
       <div className="w-full h-full overflow-y-auto scrollbar max-sm:pb-12">
         <div className="pt-5 sm:pr-1 pb-4 sm:pb-20 w-full">
           <div className="mb-4">
-            <p className="text-sm text-secondary">Locale: {locale.toUpperCase()}</p>
+            <p className="text-sm text-secondary">Locale: {localeDir.toUpperCase()}</p>
             <p className="text-lg font-bold">JLPT N{level}</p>
             <p className="text-sm text-secondary">
               Words: {allWords.length} · Pages: {totalPages}
@@ -63,7 +48,10 @@ export default async function JlptLevelPage({
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-1">
             {allWords.slice(0, CHARACTERS_PER_PAGE).map((w) => (
-              <div key={`${w.word}-${w.reading}`} className="rounded-md border border-secondary/10 bg-softblack p-3">
+              <div
+                key={`${w.word}-${w.reading}`}
+                className="rounded-md border border-secondary/10 bg-softblack p-3"
+              >
                 <div className="flex items-baseline justify-between gap-2">
                   <span className="font-semibold">{w.word}</span>
                   <span className="text-xs text-secondary">{w.romaji}</span>

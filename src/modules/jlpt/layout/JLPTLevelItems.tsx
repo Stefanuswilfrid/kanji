@@ -4,7 +4,13 @@ import clsx from "clsx";
 import { ResetButton } from "@/components/jlpt/reset-button";
 import { ProgressBar } from "@/components/progress-bar";
 
-export function JLPTLevelItems({ isDrawer = false }: { isDrawer?: boolean }) {
+export function JLPTLevelItems({
+  isDrawer = false,
+  locale,
+}: {
+  isDrawer?: boolean;
+  locale: "en" | "id";
+}) {
     return JLPT_LEVELS.map((level) => {
          return (
       <JLPTLevelItem
@@ -14,6 +20,7 @@ export function JLPTLevelItems({ isDrawer = false }: { isDrawer?: boolean }) {
         progress={12}
         isActive={false}
         level={level}
+        locale={locale}
       />
     );
     });
@@ -25,12 +32,14 @@ function JLPTLevelItem({
   progress,
   isActive,
   isDrawer = false,
+  locale,
 }: {
   level: Level;
   completedCount: number;
   progress: number;
   isActive: boolean;
   isDrawer?: boolean;
+  locale: "en" | "id";
 }) {
   const totalCharacters = CHARACTERS_PER_LEVEL[level];
 
@@ -42,7 +51,7 @@ function JLPTLevelItem({
     }
       key={level}
       isActive={isActive}
-      href={`/jlpt/${level}?page=1`}
+      href={locale === "en" ? `/en/jlpt/${level}?page=1` : `/jlpt/${level}?page=1`}
     >
       <div className={clsx("flex items-center justify-between", progress === 1 && "text-sky-400")}>
         <span className={clsx("text-sm", progress === 1 && "text-yellow-500")}>JLPT {level}</span>
