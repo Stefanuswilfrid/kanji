@@ -1,11 +1,16 @@
+"use client";
+
 import { Drawer } from "@/components/jlpt/drawer";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { JLPTLevelItems } from "./JLPTLevelItems";
+import { useLocale } from "@/locales/use-locale";
 
-export function DesktopSidebar({ locale }: { locale: "en" | "id" }) {
+export function DesktopSidebar() {
+  const { locale } = useLocale();
+
   return (
     <div className="max-md:hidden border-r border-r-secondary/10">
       <aside className="px-4 pb-4 pt-20 z-10 sticky top-0 h-[calc(100dvh-7rem)] overflow-y-auto scrollbar min-w-64">

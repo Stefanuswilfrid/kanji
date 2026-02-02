@@ -3,15 +3,18 @@ import { cn } from "@/lib/utils";
 import { replace } from "@/lib/utils/page-router";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { useLocale } from "@/locales/use-locale";
 
 export function ReplaceRouteButton({
   children,
   path,
 }: {
   children: React.ReactNode;
-  path: string;
+  path?: string;
 }) {
   const router = useRouter();
+  const { locale } = useLocale();
+  const resolvedPath = path ?? (locale === "en" ? "/en" : "/");
 
   const ref = React.useRef<HTMLButtonElement>(null);
 
@@ -21,7 +24,7 @@ export function ReplaceRouteButton({
       onClick={() => {
         if (ref.current) {
           ref.current.disabled = true;
-          replace(router, path);
+          replace(router, resolvedPath);
         }
       }}
       type="button"
