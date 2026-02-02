@@ -19,7 +19,7 @@ export default async function JlptLevelPage({
   params: Promise<{ level: string }>;
 }) {
   const { level: levelParam } = await params;
-  const localeDir = "id";
+  const localeDir = "en";
 
   const level = (() => {
     const normalized = levelParam.startsWith("n") ? levelParam.slice(1) : levelParam;
@@ -74,3 +74,4 @@ export default async function JlptLevelPage({
     </div>
   );
 }
+
