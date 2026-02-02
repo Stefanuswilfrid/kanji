@@ -1,51 +1,42 @@
 {
-    "return": "Kembali",
+    "return": "Return",
 
   "home": {
     "jlpt": {
-      "title": "Belajar JLPT 1-9",
-      "description": "Daftar kosakata JLPT baru dan contoh kalimat."
-    },
-
-    "tools": {
-      "title": "Fitur Tambahan",
-      "description": "Fitur lainnya terkait karakter Jepang."
-    },
-    "radicals": {
-      "title": "Radikal Kanji",
-      "description": "Radikal kanji dan contoh karakternya."
-    },
-    "podcast": {
-      "title": "Podcast Bahasa Jepang",
-      "description": "Subtitle ganda secara real-time dari podcast."
+      "title": "Learn JLPT 1-5",
+      "description": "New JLPT vocabulary lists and example sentences."
     },
     "youtube": {
-      "title": "YouTube Bahasa Jepang",
-      "description": "Subtitle ganda secara real-time dari video YouTube."
+      "title": "Japanese YouTube",
+      "description": "Realtime dual-subtitle from YouTube videos."
     },
     "explore": {
-      "title": "Jelajahi",
-      "description": "Baca dan dengarkan buku bahasa Jepang dengan terjemahan."
+      "title": "Explore",
+      "description": "Read and listen to Japanese books with translations."
     },
     "typingTest": {
-      "title": "Latihan Mengetik",
-      "description": "Uji kecepatan mengetik bahasa Jepang Anda."
+      "title": "Typing Practice",
+      "description": "Improve your Japanese typing speed."
     },
     "flashcards": {
-      "title": "Kartu Pengingat",
-      "description": "Kata dan frasa yang disimpan untuk ulasan cepat."
+      "title": "Flashcards",
+      "description": "Your saved words and phrases for quick review."
     },
     "search": {
-      "title": "Cari Kata",
-      "description": "Telusuri karakter, kata, dan frasa bahasa Jepang."
+      "title": "Search",
+      "description": "Browse Japanese characters, words, and phrases."
+    },
+    "radicals": {
+      "title": "Radikal Jepang",
+      "description": "Radikal kanji dan contoh karakternya."
     },
     "suggestions": {
-      "title": "Saran",
-      "description": "Fitur baru, perbaikan, atau buku yang ingin Anda tambahkan ke situs."
+      "title": "Suggestions",
+      "description": "New features, improvements, or books you would like to be added to the site."
     },
     "teleprompter": {
       "title": "Teleprompter",
-      "description": "Tingkatkan kecepatan membaca bahasa Jepang Anda dengan teleprompter."
+      "description": "Improve your Japanese reading speed with a teleprompter."
     }
   }
 }

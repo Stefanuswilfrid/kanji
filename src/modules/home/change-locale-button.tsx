@@ -7,17 +7,15 @@ export function ChangeLocaleButton() {
   const router = useRouter();
 
   // Locale routing:
-  // - Indonesian: `/id/...`
-  // - English: `/en/...`
-  const localePrefix = /^\/(en|id)(?=\/|$)/;
-  const currentLocale: "en" | "id" =
-    pathname.match(localePrefix)?.[1] === "en" ? "en" : "id";
+
+  const prefix = /^\/(en|id)(?=\/|$)/;
+  const currentLocale: "en" | "id" = pathname.startsWith("/en") ? "en" : "id";
   const nextLocale: "en" | "id" = currentLocale === "en" ? "id" : "en";
 
-  const restPath = pathname.replace(localePrefix, "") || "/";
+  const restPath = pathname.replace(prefix, "") || "/";
   const normalizedRestPath = restPath === "/" ? "" : restPath;
 
-  const href = `/${nextLocale}${normalizedRestPath}`;
+  const href = nextLocale === "en" ? `/en${normalizedRestPath}` : normalizedRestPath || "/";
 
   return (
     <button

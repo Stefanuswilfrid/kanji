@@ -1,5 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { push } from "@/lib/utils/page-router";
+import { useLocale } from "@/locales/use-locale";
 import { useRouter } from "next/navigation";
 type AdditionalProps = {
   title: string;
@@ -22,13 +25,24 @@ export function HomeButton({
   ...props
 }: React.ComponentPropsWithoutRef<"button"> & AdditionalProps) {
   const router = useRouter();
+  const { locale } = useLocale();
+
+  const href = (() => {
+    // If the caller already provided a locale-prefixed path, keep it.
+    if (path === "/en" || path === "/id" || path.startsWith("/en/") || path.startsWith("/id/")) {
+      return path;
+    }
+    // Always target the locale routes we created under `app/[locale]/**`.
+    if (path === "/") return `/${locale}`;
+    return `/${locale}${path}`;
+  })();
 
   return (
     <button
       className={cn(buttonClassNames, "text-left", className)}
       onClick={(e) => {
         onClick?.(e);
-        push(router, path);
+        push(router, href);
       }}
       {...props}
     >
