@@ -9,3 +9,11 @@ export const CHARACTERS_PER_LEVEL = {
 };
 
 export type Level = keyof typeof CHARACTERS_PER_LEVEL;
+
+export type JapaneseCharacter = {
+  id: string;
+  kanji: string;
+  reading: string;
+  translations: Array<string>;
+};
+

@@ -21,12 +21,6 @@ export function proxy(request: NextRequest) {
 
   // Keep `/en/...` in the browser, but serve the underlying route at `/<path>`.
   if (match?.[1] === "en") {
-    // For routes that have a real `/en/...` implementation (SSG), don't rewrite away the prefix.
-    // This allows `src/app/en/...` to be matched directly.
-    if (pathname === "/en/jlpt" || pathname.startsWith("/en/jlpt/")) {
-      return NextResponse.next({ request: { headers: requestHeaders } });
-    }
-
     const url = request.nextUrl.clone();
     url.pathname = pathname.replace(LOCALE_PREFIX, "") || "/";
     // Make locale visible to client hooks even though the pathname is rewritten.
@@ -41,4 +35,3 @@ export function proxy(request: NextRequest) {
 export const config = {
   matcher: ["/((?!_next|favicon.ico).*)"],
 };
-
