@@ -1,5 +1,6 @@
 
 import { CHARACTERS_PER_PAGE, JLPT_LEVELS, type JapaneseCharacter, type Level } from "@/data/constants";
+import { KanjiModal } from "@/modules/jlpt/character/kanji-modal";
 import { JlptLevelClient } from "@/modules/jlpt/jlpt-level-client";
 import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
@@ -65,9 +66,6 @@ export default async function JlptLevelPage({
       };
     });
 
-  return (
-    <div className="relative h-dvh pt-12 w-full">
-      <JlptLevelClient level={level} items={items} />
-    </div>
-  );
+  return  <JlptLevelClient level={level} items={items} />
+  
 }

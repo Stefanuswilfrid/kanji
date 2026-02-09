@@ -1,3 +1,5 @@
+"use client";
+
 import { Drawer as VaulDrawer } from "vaul";
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -13,15 +15,17 @@ export function Drawer({ children, ...props }: DrawerProps) {
 function DrawerContent({ children, className, ...props }: DrawerContentProps) {
   return (
     <VaulDrawer.Portal>
-      <VaulDrawer.Overlay className="fixed z-[998] inset-0 bg-black/10 backdrop-blur-sm" />
+      <VaulDrawer.Overlay className="fixed z-998 inset-0 bg-black/10 backdrop-blur-sm" />
       <VaulDrawer.Content
         onOpenAutoFocus={(e) => e.preventDefault()}
         className={cn(
-          "p-3 pt-4 focus:outline-none z-[998] text-light-smokewhite bg-black rounded-t-[10px] fixed bottom-0 right-0",
+          "p-3 pt-4 focus:outline-none z-998 text-light-smokewhite bg-black rounded-t-[10px] fixed bottom-0 right-0",
           className
         )}
         {...props}
       >
+        {/* Required by Radix Dialog for accessibility */}
+        <VaulDrawer.Title className="sr-only">Drawer</VaulDrawer.Title>
         <Drawer.MobilePan />
 
         {children}

@@ -3,6 +3,7 @@
 import { JapaneseCharacter } from "@/data/constants";
 import clsx from "clsx";
 import { MarkAsCompleted } from "./mark-as-completed";
+import Link from "next/link";
 
 export type Locale = "en" | "id";
 
@@ -12,11 +13,13 @@ export function CharacterCard({
   reading,
   translations,
   onFlip,
+  kanjiHref,
   isFlipped,
   isCompleted,
   onCompleteToggle,
 }: JapaneseCharacter & {
   isCompleted: boolean;
+  kanjiHref: string;
   onCompleteToggle: () => void;
   onFlip: () => void;
   isFlipped: boolean;
@@ -75,6 +78,12 @@ export function CharacterCard({
                   : "active:bg-mossgreen/10",
               )}
             >
+               <Link
+                onMouseEnter={()=>{}}
+                onClick={(e) => e.stopPropagation()}
+                href={kanjiHref}
+                shallow
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -90,6 +99,7 @@ export function CharacterCard({
                 <path d="M12 16v-4" />
                 <path d="M12 8h.01" />
               </svg>
+              </Link>
             </div>
             <div className="absolute left-4 top-4 text-sm">{id}</div>
           </div>
