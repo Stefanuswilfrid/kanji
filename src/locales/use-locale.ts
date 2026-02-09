@@ -7,9 +7,9 @@ export function useLocale(){
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // Proxy routing:
-  // - `/en/...` is rewritten to `/<path>?__locale=en`, so pathname won't include `/en`.
-  // - Default (id) has no prefix.
+  // Locale detection for App Router + middleware rewrite:
+  // - `/en/...` is rewritten to `/<path>?__locale=en` (so `usePathname()` won't include `/en`)
+  // - Default `id` has no prefix and no `__locale`
   const localeFromQuery = searchParams.get("__locale");
   const locale: "en" | "id" =
     localeFromQuery === "en" ? "en" : pathname.startsWith("/en") ? "en" : "id";

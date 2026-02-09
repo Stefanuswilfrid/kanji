@@ -6,36 +6,38 @@ import { MarkAsCompleted } from "./mark-as-completed";
 
 export function CharacterRow({
   id,
-  character,
+  kanji,
+  reading,
+  translations,
   isCompleted,
+  onClick,
+  onCompleteToggle,
 }: JapaneseCharacter & {
-  character: string;
   isCompleted: boolean;
+  onClick?: () => void;
+  onCompleteToggle?: () => void;
 }) {
-  const onClick = () => {
-    // TODO: open details / modal
-  };
-
-  const onCompleteToggle = () => {
-    // TODO: persist completion state (e.g. localStorage)
-  };
+  const handleRowClick = onClick ?? (() => {});
+  const handleCompleteToggle = onCompleteToggle ?? (() => {});
 
   return (
     <div
-      onClick={onClick}
+      onClick={handleRowClick}
       className={clsx("relative group transition select-none", isCompleted ? "text-smokewhite" : "text-lightgray")}
     >
       <div className="pl-3 pr-4 pt-7 pb-3 flex gap-2 items-center transition border-b border-b-secondary/10 bg-softblack active:bg-hovered">
-        <div className="shrink-0 font-medium text-4xl">{character}</div>
+        <div className="shrink-0 font-medium text-4xl">{kanji}</div>
         <MarkAsCompleted
           className={isCompleted ? "bg-transparent" : ""}
           isCompleted={isCompleted}
-          onClick={onCompleteToggle}
+          onClick={handleCompleteToggle}
         />
         <div className="absolute left-4 top-3 text-xs">{id}</div>
-
-</div>
-
+        <div className="pl-1 pt-0.5">
+          <div className="text-sm text-secondary">{reading}</div>
+          <div className="text-xs text-secondary">{translations.join(", ")}</div>
+        </div>
+      </div>
     </div>
   );
 
