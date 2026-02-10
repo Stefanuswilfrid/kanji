@@ -3,6 +3,7 @@
 import { CharacterCard } from "@/components/jlpt/character-card";
 import { CharacterRow } from "@/components/jlpt/character-row";
 import type { JapaneseCharacter, Level } from "@/data/constants";
+import { usePagination } from "@/hooks/usePagination";
 import { useLocale } from "@/locales/use-locale";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -34,17 +35,51 @@ function writeCompleted(level: Level, ids: Array<string>) {
   }
 }
 
+
 export function JlptLevelClient({
   level,
-  items,
+  allCharacters,
+  totalPages,
+  previousLevelTotalPages,
+  hasPreviousLevel,
+  hasNextLevel,
 }: {
   level: Level;
-  items: Array<JapaneseCharacter & { translationsEn: Array<string> }>;
+  allCharacters: Array<JapaneseCharacter & { translationsEn: Array<string> }>;
+  totalPages: number;
+  previousLevelTotalPages: number;
+  hasPreviousLevel: boolean;
+  hasNextLevel: boolean;
 }) {
   const { locale } = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  type JLPTCharacter = JapaneseCharacter & { translationsEn: Array<string> };
+
+  const {
+    characters,
+    currentPage,
+    previousHref,
+    nextHref,
+    canNextLevel,
+    canPreviousLevel,
+  } = usePagination({
+    allCharacters: allCharacters as Array<JapaneseCharacter>,
+    totalPages,
+    currentLevel: level,
+    previousLevelTotalPages,
+    hasPreviousLevel,
+    hasNextLevel,
+  });
+
+  const items = characters as Array<JLPTCharacter>;
+
+  const withLocalePrefix = useCallback(
+    (href: string) => (locale === "en" ? `/en${href}` : href),
+    [locale]
+  );
 
   const [completedIds, setCompletedIds] = useState<Array<string>>([]);
   const [flippedId, setFlippedId] = useState<string | null>(null);
@@ -71,10 +106,11 @@ export function JlptLevelClient({
       const sp = new URLSearchParams(searchParams.toString());
       sp.delete("__locale");
       sp.set("id", id);
+      sp.set("page", String(currentPage));
       const basePath = locale === "en" ? `/en${pathname}` : pathname;
       router.push(`${basePath}?${sp.toString()}`);
     },
-    [locale, pathname, router, searchParams]
+    [currentPage, locale, pathname, router, searchParams]
   );
 
   return (
@@ -107,7 +143,7 @@ export function JlptLevelClient({
               <CharacterCard
                 {...characterForLocale}
                 isCompleted={isCompleted}
-                kanjiHref={`/jlpt/${level}/?kanji=${character.kanji}&id=${character.id}&page=1`}
+                kanjiHref={`${withLocalePrefix(`/jlpt/${level}`)}?kanji=${character.kanji}&id=${character.id}&page=${currentPage}`}
                 isFlipped={flippedId === character.id}
                 onFlip={() => setFlippedId((prev) => (prev === character.id ? null : character.id))}
                 onCompleteToggle={() => toggleCompleted(character.id)}
@@ -120,12 +156,12 @@ export function JlptLevelClient({
     </div>
     <div className="fixed w-full left-0 max-w-[1440px] mx-auto max-sm:border-t border-t-secondary/10 p-1 max-sm:bg-black bottom-0 md:right-4 md:px-4 flex justify-end mt-8 gap-1">
       <Pagination
-        currentPage={1}
-        totalPages={4}
-        canNextLevel={true}
-        canPreviousLevel={true}
-        previousHref={"previousHref"}
-        nextHref={"nextHref"}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        canNextLevel={canNextLevel}
+        canPreviousLevel={canPreviousLevel}
+        previousHref={withLocalePrefix(previousHref)}
+        nextHref={withLocalePrefix(nextHref)}
       />
     </div>
 

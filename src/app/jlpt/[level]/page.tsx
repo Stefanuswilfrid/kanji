@@ -1,6 +1,5 @@
 
 import { CHARACTERS_PER_PAGE, JLPT_LEVELS, type JapaneseCharacter, type Level } from "@/data/constants";
-import { KanjiModal } from "@/modules/jlpt/character/kanji-modal";
 import { JlptLevelClient } from "@/modules/jlpt/jlpt-level-client";
 import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
@@ -14,6 +13,13 @@ export async function generateStaticParams() {
     { level: String(level) },
     { level: `n${level}` },
   ]);
+}
+
+function splitMeaning(meaning: string) {
+  return meaning
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
 }
 
 export default async function JlptLevelPage({
@@ -32,6 +38,10 @@ export default async function JlptLevelPage({
   })();
 
   if (!level) notFound();
+
+  const levelNum = Number(level);
+  const hasPreviousLevel = JLPT_LEVELS.includes((levelNum - 1) as any);
+  const hasNextLevel = JLPT_LEVELS.includes((levelNum + 1) as any);
 
   const [rawId, rawEn] = await Promise.all([
     readFile(path.join(process.cwd(), "src", "data", "id", `n${level}.json`), "utf8"),
@@ -53,19 +63,40 @@ export default async function JlptLevelPage({
     romaji: string;
   }>;
 
-  const items: Array<JapaneseCharacter & { translationsEn: Array<string> }> = charactersId
-    .slice(0, CHARACTERS_PER_PAGE)
-    .map((item, idx) => {
+  const allCharacters: Array<JapaneseCharacter & { translationsEn: Array<string> }> = charactersId.map(
+    (item, idx) => {
       const en = charactersEn[idx];
       return {
         id: `N${level}-${idx + 1}`,
         kanji: item.word,
         reading: item.reading,
-        translations: item.meaning.split(",").map((s) => s.trim()).filter(Boolean),
-        translationsEn: (en?.meaning ?? item.meaning).split(",").map((s) => s.trim()).filter(Boolean),
+        translations: splitMeaning(item.meaning),
+        translationsEn: splitMeaning(en?.meaning ?? item.meaning),
       };
-    });
+    }
+  );
 
-  return  <JlptLevelClient level={level} items={items} />
-  
+  const totalPages = Math.ceil(allCharacters.length / CHARACTERS_PER_PAGE);
+
+  const previousLevelTotalPages = hasPreviousLevel
+    ? Math.ceil(
+        (JSON.parse(
+          await readFile(
+            path.join(process.cwd(), "src", "data", "id", `n${levelNum - 1}.json`),
+            "utf8"
+          )
+        ) as Array<unknown>).length / CHARACTERS_PER_PAGE
+      )
+    : 0;
+
+  return (
+    <JlptLevelClient
+      level={level}
+      allCharacters={allCharacters}
+      totalPages={totalPages}
+      previousLevelTotalPages={previousLevelTotalPages}
+      hasPreviousLevel={hasPreviousLevel}
+      hasNextLevel={hasNextLevel}
+    />
+  );
 }
