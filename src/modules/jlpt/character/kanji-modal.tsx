@@ -1,11 +1,27 @@
 "use client";
 import { Drawer } from "@/components/jlpt/drawer";
 import { MarkAsCompleted } from "@/components/jlpt/mark-as-completed";
-import { JLPT_LEVELS, type Level } from "@/data/constants";
+import { CHARACTERS_PER_LEVEL, JLPT_LEVELS, type Level } from "@/data/constants";
 import clsx from "clsx";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import {  KanjiDetails } from "./kanji-details/kanji-details";
+import IdKanjiMap from "@/data/id-kanji-map.json";
+import { JLPTButton } from "@/components/jlpt/jlpt-link-button";
+import { AddToFlashcard, AddToFlashcardMobile } from "../flashcard/add-to-flashcard";
 
+export type IdKanjiMapKey = keyof typeof IdKanjiMap;
+
+const parseLevel = (raw?: string): Level | null => {
+  const n = Number.parseInt(raw?.replace(/^n/, "") ?? "", 10);
+  return JLPT_LEVELS.includes(n as any) ? (n as Level) : null;
+};
+
+const parseKanjiId = (id?: string) => {
+  const [, levelRaw, idxRaw] = id?.match(/^N(\d+)-(\d+)$/) ?? [];
+  const level = parseLevel(levelRaw);
+  const idx = Number.parseInt(idxRaw ?? "", 10);
+  return level && Number.isFinite(idx) ? { level, idx } : null;
+};
 
 
 export function KanjiModal() {
@@ -15,19 +31,21 @@ export function KanjiModal() {
   const kanji = searchParams.get("kanji") as string;
   const currentKanjiId = searchParams.get("id") as string;
 
-  const currentLevel: Level | null = (() => {
-    const raw = params?.level;
-    const levelParam = Array.isArray(raw) ? raw[0] : raw;
-    if (!levelParam) return null;
-    const normalized = levelParam.startsWith("n") ? levelParam.slice(1) : levelParam;
-    const n = Number.parseInt(normalized, 10);
-    if (!Number.isFinite(n)) return null;
-    if (!JLPT_LEVELS.includes(n as any)) return null;
-    return n as Level;
-  })();
+  const levelParam = Array.isArray(params?.level) ? params.level[0] : params?.level;
+  const currentLevel = parseLevel(levelParam);
+  const parsed = parseKanjiId(currentKanjiId);
+  const effectiveLevel = currentLevel ?? parsed?.level ?? null;
+  const effectiveIdx = parsed?.idx ?? null;
+  const lastIdx = effectiveLevel ? CHARACTERS_PER_LEVEL[effectiveLevel] : null;
 
-  const previousHanziId = (parseInt(currentKanjiId) - 1).toString() as any;
-  const nextHanziId = (parseInt(currentKanjiId) + 1).toString() as any;
+  const previousIdStr =
+    effectiveLevel && effectiveIdx && effectiveIdx > 1 ? `N${effectiveLevel}-${effectiveIdx - 1}` : undefined;
+  const nextIdStr =
+    effectiveLevel && effectiveIdx && lastIdx && effectiveIdx < lastIdx ? `N${effectiveLevel}-${effectiveIdx + 1}` : undefined;
+
+  const getKanjiById = (id?: string) => (id && id in IdKanjiMap ? IdKanjiMap[id as IdKanjiMapKey] : undefined);
+  const previousKanji = getKanjiById(previousIdStr);
+  const nextKanji = getKanjiById(nextIdStr);
 
 
 
@@ -56,6 +74,31 @@ export function KanjiModal() {
         
         
         <div className="absolute bg-black max-sm:py-2 max-sm:grid max-sm:grid-cols-2 flex gap-2 bottom-0 left-0 right-0 px-3 sm:px-4 sm:pb-4">
+        <JLPTButton
+            onMouseEnter={() => {
+            }}
+            disabled={!previousKanji}
+            className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
+            onClick={() => {
+
+            }}
+          >
+            &#x2190; {previousKanji}
+          </JLPTButton>
+          <AddToFlashcard kanji={kanji} />
+
+          <JLPTButton
+            onMouseEnter={() => {
+            }}
+            disabled={!nextKanji}
+            className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
+            onClick={() => {
+             
+            }}
+          >
+            {nextKanji} &#x2192;
+          </JLPTButton>
+          <AddToFlashcardMobile kanji={kanji}  />
 
         </div>
       </Drawer.Content>

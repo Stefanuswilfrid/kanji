@@ -1,7 +1,18 @@
 "use client";
 import { Divider } from "@/components/divider";
 import AuthButton from "./auth-button";
-import { ClapperboardIcon, KeyboardIcon, LanguagesIcon, LibraryBigIcon, LightbulbIcon, LucideVideo, NotebookPen, PickaxeIcon, SearchIcon } from "lucide-react";
+import {
+  BookAIcon,
+  ClapperboardIcon,
+  KeyboardIcon,
+  LanguagesIcon,
+  LibraryBigIcon,
+  LightbulbIcon,
+  LucideVideo,
+  NotebookPen,
+  PickaxeIcon,
+  SearchIcon,
+} from "lucide-react";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { ChangeLocaleButton } from "./change-locale-button";
 import { HomeButton } from "./home-button";
@@ -9,8 +20,7 @@ import { useLocale } from "@/locales/use-locale";
 
 export function HomeTodo() {
   const { width } = useWindowSize();
-    const { t } = useLocale();
-
+  const { t } = useLocale();
 
   return (
     <div>
@@ -43,16 +53,15 @@ export function HomeTodo() {
       <Divider />
 
       <div className="grid md:grid-cols-2 gap-4">
-
-         <HomeButton
+        <HomeButton
           className="relative hover:bg-sky-200/5"
           icon={
             <NotebookPen
-            size={48}
-            strokeWidth={1.5}
-            className="shrink-0 duration-200 group-hover:text-green-400"
-          />
-            }
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-green-400"
+            />
+          }
           path="/jlpt/1"
           title={t.home.jlpt.title}
           description={t.home.jlpt.description}
@@ -62,7 +71,7 @@ export function HomeTodo() {
           </div>
         </HomeButton>
 
-  <HomeButton
+        <HomeButton
           path="/youtube"
           className="relative hover:bg-green-200/5"
           icon={
@@ -80,58 +89,89 @@ export function HomeTodo() {
           </div>
         </HomeButton>
 
-          <HomeButton
+        <HomeButton
           path="/explore"
           className="hover:bg-sky-200/5"
           icon={
-            <LibraryBigIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+            <LibraryBigIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
           }
           title={t.home.explore.title}
           description={t.home.explore.description}
         />
 
-
-         <HomeButton
+        <HomeButton
           path="/flashcards/radicals"
           className="relative hover:bg-sky-200/5"
           icon={
-            <LanguagesIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+            <LanguagesIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
           }
           title={t.home.radicals.title}
           description={t.home.radicals.description}
         />
 
-         <HomeButton
+        <HomeButton
           path="/teleprompter"
           className="relative hover:bg-sky-200/5"
           icon={
-            <ClapperboardIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+            <ClapperboardIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
           }
           title={t.home.teleprompter.title}
           description={t.home.teleprompter.description}
         />
 
+        <HomeButton
+          path="/flashcards"
+          className="hover:bg-sky-200/5"
+          icon={
+            <BookAIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
+          }
+          title={t.home.flashcards.title}
+          description={t.home.flashcards.description}
+        />
 
         <HomeButton
           path="/typing-test"
           className="hover:bg-sky-200/5 relative disabled:pointer-events-none disabled:opacity-50"
-          icon={<KeyboardIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />}
+          icon={
+            <KeyboardIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
+          }
           title={t.home.typingTest.title}
           description={t.home.typingTest.description}
         />
-
-     
 
         <HomeButton
           path="/suggestions"
           className="hover:bg-sky-200/5"
           icon={
-            <LightbulbIcon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+            <LightbulbIcon
+              size={48}
+              strokeWidth={1.5}
+              className="shrink-0 duration-200 group-hover:text-sky-400"
+            />
           }
           title={t.home.suggestions.title}
           description={t.home.suggestions.description}
         />
-
       </div>
     </div>
   );
