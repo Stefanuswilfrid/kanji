@@ -48,6 +48,8 @@
       "description": "Tingkatkan kecepatan membaca bahasa Jepang Anda dengan teleprompter."
     }
   },
-  "saveToFlashcard": "+ Kartu Pengingat"
+  "saveToFlashcard": "+ Kartu Pengingat",
+  "add": "Tambah +"
+
 
 }

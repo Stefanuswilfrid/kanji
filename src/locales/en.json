@@ -40,6 +40,7 @@
     }
 
   },
-  "saveToFlashcard": "Add to Flashcard +"
+  "saveToFlashcard": "Add to Flashcard +",
+  "add": "Add +"
 
 }
