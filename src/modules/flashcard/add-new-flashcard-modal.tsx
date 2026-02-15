@@ -24,7 +24,7 @@ export function AddNewFlashcardModal({
       }}
       withoutOkButton
     >
-        <h1>test</h1>
+        <h1>Add New Flashcard Modal (WIP)</h1>
     </RouteDialog>
             );
   }

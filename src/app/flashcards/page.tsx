@@ -1,7 +1,8 @@
 "use client";
 import { BackRouteButton } from "@/components/route-button";
-import Layout from "../layout";
 import { useLocale } from "@/locales/use-locale";
+import { AddNewFlashcardButton } from "@/modules/flashcard/new-flashcards-button";
+import { Layout } from "@/modules/layout/layout";
 
 export default function FlashcardsPage() {
   const { t } = useLocale();
@@ -16,6 +17,13 @@ export default function FlashcardsPage() {
 
             </div>
           </div>
+
+          <div>
+          <div className="max-md:px-4 mt-4">
+          <AddNewFlashcardButton setFlashcards={()=>{}} />
+
+            </div>
+            </div>
 
           <div>
 </div>
