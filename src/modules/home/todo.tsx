@@ -85,23 +85,27 @@ export function HomeTodo() {
           description={t.home.youtube.description}
         >
           <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
-            New
+            WIP
           </div>
         </HomeButton>
 
         <HomeButton
           path="/explore"
-          className="hover:bg-sky-200/5"
+          className="relative hover:bg-green-200/5"
           icon={
             <LibraryBigIcon
               size={48}
               strokeWidth={1.5}
-              className="shrink-0 duration-200 group-hover:text-sky-400"
+              className="shrink-0 duration-200 group-hover:text-green-400"
             />
           }
           title={t.home.explore.title}
           description={t.home.explore.description}
-        />
+        >
+          <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
+            WIP
+          </div>
+        </HomeButton>
 
         <HomeButton
           path="/flashcards/radicals"
@@ -115,7 +119,11 @@ export function HomeTodo() {
           }
           title={t.home.radicals.title}
           description={t.home.radicals.description}
-        />
+        >
+            <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
+            WIP
+          </div>
+        </HomeButton>
 
         <HomeButton
           path="/teleprompter"
@@ -129,7 +137,11 @@ export function HomeTodo() {
           }
           title={t.home.teleprompter.title}
           description={t.home.teleprompter.description}
-        />
+        >
+            <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
+            WIP
+          </div>
+        </HomeButton>
 
         <HomeButton
           path="/flashcards"
@@ -157,21 +169,30 @@ export function HomeTodo() {
           }
           title={t.home.typingTest.title}
           description={t.home.typingTest.description}
-        />
+        >
+            <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
+            WIP
+          </div>
+        </HomeButton>
 
         <HomeButton
           path="/suggestions"
-          className="hover:bg-sky-200/5"
+          className="relative hover:bg-green-200/5"
           icon={
             <LightbulbIcon
               size={48}
               strokeWidth={1.5}
-              className="shrink-0 duration-200 group-hover:text-sky-400"
+              className="shrink-0 duration-200 group-hover:text-green-400"
             />
           }
           title={t.home.suggestions.title}
           description={t.home.suggestions.description}
-        />
+        >
+            <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
+            WIP
+          </div>
+
+          </HomeButton>
       </div>
     </div>
   );

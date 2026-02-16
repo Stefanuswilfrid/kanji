@@ -46,7 +46,7 @@ export function HomeButton({
 
   return (
     <button
-      className={cn(buttonClassNames, "text-left", className)}
+      className={cn(buttonClassNames, "relative text-left", className)}
       onClick={(e) => {
         onClick?.(e);
         push(router, href);
