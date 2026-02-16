@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { JLPTLevelItems } from "./JLPTLevelItems";
 import { useLocale } from "@/locales/use-locale";
+import { ChangeLocaleButton } from "@/modules/home/change-locale-button";
 
 export function DesktopSidebar() {
   const { locale } = useLocale();
@@ -18,7 +19,11 @@ export function DesktopSidebar() {
           <JLPTLevelItems locale={locale} />
         </ul>
       </aside>
-      <div className="ml-6 space-y-2 pt-3 max-w-45"></div>
+      <div className="ml-6 space-y-2 pt-3 max-w-45">
+        <div className="flex gap-2">
+          <ChangeLocaleButton />
+        </div>
+      </div>
     </div>
   );
 }
