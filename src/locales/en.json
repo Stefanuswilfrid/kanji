@@ -41,6 +41,8 @@
 
   },
   "saveToFlashcard": "Add to Flashcard +",
+  "removeFromFlashcard": "Remove from Flashcard -",
+
   "add": "Add +"
 
 }

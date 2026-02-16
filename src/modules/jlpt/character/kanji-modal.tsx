@@ -59,7 +59,7 @@ export function KanjiModal() {
           "h-dvh rounded-none max-w-xl w-full",
         )}
       >
-        {currentLevel && <KanjiDetails currentLevel={currentLevel} />}
+        {currentLevel && <KanjiDetails currentLevel={currentLevel} currentKanji={kanji}/>}
         <div className="absolute top-8 sm:top-4 left-0 right-0 mx-4 bg-linear-to-b from-black h-6"></div>
         <div className="absolute bottom-24 sm:bottom-12 left-0 right-0 mx-4 bg-linear-to-t from-black h-12"></div>
         
