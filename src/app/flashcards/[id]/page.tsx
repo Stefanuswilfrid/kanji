@@ -1,11 +1,12 @@
 "use client";
 import { BackRouteButton } from "@/components/route-button";
+import { Flashcard } from "@/modules/flashcard/useJLPTFlashcard";
 import { Layout } from "@/modules/layout/layout";
 import {
   useFlashcard,
   useFlashcardList,
 } from "@/modules/layout/reading-layout";
-import { LucideTrash2 } from "lucide-react";
+import { ChevronRightIcon, LucideTrash2 } from "lucide-react";
 import { useParams } from "next/navigation";
 import React from "react";
 
@@ -15,7 +16,6 @@ export default function FlashcardsIdPage() {
   const { flashcardItem, removeFlashcard } = useFlashcard(id);
   const [openAlert, setOpenAlert] = React.useState(false);
 
-  console.log("flashcards id", flashcardItem);
   return (
     <Layout>
       <div className="min-h-dvh">
@@ -33,8 +33,60 @@ export default function FlashcardsIdPage() {
               </button>
             </div>
           </div>
+          {flashcardItem && <DisplayFlashcard flashcard={flashcardItem} />}
+
         </main>
       </div>
     </Layout>
+  );
+}
+  
+function DisplayFlashcard({ flashcard }: { flashcard: Flashcard }) {
+  const [bookName, ...chapterParts] = flashcard.chapter.split("-");
+  const chapterName = chapterParts.join("-").trim();
+  const words = (flashcard.words ?? []).filter(Boolean);
+
+  return (
+    <div className="mx-4 mt-4">
+      <div className="flex items-end justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold text-primary">{bookName}</h1>
+          {chapterName ? (
+            <p className="mt-1 text-sm text-secondary">{chapterName}</p>
+          ) : null}
+        </div>
+        <div className="text-sm text-secondary">{words.length} words</div>
+      </div>
+
+      {words.length === 0 ? (
+        <div className="mt-6 rounded-md border border-subtle bg-softblack p-4 text-secondary">
+          No words in this flashcard yet.
+        </div>
+      ) : (
+        <div className="mt-6 border-y border-subtle">
+          {words.map((w, idx) => (
+            <button
+              key={`${w}-${idx}`}
+              type="button"
+              onClick={() => {}}
+              className="w-full text-left px-0 py-4 border-b border-subtle last:border-b-0"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-6 text-sm text-secondary tabular-nums">{idx + 1}</div>
+
+                <div className="flex-1 min-w-0">
+                  <div className="text-3xl leading-none text-primary">{w}</div>
+                  <div className="mt-1 text-sm text-secondary truncate">
+                    {/* Placeholder for reading/meaning if you add it later */}
+                  </div>
+                </div>
+
+                <div className="text-secondary/60 text-xl leading-none"><ChevronRightIcon/></div>
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
