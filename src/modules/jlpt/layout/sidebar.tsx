@@ -87,6 +87,7 @@ export function SidebarItem({
 
 const ActiveIndicator = React.memo(
   function ActiveIndicator({ isActive }: { isActive: boolean }) {
+    console.log("isActive", isActive);
     if (!isActive) return null;
 
     return (

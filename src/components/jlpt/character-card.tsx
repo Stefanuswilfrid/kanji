@@ -7,6 +7,10 @@ import Link from "next/link";
 
 export type Locale = "en" | "id";
 
+export const url = (kanji: string, locale: Locale) => `https://content.hanzi.id/character/${locale}/${kanji}.json`;
+
+
+
 export function CharacterCard({
   id,
   kanji,

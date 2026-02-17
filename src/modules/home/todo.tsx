@@ -62,7 +62,7 @@ export function HomeTodo() {
               className="shrink-0 duration-200 group-hover:text-green-400"
             />
           }
-          path="/jlpt/1"
+          path="/jlpt/5"
           title={t.home.jlpt.title}
           description={t.home.jlpt.description}
         >
