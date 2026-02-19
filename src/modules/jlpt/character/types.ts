@@ -29,7 +29,8 @@ export interface KanjiApiResponse {
   lessons: {
     japanese: string;
     reading: string | null;
-    english: string;
+    english?: string;
+    indonesian?: string;
     lessonInfo: {
       level: string;
     };
