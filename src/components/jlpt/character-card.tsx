@@ -4,11 +4,22 @@ import { JapaneseCharacter } from "@/data/constants";
 import clsx from "clsx";
 import { MarkAsCompleted } from "./mark-as-completed";
 import Link from "next/link";
+import { queryClient } from "@/lib/react-query";
 
 export type Locale = "en" | "id";
 
-export const url = (kanji: string, locale: Locale) => `https://content.hanzi.id/character/${locale}/${kanji}.json`;
+export const url = (kanji: string, locale: Locale) => `https://stefanuswilfrid.github.io/jlpt-content-pipeline/character/${locale}/${kanji}.json`;
 
+export async function preloadKanjiDetails(kanji: string, locale: Locale) {
+  await queryClient.prefetchQuery({
+    queryKey: ["kanji-details", locale, kanji],
+    queryFn: async () => {
+      const response = await fetch(url(kanji, locale));
+      if (!response.ok) throw new Error(`Failed to fetch kanji details: ${response.status}`);
+      return response.json();
+    },
+  });
+}
 
 
 export function CharacterCard({
@@ -17,6 +28,7 @@ export function CharacterCard({
   reading,
   translations,
   onFlip,
+  locale,
   kanjiHref,
   isFlipped,
   isCompleted,
@@ -24,6 +36,7 @@ export function CharacterCard({
 }: JapaneseCharacter & {
   isCompleted: boolean;
   kanjiHref: string;
+  locale: Locale;
   onCompleteToggle: () => void;
   onFlip: () => void;
   isFlipped: boolean;
@@ -83,7 +96,7 @@ export function CharacterCard({
               )}
             >
                <Link
-                onMouseEnter={()=>{}}
+                onMouseEnter={() => preloadKanjiDetails(kanji, locale)}
                 onClick={(e) => e.stopPropagation()}
                 href={kanjiHref}
                 shallow

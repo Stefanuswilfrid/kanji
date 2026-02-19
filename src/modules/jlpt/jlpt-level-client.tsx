@@ -143,6 +143,7 @@ export function JlptLevelClient({
               <CharacterCard
                 {...characterForLocale}
                 isCompleted={isCompleted}
+                locale={locale}
                 kanjiHref={`${withLocalePrefix(`/jlpt/${level}`)}?kanji=${character.kanji}&id=${character.id}&page=${currentPage}`}
                 isFlipped={flippedId === character.id}
                 onFlip={() => setFlippedId((prev) => (prev === character.id ? null : character.id))}

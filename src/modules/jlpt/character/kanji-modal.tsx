@@ -1,14 +1,24 @@
 "use client";
 import { Drawer } from "@/components/jlpt/drawer";
 import { MarkAsCompleted } from "@/components/jlpt/mark-as-completed";
-import { CHARACTERS_PER_LEVEL, JLPT_LEVELS, type Level } from "@/data/constants";
+import {
+  CHARACTERS_PER_LEVEL,
+  JLPT_LEVELS,
+  type Level,
+} from "@/data/constants";
 import clsx from "clsx";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import {  KanjiDetails } from "./kanji-details/kanji-details";
+import { KanjiDetails } from "./kanji-details/kanji-details";
 import IdKanjiMap from "@/data/id-kanji-map.json";
 import { JLPTButton } from "@/components/jlpt/jlpt-link-button";
-import { AddToFlashcard, AddToFlashcardMobile } from "../flashcard/add-to-flashcard";
-
+import {
+  AddToFlashcard,
+  AddToFlashcardMobile,
+} from "../flashcard/add-to-flashcard";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { Locale, url } from "@/components/jlpt/character-card";
+import { useLocale } from "@/locales/use-locale";
+import { KanjiApiResponse } from "./types";
 export type IdKanjiMapKey = keyof typeof IdKanjiMap;
 
 const parseLevel = (raw?: string): Level | null => {
@@ -23,7 +33,6 @@ const parseKanjiId = (id?: string) => {
   return level && Number.isFinite(idx) ? { level, idx } : null;
 };
 
-
 export function KanjiModal() {
   const router = useRouter();
   const params = useParams<{ level?: string }>();
@@ -31,7 +40,9 @@ export function KanjiModal() {
   const kanji = searchParams.get("kanji") as string;
   const currentKanjiId = searchParams.get("id") as string;
 
-  const levelParam = Array.isArray(params?.level) ? params.level[0] : params?.level;
+  const levelParam = Array.isArray(params?.level)
+    ? params.level[0]
+    : params?.level;
   const currentLevel = parseLevel(levelParam);
   const parsed = parseKanjiId(currentKanjiId);
   const effectiveLevel = currentLevel ?? parsed?.level ?? null;
@@ -39,19 +50,42 @@ export function KanjiModal() {
   const lastIdx = effectiveLevel ? CHARACTERS_PER_LEVEL[effectiveLevel] : null;
 
   const previousIdStr =
-    effectiveLevel && effectiveIdx && effectiveIdx > 1 ? `N${effectiveLevel}-${effectiveIdx - 1}` : undefined;
+    effectiveLevel && effectiveIdx && effectiveIdx > 1
+      ? `N${effectiveLevel}-${effectiveIdx - 1}`
+      : undefined;
   const nextIdStr =
-    effectiveLevel && effectiveIdx && lastIdx && effectiveIdx < lastIdx ? `N${effectiveLevel}-${effectiveIdx + 1}` : undefined;
+    effectiveLevel && effectiveIdx && lastIdx && effectiveIdx < lastIdx
+      ? `N${effectiveLevel}-${effectiveIdx + 1}`
+      : undefined;
 
-  const getKanjiById = (id?: string) => (id && id in IdKanjiMap ? IdKanjiMap[id as IdKanjiMapKey] : undefined);
+  const getKanjiById = (id?: string) =>
+    id && id in IdKanjiMap ? IdKanjiMap[id as IdKanjiMapKey] : undefined;
   const previousKanji = getKanjiById(previousIdStr);
   const nextKanji = getKanjiById(nextIdStr);
 
+  const {locale} = useLocale();
 
+  // use swri mutable = use query
+  //todo define types
+  const {data, isLoading} = useQuery<KanjiApiResponse>({
+    queryKey: ["kanji-details", locale, kanji],
+    queryFn: async () => {
+      const res = await fetch(url(kanji!, locale));
+      if (!res.ok) throw new Error(`Failed: ${res.status}`);
+      return res.json();
+    },
+    enabled: Boolean(kanji), //null
+    staleTime: Infinity, //dont refetch automatically
+    gcTime: 30*60* 1000, //keep cached for 30 minutes
+    placeholderData: keepPreviousData, //keep previous data
+  });
+
+  console.log("kanji modal",data)
 
   return (
-    <Drawer open={Boolean(kanji)}
-    onOpenChange={(open) => !open && router.back()}
+    <Drawer
+      open={Boolean(kanji)}
+      onOpenChange={(open) => !open && router.back()}
     >
       <Drawer.Content
         className={clsx(
@@ -59,47 +93,39 @@ export function KanjiModal() {
           "h-dvh rounded-none max-w-xl w-full",
         )}
       >
-        {currentLevel && <KanjiDetails currentLevel={currentLevel} currentKanji={kanji}/>}
+        {currentLevel && (
+          <KanjiDetails currentLevel={currentLevel} currentKanji={kanji} />
+        )}
         <div className="absolute top-8 sm:top-4 left-0 right-0 mx-4 bg-linear-to-b from-black h-6"></div>
         <div className="absolute bottom-24 sm:bottom-12 left-0 right-0 mx-4 bg-linear-to-t from-black h-12"></div>
-        
+
         <MarkAsCompleted
           className="absolute top-12 sm:top-9 right-4 sm:right-8 w-12 h-12"
           checkmarkClassName="w-8 h-8"
           isCompleted={false}
-          onClick={() => {
-            
-          }}
+          onClick={() => {}}
         />
-        
-        
+
         <div className="absolute bg-black max-sm:py-2 max-sm:grid max-sm:grid-cols-2 flex gap-2 bottom-0 left-0 right-0 px-3 sm:px-4 sm:pb-4">
-        <JLPTButton
-            onMouseEnter={() => {
-            }}
+          <JLPTButton
+            onMouseEnter={() => {}}
             disabled={!previousKanji}
             className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
-            onClick={() => {
-
-            }}
+            onClick={() => {}}
           >
             &#x2190; {previousKanji}
           </JLPTButton>
           <AddToFlashcard kanji={kanji} />
 
           <JLPTButton
-            onMouseEnter={() => {
-            }}
+            onMouseEnter={() => {}}
             disabled={!nextKanji}
             className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
-            onClick={() => {
-             
-            }}
+            onClick={() => {}}
           >
             {nextKanji} &#x2192;
           </JLPTButton>
-          <AddToFlashcardMobile kanji={kanji}  />
-
+          <AddToFlashcardMobile kanji={kanji} />
         </div>
       </Drawer.Content>
     </Drawer>
