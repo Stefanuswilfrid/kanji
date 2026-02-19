@@ -19,6 +19,9 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { Locale, url } from "@/components/jlpt/character-card";
 import { useLocale } from "@/locales/use-locale";
 import { KanjiApiResponse } from "./types";
+import { AnimatePresence, motion } from "framer-motion";
+import { LoadingBar } from "@/components/jlpt/loader/loading-bar";
+import { useWindowSize } from "@/hooks/useWindowSize";
 export type IdKanjiMapKey = keyof typeof IdKanjiMap;
 
 const parseLevel = (raw?: string): Level | null => {
@@ -35,15 +38,17 @@ const parseKanjiId = (id?: string) => {
 
 export function KanjiModal() {
   const router = useRouter();
+  const { width } = useWindowSize();
+
   const params = useParams<{ level?: string }>();
   const searchParams = useSearchParams();
-  const kanji = searchParams.get("kanji") as string;
+  const kanji = searchParams.get("kanji") as IdKanjiMapKey;
   const currentKanjiId = searchParams.get("id") as string;
 
   const levelParam = Array.isArray(params?.level)
     ? params.level[0]
     : params?.level;
-  const currentLevel = parseLevel(levelParam);
+  const currentLevel = parseLevel(levelParam) as Level;
   const parsed = parseKanjiId(currentKanjiId);
   const effectiveLevel = currentLevel ?? parsed?.level ?? null;
   const effectiveIdx = parsed?.idx ?? null;
@@ -63,11 +68,11 @@ export function KanjiModal() {
   const previousKanji = getKanjiById(previousIdStr);
   const nextKanji = getKanjiById(nextIdStr);
 
-  const {locale} = useLocale();
+  const { locale } = useLocale();
 
   // use swri mutable = use query
   //todo define types
-  const {data, isLoading} = useQuery<KanjiApiResponse>({
+  const { data, isLoading } = useQuery<KanjiApiResponse>({
     queryKey: ["kanji-details", locale, kanji],
     queryFn: async () => {
       const res = await fetch(url(kanji!, locale));
@@ -76,16 +81,26 @@ export function KanjiModal() {
     },
     enabled: Boolean(kanji), //null
     staleTime: Infinity, //dont refetch automatically
-    gcTime: 30*60* 1000, //keep cached for 30 minutes
+    gcTime: 30 * 60 * 1000, //keep cached for 30 minutes
     placeholderData: keepPreviousData, //keep previous data
   });
 
-  console.log("kanji modal",data)
+  console.log("kanji and type of kanji", kanji, typeof kanji);
+  const isMobile = width < 640;
 
   return (
     <Drawer
+      direction={isMobile ? "bottom" : "right"}
       open={Boolean(kanji)}
-      onOpenChange={(open) => !open && router.back()}
+      onOpenChange={(open) => {
+        if (!open) {
+          if (true) {
+            router.replace(`/hsk/${currentLevel}?page=5`, undefined);
+          } else if (Boolean(kanji)) {
+            router.back();
+          }
+        }
+      }}
     >
       <Drawer.Content
         className={clsx(
@@ -93,11 +108,26 @@ export function KanjiModal() {
           "h-dvh rounded-none max-w-xl w-full",
         )}
       >
-        {currentLevel && (
-          <KanjiDetails currentLevel={currentLevel} currentKanji={kanji} />
+        { data && (
+          <KanjiDetails currentLevel={currentLevel} currentKanji={kanji} {...data} />
         )}
         <div className="absolute top-8 sm:top-4 left-0 right-0 mx-4 bg-linear-to-b from-black h-6"></div>
         <div className="absolute bottom-24 sm:bottom-12 left-0 right-0 mx-4 bg-linear-to-t from-black h-12"></div>
+
+        <AnimatePresence>
+          {isLoading && (
+            <motion.div
+              key="loading-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="grid place-items-center absolute inset-0 z-50 bg-black/50"
+            >
+              <LoadingBar className="scale-150" />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <MarkAsCompleted
           className="absolute top-12 sm:top-9 right-4 sm:right-8 w-12 h-12"

@@ -1,13 +1,19 @@
 import { Level } from "@/data/constants";
 import clsx from "clsx";
 import React from "react";
+import { KanjiApiResponse } from "../types";
+import { IdKanjiMapKey } from "../kanji-modal";
 
 export function KanjiDetails({
-  currentLevel,
+  definition,
+  lessons,
+  idioms,
+  related,
   currentKanji,
-}: {
-  currentLevel: Level;
-  currentKanji: string;
+  currentLevel
+}: KanjiApiResponse & {
+  currentKanji : IdKanjiMapKey
+  currentLevel : Level
 }) {
   const ref = React.useRef<HTMLDivElement>(null);
 

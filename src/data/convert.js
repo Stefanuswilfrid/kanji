@@ -65,3 +65,16 @@ for (const file of files) {
 
 fs.writeFileSync(path.join(OUT_DIR, "id-to-kanji.json"), JSON.stringify(idToKanji, null, 2));
 fs.writeFileSync(path.join(OUT_DIR, "kanji-to-ids.json"), JSON.stringify(kanjiToIds, null, 2));
+
+// Bidirectional map:
+// - "N1-1" -> "現像"
+// - "現像" -> "N1-1" (or "N5-714,N5-715" when duplicates exist)
+/** @type {Record<string, string>} */
+const bidirectional = { ...idToKanji };
+for (const [kanji, ids] of Object.entries(kanjiToIds)) {
+  bidirectional[kanji] = ids.join(",");
+}
+fs.writeFileSync(
+  path.join(OUT_DIR, "id-kanji-map.bidirectional.json"),
+  JSON.stringify(bidirectional, null, 2)
+);
