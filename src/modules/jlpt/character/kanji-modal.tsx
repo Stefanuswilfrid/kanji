@@ -95,7 +95,7 @@ export function KanjiModal() {
       onOpenChange={(open) => {
         if (!open) {
           if (true) {
-            router.replace(`/hsk/${currentLevel}?page=5`, undefined);
+            router.replace(`/jlpt/${currentLevel}?page=5`, undefined);
           } else if (Boolean(kanji)) {
             router.back();
           }
