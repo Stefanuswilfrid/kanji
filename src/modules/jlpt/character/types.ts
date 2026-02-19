@@ -31,7 +31,7 @@ export interface KanjiApiResponse {
     reading: string | null;
     english: string;
     lessonInfo: {
-      level: "newbie" | "elementary" | "intermediate" | "advanced" | string;
+      level: string;
     };
   }[];
 }

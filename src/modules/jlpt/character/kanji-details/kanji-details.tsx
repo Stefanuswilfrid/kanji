@@ -4,6 +4,8 @@ import React from "react";
 import { KanjiApiResponse } from "../types";
 import { IdKanjiMapKey } from "../kanji-modal";
 import { KanjiDefinition } from "./kanji-definition";
+import { AudioButton } from "../audio-button";
+import { ExampleSentences } from "./example-sentences";
 
 export function KanjiDetails({
   definition,
@@ -11,10 +13,10 @@ export function KanjiDetails({
   idioms,
   related,
   currentKanji,
-  currentLevel
+  currentLevel,
 }: KanjiApiResponse & {
-  currentKanji : IdKanjiMapKey
-  currentLevel : Level
+  currentKanji: IdKanjiMapKey;
+  currentLevel: Level;
 }) {
   const ref = React.useRef<HTMLDivElement>(null);
   const [entryIndex, setEntryIndex] = React.useState(0);
@@ -22,11 +24,10 @@ export function KanjiDetails({
   const actualEntryIndex = Math.min(entryIndex, definition.entries.length - 1);
   const kanji = definition.word;
 
-
   const currentEntry = definition.entries[actualEntryIndex];
+  const isIdiom = kanji.length === 4;
 
   console.log("currentEntry", definition);
-
 
   const levelTabs = [
     { key: "elementary", label: "Elementary", active: currentLevel >= 4 },
@@ -42,10 +43,22 @@ export function KanjiDetails({
     <div ref={ref} className="overflow-y-auto flex-1 scrollbar-none py-4">
       {<span className="px-4 text-sm">JLPT {currentLevel}</span>}
       <div className="space-y-2">
-        
-      <KanjiDefinition entry={currentEntry} />
+        {isIdiom ? (
+          <></>
+        ) : (
+          <div className="flex items-end gap-2 px-4">
+            <p className="text-6xl font-medium">{kanji}</p>
+            <div>
+              <AudioButton text={kanji} />
+              <p className="font-medium">{definition.reading}</p>
 
-</div>
+              <p className="font-medium">{definition.romaji}</p>
+            </div>
+          </div>
+        )}
+        <KanjiDefinition entry={currentEntry} />
+        <ExampleSentences kanji={kanji} lessons={lessons} />
+      </div>
     </div>
   );
 }

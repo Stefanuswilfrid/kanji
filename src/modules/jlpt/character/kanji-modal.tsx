@@ -141,7 +141,9 @@ export function KanjiModal() {
             onMouseEnter={() => {}}
             disabled={!previousKanji}
             className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
-            onClick={() => {}}
+            onClick={() => {
+              router.replace(`/jlpt/${currentLevel}?kanji=${previousKanji}&id=${previousIdStr}`, undefined);
+            }}
           >
             &#x2190; {previousKanji}
           </JLPTButton>
@@ -151,7 +153,9 @@ export function KanjiModal() {
             onMouseEnter={() => {}}
             disabled={!nextKanji}
             className="shadow-none border-zinc text-smokewhite aria-disabled:shadow-none aria-disabled:border-zinc aria-disabled:text-smokewhite/50 whitespace-nowrap flex-1"
-            onClick={() => {}}
+            onClick={() => {
+              router.replace(`/jlpt/${currentLevel}?kanji=${nextKanji}&id=${nextIdStr}`, undefined);
+            }}
           >
             {nextKanji} &#x2192;
           </JLPTButton>
