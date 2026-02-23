@@ -14,7 +14,7 @@ export function AddNewFlashcardButton({
 
   return (
     <>
-      {/* <AddNewFlashcardModal setFlashcards={setFlashcards} /> */}
+      <AddNewFlashcardModal setFlashcards={setFlashcards} />
       <button
         type="button"
         onClick={() => {

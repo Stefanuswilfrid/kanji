@@ -10,7 +10,8 @@ export function AudioButton({
   size?: "small" | "normal" | "large";
 }) {
     return (
-        <button className="flex items-center ">
+        <button className={clsx("flex items-center opacity-50 text-sky-400",         size === "small" && "inline align-middle max-sm:mb-0.5",
+        )}>
                <svg
         className={clsx(
           size === "small" && "w-[18px] h-[18px]",

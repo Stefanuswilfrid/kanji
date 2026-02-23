@@ -43,6 +43,8 @@
   "saveToFlashcard": "Add to Flashcard +",
   "removeFromFlashcard": "Remove from Flashcard -",
 
-  "add": "Add +"
+  "add": "Add +",
+  "placeholderFlashcardTitle": "Enter flashcard title"
+
 
 }

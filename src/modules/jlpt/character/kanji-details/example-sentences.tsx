@@ -6,6 +6,7 @@ import { Popover } from "@/components/jlpt/popover";
 import { AudioButton } from "../audio-button";
 import { useLocale } from "@/locales/use-locale";
 import { useQuery } from "@tanstack/react-query";
+import { CopyToClipboard } from "@/modules/speech/view-definition";
 
 function useTranslateToIndonesian(text?: string) {
   return useQuery({
@@ -129,6 +130,12 @@ export function ExampleSentences({
                         <React.Fragment key={index}>{part}</React.Fragment>
                       );
                     })}
+
+<CopyToClipboard
+                      className="inline-flex align-middle max-sm:mb-0.5 active:bg-transparent md:w-9 md:h-9"
+                      text={lesson.japanese}
+                      size={16}
+                    />
 
                     <AudioButton
                       size="small"
