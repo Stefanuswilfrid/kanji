@@ -1,27 +1,23 @@
-import { useRouter, useSearchParams } from "next/navigation";
 import { Flashcard } from "./useJLPTFlashcard";
 import { useLocale } from "@/locales/use-locale";
 import { RouteDialog } from "@/components/route-dialog";
 
 export function AddNewFlashcardModal({
     setFlashcards,
+    open,
+    onClose,
   }: {
     setFlashcards: React.Dispatch<React.SetStateAction<Array<Flashcard>>>;
+    open: boolean;
+    onClose: () => void;
   }) {
-    const router = useRouter();
-    const searchParams = useSearchParams();
-  
-    const open = searchParams.get("add") === "true";
-  
     const { t } = useLocale();
   
     return (
 <RouteDialog
       className="sm:max-w-lg"
       open={open}
-      onClose={() => {
-        router.back();
-      }}
+      onClose={onClose}
       withoutOkButton
     >
       <form action="" className="space-y-4">
