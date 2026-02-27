@@ -27,8 +27,6 @@ export function KanjiDetails({
   const currentEntry = definition.entries[actualEntryIndex];
   const isIdiom = kanji.length === 4;
 
-  console.log("currentEntry", definition);
-
   const levelTabs = [
     { key: "elementary", label: "Elementary", active: currentLevel >= 4 },
     {
@@ -49,6 +47,7 @@ export function KanjiDetails({
           <div className="flex items-end gap-2 px-4">
             <p className="text-6xl font-medium">{kanji}</p>
             <div>
+              
               <AudioButton text={kanji} />
               <p className="font-medium">{definition.reading}</p>
 

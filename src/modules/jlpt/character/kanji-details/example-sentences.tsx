@@ -140,7 +140,7 @@ export function ExampleSentences({
                     <AudioButton
                       size="small"
                       key={index}
-                      text={lesson.japanese}
+                      text={"こう言う人もいれば、ああ言う人もいる。"}
                       speed={1}
                     />
                   </div>

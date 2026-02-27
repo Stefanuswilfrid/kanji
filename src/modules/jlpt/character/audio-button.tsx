@@ -1,4 +1,7 @@
+import { useLocale } from "@/locales/use-locale";
+import { useAudio } from "@/modules/layout/audio-provider";
 import clsx from "clsx";
+import React from "react";
 
 export function AudioButton({
   text,
@@ -9,10 +12,38 @@ export function AudioButton({
   speed?: number;
   size?: "small" | "normal" | "large";
 }) {
+  const { speak, isSpeaking, stopAudio } = useAudio();
+
+  const { t } = useLocale();
+
+  const isLoading = isSpeaking.text === text;
+
+  React.useEffect(() => {
+    return () => {
+      stopAudio();
+    };
+  }, [stopAudio]);
     return (
-        <button className={clsx("flex items-center opacity-50 text-sky-400",         size === "small" && "inline align-middle max-sm:mb-0.5",
-        )}>
-               <svg
+      <button
+      role="button"
+      onClick={async (e) => {
+        e.stopPropagation();
+        
+        if (isLoading) {
+          stopAudio();
+          return;
+        }
+        if (text) {
+          speak(text, speed);
+        }
+      }}
+      className={clsx(
+        "text-sky-500 active:opacity-100 transition",
+        size === "small" && "inline align-middle max-sm:mb-0.5",
+        isLoading ? "opacity-100" : "opacity-50"
+      )}
+    >
+      <svg
         className={clsx(
           size === "small" && "w-[18px] h-[18px]",
           size === "normal" && "w-6 h-6",
@@ -32,6 +63,6 @@ export function AudioButton({
         <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
         <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
       </svg>
-        </button>
+    </button>
     )
 }

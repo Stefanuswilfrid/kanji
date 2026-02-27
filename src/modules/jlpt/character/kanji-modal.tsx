@@ -22,6 +22,7 @@ import { KanjiApiResponse } from "./types";
 import { AnimatePresence, motion } from "framer-motion";
 import { LoadingBar } from "@/components/jlpt/loader/loading-bar";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import { useCompletedCharacters, useCompletedCharactersActions } from "@/store/useCompletedCharactersStore";
 export type IdKanjiMapKey = keyof typeof IdKanjiMap;
 
 const parseLevel = (raw?: string): Level | null => {
@@ -85,8 +86,15 @@ export function KanjiModal() {
     placeholderData: keepPreviousData, //keep previous data
   });
 
-  console.log("kanji and type of kanji", kanji, typeof kanji);
   const isMobile = width < 640;
+
+  const completedCharacters = useCompletedCharacters();
+  const currentCompletedCharacters = data?.definition && !isLoading ? completedCharacters[currentLevel] : null;
+
+  const isCompleted = currentCompletedCharacters && currentCompletedCharacters.includes(currentKanjiId);
+
+  const { addCompletedCharacters, removeCompletedCharacters } = useCompletedCharactersActions();
+
 
   return (
     <Drawer
@@ -132,8 +140,14 @@ export function KanjiModal() {
         <MarkAsCompleted
           className="absolute top-12 sm:top-9 right-4 sm:right-8 w-12 h-12"
           checkmarkClassName="w-8 h-8"
-          isCompleted={false}
-          onClick={() => {}}
+          isCompleted={isCompleted}
+          onClick={() => {
+            if (isCompleted) {
+              removeCompletedCharacters(currentLevel, currentKanjiId);
+            } else {
+              addCompletedCharacters(currentLevel, currentKanjiId);
+            }
+          }}
         />
 
         <div className="absolute bg-black max-sm:py-2 max-sm:grid max-sm:grid-cols-2 flex gap-2 bottom-0 left-0 right-0 px-3 sm:px-4 sm:pb-4">

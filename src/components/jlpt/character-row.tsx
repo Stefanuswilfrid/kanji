@@ -18,7 +18,6 @@ export function CharacterRow({
   onCompleteToggle?: () => void;
 }) {
   const handleRowClick = onClick ?? (() => {});
-  const handleCompleteToggle = onCompleteToggle ?? (() => {});
 
   return (
     <div
@@ -30,7 +29,7 @@ export function CharacterRow({
         <MarkAsCompleted
           className={isCompleted ? "bg-transparent" : ""}
           isCompleted={isCompleted}
-          onClick={handleCompleteToggle}
+          onClick={onCompleteToggle}
         />
         <div className="absolute left-4 top-3 text-xs">{id}</div>
         <div className="pl-1 pt-0.5">

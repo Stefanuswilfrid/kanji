@@ -9,31 +9,10 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { KanjiModal } from "./character/kanji-modal";
 import { Pagination } from "@/components/jlpt/pagination";
-
-function storageKey(level: Level) {
-  return `jlpt:completed:n${level}`;
-}
-
-function readCompleted(level: Level): Array<string> {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(storageKey(level));
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter((x): x is string => typeof x === "string");
-  } catch {
-    return [];
-  }
-}
-
-function writeCompleted(level: Level, ids: Array<string>) {
-  try {
-    window.localStorage.setItem(storageKey(level), JSON.stringify(ids));
-  } catch {
-    // ignore quota / privacy errors
-  }
-}
+import {
+  useCompletedCharacters,
+  useCompletedCharactersActions,
+} from "@/store/useCompletedCharactersStore";
 
 export function JlptLevelClient({
   level,
@@ -80,26 +59,36 @@ export function JlptLevelClient({
     [locale],
   );
 
-  const [completedIds, setCompletedIds] = useState<Array<string>>([]);
+  const {
+    handleValueMismatch,
+    hydrateSettings,
+    hydrateCompletedCharacters,
+    addCompletedCharacters,
+    removeCompletedCharacters,
+  } = useCompletedCharactersActions();
+
+  const completedCharacters = useCompletedCharacters();
+  const currentCompletedCharacters = completedCharacters[level] ?? [];
   const [flippedId, setFlippedId] = useState<string | null>(null);
 
   useEffect(() => {
-    setCompletedIds(readCompleted(level));
-  }, [level]);
+    // hydrate from localStorage once on client
+    handleValueMismatch();
+    hydrateSettings();
+    hydrateCompletedCharacters();
+  }, [handleValueMismatch, hydrateCompletedCharacters, hydrateSettings]);
 
-  const completedSet = useMemo(() => new Set(completedIds), [completedIds]);
+  const completedSet = useMemo(
+    () => new Set(currentCompletedCharacters),
+    [currentCompletedCharacters],
+  );
 
   const toggleCompleted = useCallback(
     (id: string) => {
-      setCompletedIds((prev) => {
-        const next = prev.includes(id)
-          ? prev.filter((x) => x !== id)
-          : [...prev, id];
-        writeCompleted(level, next);
-        return next;
-      });
+      if (completedSet.has(id)) removeCompletedCharacters(level, id);
+      else addCompletedCharacters(level, id);
     },
-    [level],
+    [addCompletedCharacters, completedSet, level, removeCompletedCharacters],
   );
 
   const goToCharacter = useCallback(
