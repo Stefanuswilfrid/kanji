@@ -48,9 +48,14 @@
       "description": "Tingkatkan kecepatan membaca bahasa Jepang Anda dengan teleprompter."
     }
   },
+  "youtube": {
+    "buttons": ["Semua", "Saluran", "Riwayat Tonton"]
+  },
   "saveToFlashcard": "+ Kartu Pengingat",
   "removeFromFlashcard": "- Kartu Pengingat",
   "add": "Tambah +",
+  "loading": "Memuat...",
+
   "pleaseFill": "Silahkan isi kolom berikut:",
   "placeholderFlashcardTitle": "Judul kartu pengingat",
   "placeholderFlashcardDescription": "Deskripsi kartu pengingat",
@@ -62,6 +67,7 @@
   "exampleIdiomsOf": "Contoh idiom dari",
 
   "audioNotFound": "Sumber audio tidak ditemukan.",
+  
   "export": "Ekspor"
 
 

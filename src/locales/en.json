@@ -40,6 +40,9 @@
     }
 
   },
+  "youtube": {
+    "buttons": ["All", "Channels", "Watch History"]
+  },
   "saveToFlashcard": "Add to Flashcard +",
   "removeFromFlashcard": "Remove from Flashcard -",
 
@@ -54,6 +57,8 @@
   "relatedTo": "Related to",
   "seeIdioms": "See idioms",
   "exampleIdiomsOf": "Example idioms of",
+
+  "loading": "Loading...",
 
   "audioNotFound": "Audio source not found."
 
