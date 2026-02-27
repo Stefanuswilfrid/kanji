@@ -16,6 +16,8 @@
   --color-zinc: rgb(var(--zinc));
   --color-softzinc: rgb(var(--softzinc));
   --color-smokewhite: rgb(var(--smokewhite));
+  --color-wheat: rgb(var(--wheat));
+  --color-mossgreen: rgb(var(--mossgreen));
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -35,6 +37,8 @@
   --smokewhite: 25 25 25;
   --zinc: 224 224 224;
   --softzinc: 206 206 206;
+  --wheat: 113 206 250; /* light blue */
+  --mossgreen: 92 138 154; /* medium blue */
 
 
 
@@ -56,6 +60,8 @@
   --lightgray: 136 136 136;
   --smokewhite: 229 229 229;
   --zinc: 32 32 32;
+  --wheat: 113 206 250; /* light blue */
+  --mossgreen: 92 138 154; /* medium blue */
 
 
   --hovered: 36 36 36;

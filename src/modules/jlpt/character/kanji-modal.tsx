@@ -86,6 +86,7 @@ export function KanjiModal() {
     placeholderData: keepPreviousData, //keep previous data
   });
 
+  console.log("data", data);
   const isMobile = width < 640;
 
   const completedCharacters = useCompletedCharacters();
@@ -140,7 +141,7 @@ export function KanjiModal() {
         <MarkAsCompleted
           className="absolute top-12 sm:top-9 right-4 sm:right-8 w-12 h-12"
           checkmarkClassName="w-8 h-8"
-          isCompleted={isCompleted}
+          isCompleted={Boolean(isCompleted)}
           onClick={() => {
             if (isCompleted) {
               removeCompletedCharacters(currentLevel, currentKanjiId);

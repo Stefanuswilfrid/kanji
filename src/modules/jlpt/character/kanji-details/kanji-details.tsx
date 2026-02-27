@@ -6,6 +6,8 @@ import { IdKanjiMapKey } from "../kanji-modal";
 import { KanjiDefinition } from "./kanji-definition";
 import { AudioButton } from "../audio-button";
 import { ExampleSentences } from "./example-sentences";
+import { RelatedKanji } from "./related-kanji";
+import { ExampleIdioms } from "./example-idioms";
 
 export function KanjiDetails({
   definition,
@@ -56,6 +58,10 @@ export function KanjiDetails({
           </div>
         )}
         <KanjiDefinition entry={currentEntry} />
+        <RelatedKanji kanji={kanji} related={related} />
+        <ExampleIdioms kanji={kanji} idioms={idioms} />
+
+
         <ExampleSentences kanji={kanji} lessons={lessons} />
       </div>
     </div>

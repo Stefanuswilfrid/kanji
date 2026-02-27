@@ -87,7 +87,7 @@ type PopoverItemProps = { onSelect: () => Promise<void> | void } & Omit<
 >;
 
 export const popoverItemClassName =
-  "cursor-pointer text-sm w-full px-4 py-1.5 text-left font-light hover:bg-zinc active:bg-zinc";
+  "cursor-pointer  text-sm w-full px-4 py-1.5 text-left font-light hover:bg-zinc active:bg-zinc";
 
 Popover.Item = function PopoverItem({ children, onSelect, className }: PopoverItemProps) {
   const { closePopover } = usePopover();

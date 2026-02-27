@@ -50,6 +50,11 @@
   "addNewFlashcardPlaceholder": "Add words/phrases to flashcard separated by new lines, example:嗚呼\n北\n",
   "review": "Review",
   "export": "Export",
+  "seeRelated": "See related",
+  "relatedTo": "Related to",
+  "seeIdioms": "See idioms",
+  "exampleIdiomsOf": "Example idioms of",
+
   "audioNotFound": "Audio source not found."
 
 

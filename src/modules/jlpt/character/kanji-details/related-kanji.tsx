@@ -1,0 +1,71 @@
+import React from "react";
+
+import clsx from "clsx";
+import { useLocale } from "@/locales/use-locale";
+import { useWindowSize } from "@/hooks/useWindowSize";
+import { Drawer } from "@/components/jlpt/drawer";
+import { Popover } from "@/components/jlpt/popover";
+import { KanjiApiResponse } from "../types";
+
+export function RelatedKanji({ kanji, related }: { kanji: string; related: KanjiApiResponse["related"] }) {
+  const { width } = useWindowSize();
+  const isMobile = width < 640;
+
+
+  const { t } = useLocale();
+  console.log("related", related);
+
+  const regex = new RegExp(`(${kanji})`);
+
+  if (!related) return null;
+
+  return (
+    <Drawer.NestedRoot direction={isMobile ? "bottom" : "right"}>
+      <Drawer.Trigger className="pl-4 text-sm underline underline-offset-2">{t.seeRelated}</Drawer.Trigger>
+      <Drawer.Content className={clsx("pt-4", isMobile ? "h-[95dvh] left-0" : "h-dvh rounded-none max-w-xl w-full")}>
+        <div className="relative space-y-2 p-4 max-sm:pb-8 h-full overflow-y-auto scrollbar-none">
+          <p className="text-xl font-medium">
+            {t.relatedTo} {kanji}
+          </p>
+          {related.length === 0 && (
+            <p>
+              Related kanji for <span className="text-xl">{kanji}</span> not found.
+            </p>
+          )}
+          <ul>
+            {related.map((phrase, index) => {
+              const splitted = phrase.word.split(regex);
+              return (
+                <li key={`${phrase.word}-${index}`} className="list-none">
+                  <Popover>
+                    <Popover.Trigger className="text-left sm:text-lg font-medium">
+                      {splitted.map((part, index) => {
+                        if (part === kanji)
+                          return (
+                            <span className="text-wheat" key={index}>
+                              {kanji}
+                            </span>
+                          );
+                        return <React.Fragment key={index}>{part}</React.Fragment>;
+                      })}
+                    </Popover.Trigger>
+                    <Popover.Content
+                      align="start"
+                      className="text-xs sm:text-sm leading-5 text-smokewhite px-2 max-w-[calc(100vw-1rem)] md:max-w-[calc(540px-1rem)]"
+                    >
+                      <p>{phrase.reading}</p>
+                    </Popover.Content>
+                  </Popover>
+                  <p className="text-sm sm:text-base text-lightgray">{phrase.meaning}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="absolute top-6 sm:top-0 left-0 right-0 mx-4 bg-linear-to-b from-black h-6"></div>
+        <div className="absolute bottom-0 left-0 right-0 mx-4 bg-linear-to-t from-black h-6"></div>
+      </Drawer.Content>
+    </Drawer.NestedRoot>
+  );
+}
