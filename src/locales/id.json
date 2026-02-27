@@ -49,7 +49,9 @@
     }
   },
   "youtube": {
-    "buttons": ["Semua", "Saluran", "Riwayat Tonton"]
+    "buttons": ["Semua", "Saluran", "Riwayat Tonton"],
+    "backToChannelList": "Kembali ke Daftar Saluran",
+    "videosCountLabel": "video"
   },
   "saveToFlashcard": "+ Kartu Pengingat",
   "removeFromFlashcard": "- Kartu Pengingat",

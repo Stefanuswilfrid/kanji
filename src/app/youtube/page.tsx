@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useLocale } from "@/locales/use-locale";
 import { Layout } from "@/modules/layout/layout";
 import { usePersistedState } from "@/modules/youtube/hooks/usePersistedState";
+import { VideoChannels } from "@/modules/youtube/video-channel";
 import { VideoContainer } from "@/modules/youtube/video-container";
 
 export default function Youtube() {
@@ -44,6 +45,7 @@ export default function Youtube() {
             </div>
           </div>         
            {category === 0 && <VideoContainer />}
+           {category === 1 && <VideoChannels />}
 
           
         </main>

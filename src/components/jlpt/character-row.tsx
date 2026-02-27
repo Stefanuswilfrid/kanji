@@ -15,7 +15,7 @@ export function CharacterRow({
 }: JapaneseCharacter & {
   isCompleted: boolean;
   onClick?: () => void;
-  onCompleteToggle?: () => void;
+  onCompleteToggle: () => void;
 }) {
   const handleRowClick = onClick ?? (() => {});
 

@@ -7,6 +7,41 @@ interface FetchMediaParams {
   target?: string;
 }
 
+
+export interface TitleTranslation {
+  translation: string;
+  destLang_G: string;
+}
+
+export interface Playlist {
+  lang_G: string;
+  title: string;
+  title_translation: TitleTranslation;
+  diocoPlaylistId: string;
+  description?: string;
+  description_translation?: DescriptionTranslation;
+  image_small?: ImageSmall;
+  image_big?: ImageBig;
+  count: number;
+  satisfiesFiltersCount: number;
+  type: string;
+}
+
+export interface DescriptionTranslation {
+  translation: string;
+  destLang_G: string;
+}
+
+export interface ImageSmall {
+  type: string;
+  src: string;
+}
+
+export interface ImageBig {
+  type: string;
+  src: string;
+}
+
 interface FetchMediaDocsParams extends FetchMediaParams {
   diocoPlaylistId: string;
   forceIncludeDiocoDocId?: string | null;
@@ -136,4 +171,39 @@ export function formatTime(seconds: number): string {
     } else {
       return `${m}:${pad(s)}`;
     }
+  }
+
+  export async function fetchMediaPlaylists({
+    freq95 = { min: 0, max: 100000 },
+    searchText = "",
+    sortBy = "date",
+    duration = { min: null, max: null },
+    lang_G = "es",
+    target = "en",
+  }: FetchMediaParams): Promise<{ data: { playlists: Playlist[] } }> {
+    const payload = {
+      auth: null,
+      translationLang_G: target,
+      freq95,
+      lang_G,
+      filters: {
+        ...BASE_FILTERS,
+        searchText,
+        sortBy,
+        duration,
+      },
+      pinnedDiocoPlaylistIds: [],
+    };
+  
+    const response = await fetch("https://api-cdn.dioco.io/base_media_getMediaPlaylists_5", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+  
+    if (!response.ok) {
+      throw new Error(`Failed to fetch media playlists: ${response.statusText}`);
+    }
+  
+    return response.json();
   }

@@ -41,7 +41,9 @@
 
   },
   "youtube": {
-    "buttons": ["All", "Channels", "Watch History"]
+    "buttons": ["All", "Channels", "Watch History"],
+    "backToChannelList": "Back to Channel List",
+    "videosCountLabel": "videos"
   },
   "saveToFlashcard": "Add to Flashcard +",
   "removeFromFlashcard": "Remove from Flashcard -",
