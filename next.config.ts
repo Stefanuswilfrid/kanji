@@ -7,10 +7,26 @@ const nextConfig = {
         pathname: "/**",
       },
       {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "/**",
+      },
+      {
         hostname: "api-cdn.dioco.io",
         pathname: "/**",
         port: "",
         protocol: "https",
+      },
+      {
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+        port: "",
+        protocol: "https",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
       },
     ],
   },

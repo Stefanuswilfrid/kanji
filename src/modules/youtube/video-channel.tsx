@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchMediaDocs, fetchMediaPlaylists, Playlist } from "./utils/media";
+import { fetchMediaDocs, fetchMediaPlaylists, Playlist, PLACEHOLDER_SRC } from "./utils/media";
 import Image from "next/image";
 import { YoutubeCard } from "./youtube-card";
 import { usePersistedState } from "./hooks/usePersistedState";
@@ -12,16 +12,19 @@ const PlaylistCard = ({
   playlist,
   onPlaylistClicked,
   videosCountLabel = "videos",
+  priority = false,
 }: {
   playlist: Playlist;
   onPlaylistClicked: (id: string) => void;
   videosCountLabel?: string;
+  priority?: boolean;
 }) => {
   const [error, setError] = useState(false);
 
-  const thumbnail = !error
-    ? playlist.image_big?.src || playlist.image_small?.src || "https://placehold.co/320x180"
-    : "https://placehold.co/320x180";
+  const thumbnail = 
+    playlist.image_big?.src || playlist.image_small?.src 
+
+  console.log(playlist, "thumbnail");
 
   return (
     <button onClick={() => onPlaylistClicked(playlist.diocoPlaylistId)} className="active:opacity-80 transition w-full">
@@ -35,11 +38,12 @@ const PlaylistCard = ({
                 setError(true);
               }
             }}
-            src={thumbnail}
+            src={thumbnail || "https://placehold.co/320x180"}
             alt="thumbnail"
             className="w-full h-full object-cover"
             width={480}
             height={360}
+            priority={priority}
           />
         </div>
         <div className="mt-4 space-y-1 px-1">
@@ -118,25 +122,24 @@ export function VideoChannels() {
           </div>
           <div className="px-3">{isLoadingDocs && <p className="mt-4">{t.loading}</p>}</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:max-md:px-3">
-            {docs?.data?.docs_metadata?.map((doc) => {
-              return <YoutubeCard key={doc.diocoDocId} doc={doc} />;
-            })}
+            {(docs?.data?.docs_metadata ?? []).map((doc, index) => (
+              <YoutubeCard key={doc.diocoDocId} doc={doc} priority={index === 0} />
+            ))}
           </div>
         </div>
       )}
 
       {!selectedPlaylistId && (
         <div className="mt-4 max-sm:p-3 grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] place-items-start gap-8 sm:max-md:px-3">
-          {playlists?.data?.playlists?.map((playlist) => {
-            return (
-              <PlaylistCard
-                key={playlist.diocoPlaylistId}
-                playlist={playlist}
-                onPlaylistClicked={setSelectedPlaylistId}
-                videosCountLabel={t.youtube?.videosCountLabel ?? "videos"}
-              />
-            );
-          })}
+          {(playlists?.data?.playlists ?? []).map((playlist, index) => (
+            <PlaylistCard
+              key={playlist.diocoPlaylistId}
+              playlist={playlist}
+              onPlaylistClicked={setSelectedPlaylistId}
+              videosCountLabel={t.youtube?.videosCountLabel ?? "videos"}
+              priority={index === 0}
+            />
+          ))}
         </div>
       )}
     </div>

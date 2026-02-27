@@ -8,7 +8,7 @@ import { VideoChannels } from "@/modules/youtube/video-channel";
 import { VideoContainer } from "@/modules/youtube/video-container";
 
 export default function Youtube() {
-    const [category, setCategory] = usePersistedState<number | undefined>("youtube-category", undefined);
+    const [category, setCategory] = usePersistedState<number>("youtube-category", 0);
 
 
   const { t } = useLocale();

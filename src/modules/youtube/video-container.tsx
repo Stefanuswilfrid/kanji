@@ -30,9 +30,9 @@ export function VideoContainer() {
       <div className="mt-4 px-3">{isLoadingDocs && <p>{t.loading}</p>}</div>
 
       <div className="max-sm:-mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:max-md:px-3">
-        {docs?.data?.docs_metadata.map((doc) => {
-          return <YoutubeCard key={doc.diocoDocId} doc={doc} />;
-        })}
+        {(docs?.data?.docs_metadata ?? []).map((doc, index) => (
+          <YoutubeCard key={doc.diocoDocId} doc={doc} priority={index === 0} />
+        ))}
       </div>
     </div>
   );

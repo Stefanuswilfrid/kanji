@@ -1,3 +1,6 @@
+export const PLACEHOLDER_SRC =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Crect fill='%23222' width='320' height='180'/%3E%3C/svg%3E";
+
 interface FetchMediaParams {
   freq95?: FreqRange;
   searchText?: string;
@@ -63,23 +66,26 @@ export interface Data {
 }
 
 export interface DocsMetadaum {
-  mediaClass: string;
-  source: string;
+  mediaClass?: string;
+  source?: string;
   diocoDocName: string;
-  diocoDocName_translation: DiocoDocNameTranslation;
+  diocoDocName_translation?: DiocoDocNameTranslation;
   diocoDocId: string;
   lang_G: string;
-  description: string;
-  description_translation: any;
+  description?: string;
+  description_translation?: any;
   image: Image;
-  publishDate: PublishDate;
-  freqRank95: number;
-  freq95Bucket: number;
-  popularityScore: number;
+  publishDate?: PublishDate;
+  freqRank95?: number;
+  freq95Bucket?: number;
+  popularityScore?: number;
   info: Info;
-  duration_ms: number;
-  durationBucket_ms: number;
-  subsAvailable: SubsAvailable;
+  duration_ms?: number;
+  durationBucket_ms?: number;
+  subsAvailable?: SubsAvailable;
+  /** SerpAPI / custom fields */
+  publishedAtDisplay?: string;
+  durationText?: string;
 }
 
 export interface DiocoDocNameTranslation {
@@ -106,9 +112,10 @@ const BASE_FILTERS = {
 
 export interface Info {
   videoId: string;
-  viewCount: number;
+  viewCount?: number;
   channelId: string;
-  channelName: string;
+  channelName?: string;
+  channelAvatarUrl?: string;
 }
 
 export interface SubsAvailable {
