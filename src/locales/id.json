@@ -51,7 +51,13 @@
   "saveToFlashcard": "+ Kartu Pengingat",
   "removeFromFlashcard": "- Kartu Pengingat",
   "add": "Tambah +",
-  "placeholderFlashcardTitle": "Judul kartu pengingat"
+  "pleaseFill": "Silahkan isi kolom berikut:",
+  "placeholderFlashcardTitle": "Judul kartu pengingat",
+  "placeholderFlashcardDescription": "Deskripsi kartu pengingat",
+  "addNewFlashcardPlaceholder": "Tambahkan kata/frase Cina ke kartu pengingat dipisahkan dengan baris baru, contoh:\n北\nおはよう\n",
+  "review": "Ulas",
+  "export": "Ekspor"
+
 
 
 

@@ -22,7 +22,7 @@ export default function FlashcardsPage() {
 
           <div>
             <div className="max-md:px-4 mt-4">
-              <AddNewFlashcardButton setFlashcards={() => {}} />
+              <AddNewFlashcardButton setFlashcards={setFlashcards} />
             </div>
             <ul className="mt-4">
               {flashcards.map((flashcard) => {

@@ -44,7 +44,13 @@
   "removeFromFlashcard": "Remove from Flashcard -",
 
   "add": "Add +",
-  "placeholderFlashcardTitle": "Enter flashcard title"
+  "placeholderFlashcardTitle": "Enter flashcard title",
+  "pleaseFill": "Please fill the following:",
+  "placeholderFlashcardDescription": "Enter flashcard description",
+  "addNewFlashcardPlaceholder": "Add words/phrases to flashcard separated by new lines, example:嗚呼\n北\n",
+  "review": "Review",
+  "export": "Export"
+
 
 
 }

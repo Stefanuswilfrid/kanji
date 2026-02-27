@@ -1,5 +1,6 @@
 "use client";
 import { BackRouteButton } from "@/components/route-button";
+import { FooterButtons } from "@/modules/flashcard/footer-buttons";
 import { Flashcard } from "@/modules/flashcard/useJLPTFlashcard";
 import { Layout } from "@/modules/layout/layout";
 import {
@@ -9,6 +10,19 @@ import {
 import { ChevronRightIcon, LucideTrash2 } from "lucide-react";
 import { useParams } from "next/navigation";
 import React from "react";
+
+function exportFlashcard(words: string[], filename: string) {
+  const element = document.createElement("a");
+  const file = new Blob(
+    [`// ${filename}`, ...words].map((str) => str + "\n"),
+    { type: "text/plain" }
+  );
+  element.href = URL.createObjectURL(file);
+  element.download = `${filename}.txt`;
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
 
 export default function FlashcardsIdPage() {
   const params = useParams<{ id?: string }>();
@@ -20,7 +34,7 @@ export default function FlashcardsIdPage() {
     <Layout>
       <div className="min-h-dvh">
         <main className="max-w-[960px] mx-auto md:px-8">
-          <div className="max-md:sticky top-0 h-[11.25rem] flex flex-col justify-end bg-black z-10 max-md:px-2 pb-2 border-b-[1.5px] border-b-subtle">
+          <div className="max-md:sticky top-0 h-45 flex flex-col justify-end bg-black z-10 max-md:px-2 pb-2 border-b-[1.5px] border-b-subtle">
             <div className="flex justify-between">
               <div className="w-fit">
                 <BackRouteButton defaultBack />
@@ -46,7 +60,9 @@ function DisplayFlashcard({ flashcard }: { flashcard: Flashcard }) {
   const chapterName = chapterParts.join("-").trim();
   const words = (flashcard.words ?? []).filter(Boolean);
 
+
   return (
+    <>
     <div className="mx-4 mt-4">
       <div className="flex items-end justify-between gap-4">
         <div>
@@ -88,5 +104,14 @@ function DisplayFlashcard({ flashcard }: { flashcard: Flashcard }) {
         </div>
       )}
     </div>
+
+    {words.length > 0 && (
+        <FooterButtons
+          onExport={() => {
+            exportFlashcard(words, flashcard.chapter);
+          }}
+        />
+      )}
+    </>
   );
 }
