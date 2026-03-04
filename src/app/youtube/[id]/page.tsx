@@ -1,5 +1,6 @@
 import { BackRouteButton } from "@/components/route-button";
 import { Layout } from "@/modules/layout/layout";
+import { VideoIdContainer } from "@/modules/youtube/video-id-container";
 
 export default function Youtube() {
     return (
@@ -11,7 +12,8 @@ export default function Youtube() {
                 <BackRouteButton />
               </div>
             </div>
-  
+            <VideoIdContainer />
+
           </main>
         </div>
       </Layout>
