@@ -18,14 +18,13 @@ import { ChangeLocaleButton } from "./change-locale-button";
 import { HomeButton } from "./home-button";
 import { useLocale } from "@/locales/use-locale";
 import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export function HomeTodo() {
   const { width } = useWindowSize();
   const { t } = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
 //podcast
   return (
@@ -38,7 +37,7 @@ export function HomeTodo() {
         </div>
         <button
           onClick={() => {
-            const params = new URLSearchParams(searchParams?.toString());
+            const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
             params.set("search", "true");
             router.push(`${pathname}?${params.toString()}`);
           }}
@@ -115,7 +114,7 @@ export function HomeTodo() {
           </div>
         </HomeButton>
 
-        <HomeButton
+        {/* <HomeButton
           path="/flashcards/radicals"
           className="relative hover:bg-sky-200/5"
           icon={
@@ -131,7 +130,7 @@ export function HomeTodo() {
             <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
             WIP
           </div>
-        </HomeButton>
+        </HomeButton> */}
 
         <HomeButton
           path="/teleprompter"

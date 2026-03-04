@@ -64,6 +64,9 @@
   "loading": "Loading...",
   "searchPlaceholder": "Find characters/words/phrases...",
   "commandMenuChips": ["Translation", "Word Definition"],
+  "definition": "Definition",
+  "translation": "Translation",
+  "keyword": "You searched for:",
 
   "audioNotFound": "Audio source not found."
 

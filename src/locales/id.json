@@ -72,6 +72,10 @@
   "audioNotFound": "Sumber audio tidak ditemukan.",
   "searchPlaceholder": "Cari karakter, kata, atau frasa...",
   "commandMenuChips": ["Terjemahan", "Definisi Kata"],
+  "definition": "Definisi",
+  "translation": "Terjemahan",
+  "seeTranslation": "Lihat Terjemahan",
+  "keyword": "Pencarian Anda:",
 
   "export": "Ekspor"
 

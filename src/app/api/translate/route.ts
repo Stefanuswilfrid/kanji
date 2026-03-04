@@ -16,10 +16,7 @@ export async function GET(request: Request) {
   const to = searchParams.get("to") ?? "id";
 
   if (!text.trim()) {
-    return NextResponse.json(
-      { error: "Missing 'text' query param" },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Missing 'text' query param" }, { status: 400 });
   }
 
   const endpoint =
@@ -29,22 +26,21 @@ export async function GET(request: Request) {
     `&q=${encodeURIComponent(text)}`;
 
   const res = await fetch(endpoint, {
-    // Avoid caching potentially dynamic translations forever.
     cache: "no-store",
   });
 
   if (!res.ok) {
-    return NextResponse.json(
-      { error: `Translate failed (${res.status})` },
-      { status: 502 }
-    );
+    return NextResponse.json({ error: `Translate failed (${res.status})` }, { status: 502 });
   }
 
   const data = (await res.json()) as unknown;
   // Response shape: [[["translated","original",...], ...], ...]
   const translatedText =
     Array.isArray(data) && Array.isArray((data as any)[0])
-      ? (data as any)[0].map((chunk: any) => chunk?.[0]).filter(Boolean).join("")
+      ? (data as any)[0]
+          .map((chunk: any) => chunk?.[0])
+          .filter(Boolean)
+          .join("")
       : "";
 
   const body: TranslateResponse = {
