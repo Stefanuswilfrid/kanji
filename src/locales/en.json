@@ -67,6 +67,7 @@
   "definition": "Definition",
   "translation": "Translation",
   "keyword": "You searched for:",
+  "searchErrorToast": "Please type Japanese text (かな・カナ・漢字).",
 
   "audioNotFound": "Audio source not found."
 

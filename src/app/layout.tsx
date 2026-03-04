@@ -6,6 +6,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SearchCommandMenu } from "@/modules/search/search-command-menu";
 import { Suspense } from "react";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </Providers>
+        <Toaster theme="dark" position="bottom-center" richColors />
         <Analytics />
       </body>
     </html>

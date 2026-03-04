@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { CommandMenuFooter } from "./command-menu/footer";
 import { Command } from "cmdk";
 import { useLocale } from "@/locales/use-locale";
@@ -12,12 +12,22 @@ import { CommandMenuSearch } from "./command-menu/search";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { AudioProvider } from "../layout/audio-provider";
 import { CommandMenuGroupCard } from "./command-menu/group";
+import { toast } from "sonner";
 
 export type TranslateApiResponse = {
-  text: string;
-  translatedText: string;
-  from: string;
-  to: string;
+  result: SegmentedResult[][];
+  translated: string;
+};
+
+export type SegmentedResult = {
+  index: number;
+  simplified: string;
+  traditional: string;
+  entries?: Array<{
+    reading: string;
+    glosses: string[];
+  }>;
+  isPunctuation: boolean;
 };
 
 const KEYWORD_REGEX = /^[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}\sー々〆ヵヶ]+$/u;
@@ -45,8 +55,24 @@ export function SearchCommandMenu() {
 
 function SearchCommandMenuInner() {
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
+
+
+  React.useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        const params = new URLSearchParams(searchParams.toString());
+        params.set("search", "true");
+        router.push(`${pathname}?${params.toString()}`);
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [router, pathname, searchParams]);
   return (
     <Dialog
       className="relative z-[998]"
@@ -87,6 +113,7 @@ function CommandMenuContent() {
   const listRef = React.useRef<HTMLDivElement>(null);
 
   const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lastInvalidToastKeywordRef = React.useRef<string>("");
   const keyword = value.trim();
   const showTranslation = active.includes(0);
   const showDefinition = active.includes(1);
@@ -103,12 +130,22 @@ function CommandMenuContent() {
 
       const isMatch = KEYWORD_REGEX.test(keyword);
       if (!isMatch) {
+        if (keyword && lastInvalidToastKeywordRef.current !== keyword) {
+          lastInvalidToastKeywordRef.current = keyword;
+          toast.error((t as any).searchErrorToast ?? "Please type Japanese text (かな・カナ・漢字).", {
+            id: "search-invalid-japanese",
+            duration: 2500,
+          });
+        }
         timeoutRef.current = setTimeout(() => {
           // eslint-disable-next-line no-console
           console.warn("Search keyword rejected by regex:", keyword);
         }, 1000);
         return null;
       }
+
+      // Reset so future invalid inputs can toast again.
+      lastInvalidToastKeywordRef.current = "";
 
       updateRecentlySearched(keyword);
 
@@ -172,7 +209,7 @@ function CommandMenuContent() {
                 )} */}
                 <div className={cn("duration-200", isLoading ? "opacity-50" : "opacity-100")}>
                   {searchResult && value && (
-                    <CommandMenuGroupCard active={active} data={searchResult} sentence={value} />
+                    <CommandMenuGroupCard active={active} data={searchResult} sentence={value} to={locale} />
                   )}
                 </div>
               </React.Fragment>
