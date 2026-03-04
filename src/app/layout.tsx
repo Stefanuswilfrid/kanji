@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"
+import { SearchCommandMenu } from "@/modules/search/search-command-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}>
         <Providers>
           <ThemeProvider forcedTheme="dark" attribute="class">
+            <SearchCommandMenu/>
             {children}
           </ThemeProvider>
         </Providers>

@@ -59,8 +59,11 @@
   "relatedTo": "Related to",
   "seeIdioms": "See idioms",
   "exampleIdiomsOf": "Example idioms of",
-
+  "openCommandMenu": "Open search command",
+  "seeDetails": "See details",
   "loading": "Loading...",
+  "searchPlaceholder": "Find characters/words/phrases...",
+  "commandMenuChips": ["Translation", "Word Definition"],
 
   "audioNotFound": "Audio source not found."
 

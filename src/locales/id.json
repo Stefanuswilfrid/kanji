@@ -67,9 +67,12 @@
   "relatedTo": "Terkait dengan",
   "seeIdioms": "Lihat idiom",
   "exampleIdiomsOf": "Contoh idiom dari",
-
+  "openCommandMenu": "Buka pencarian kata",
+  "seeDetails": "Lihat definisi",
   "audioNotFound": "Sumber audio tidak ditemukan.",
-  
+  "searchPlaceholder": "Cari karakter, kata, atau frasa...",
+  "commandMenuChips": ["Terjemahan", "Definisi Kata"],
+
   "export": "Ekspor"
 
 

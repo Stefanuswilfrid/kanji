@@ -17,21 +17,31 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 import { ChangeLocaleButton } from "./change-locale-button";
 import { HomeButton } from "./home-button";
 import { useLocale } from "@/locales/use-locale";
+import { useRouter } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export function HomeTodo() {
   const { width } = useWindowSize();
   const { t } = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
 //podcast
   return (
     <div>
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
-          <AuthButton />
+          {/* <AuthButton /> */}
 
           <ChangeLocaleButton />
         </div>
         <button
-          onClick={() => {}}
+          onClick={() => {
+            const params = new URLSearchParams(searchParams?.toString());
+            params.set("search", "true");
+            router.push(`${pathname}?${params.toString()}`);
+          }}
           className="relative flex gap-2 items-center text-secondary sm:flex-1 rounded-md border border-secondary/10 p-2.5 sm:max-w-xs active:bg-hovered duration-200 bg-softblack"
         >
           <SearchIcon
