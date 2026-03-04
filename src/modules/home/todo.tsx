@@ -199,7 +199,7 @@ export function HomeTodo() {
             WIP
           </div>
         </HomeButton> */}
-
+{isAuthenticated && (
         <HomeButton
           path="/suggestions"
           className="relative hover:bg-green-200/5"
@@ -217,7 +217,7 @@ export function HomeTodo() {
             WIP
           </div>
 
-          </HomeButton>
+          </HomeButton>)}
       </div>
     </div>
   );
