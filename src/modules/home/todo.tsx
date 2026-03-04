@@ -4,6 +4,7 @@ import AuthButton from "./auth-button";
 import {
   BookAIcon,
   ClapperboardIcon,
+  FilePlus2Icon,
   KeyboardIcon,
   LanguagesIcon,
   LibraryBigIcon,
@@ -19,12 +20,16 @@ import { HomeButton } from "./home-button";
 import { useLocale } from "@/locales/use-locale";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { useAuth } from "../auth/auth-provider";
+import Home from "@/app/page";
 
 export function HomeTodo() {
   const { width } = useWindowSize();
   const { t } = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const {  isAuthenticated,  } = useAuth();
+
 
 //podcast
   return (
@@ -113,6 +118,19 @@ export function HomeTodo() {
             WIP
           </div>
         </HomeButton>
+
+
+        {/* {isAuthenticated && (
+          <HomeButton
+            path="/new"
+            className="hover:bg-sky-200/5"
+            icon={
+              <FilePlus2Icon size={48} strokeWidth={1.5} className="shrink-0 duration-200 group-hover:text-sky-400" />
+            }
+            title="New Reading"
+            description="Upload PDFs, texts or images to practice reading."
+          />
+        )} */}
 
         {/* <HomeButton
           path="/flashcards/radicals"

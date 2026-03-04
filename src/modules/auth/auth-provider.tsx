@@ -1,6 +1,5 @@
 "use client";
 import useIsMobile from "@/hooks/useIsMobile";
-import { newWindow } from "@/utils/new-window";
 import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 
@@ -28,11 +27,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         value={{
           isAuthenticated,
           signInWithGoogle: () => {
-            if (isMobile) {
-              signIn("google", { callbackUrl: "/" });
-            } else {
-              newWindow("/google-signin", "Sign In with Google");
-            }
+            signIn("google", { callbackUrl: "/" });
           },
           signOut: async () => {
             await signOut({ redirect: false });

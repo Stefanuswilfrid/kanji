@@ -1,8 +1,7 @@
 import prisma from "@/lib/prisma";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth, { type AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -49,7 +48,6 @@ export const authOptions: AuthOptions = {
     error: "/",
     verifyRequest: "/",
   },
-  // debug: process.env.NODE_ENV === "development",
   session: {
     strategy: "jwt",
     maxAge: 24 * 60 * 60,
@@ -57,4 +55,7 @@ export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
+
