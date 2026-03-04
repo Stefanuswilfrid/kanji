@@ -155,7 +155,7 @@ export function HomeTodo() {
           description={t.home.flashcards.description}
         />
 
-        <HomeButton
+        {/* <HomeButton
           path="/typing-test"
           className="hover:bg-sky-200/5 relative disabled:pointer-events-none disabled:opacity-50"
           icon={
@@ -171,7 +171,7 @@ export function HomeTodo() {
             <div className="absolute top-2 right-2 inline-flex text-xs items-center rounded-md backdrop-blur-sm bg-green-500/10 px-2 py-1 font-medium text-green-500 ring-1 ring-inset ring-green-500/20">
             WIP
           </div>
-        </HomeButton>
+        </HomeButton> */}
 
         <HomeButton
           path="/suggestions"
