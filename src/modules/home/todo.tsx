@@ -31,7 +31,7 @@ export function HomeTodo() {
     <div>
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
-          {/* <AuthButton /> */}
+          <AuthButton />
 
           <ChangeLocaleButton />
         </div>
