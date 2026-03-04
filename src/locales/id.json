@@ -53,6 +53,18 @@
     "backToChannelList": "Kembali ke Daftar Saluran",
     "videosCountLabel": "video"
   },
+  "suggestions": {
+    "buttons": ["Fitur baru", "Saran perbaikan", "Tambah buku"],
+    "successToast": "Pesan berhasil dikirim!",
+    "errorToast": "Terjadi kesalahan.",
+    "placeholders": [
+      "Deskripsikan fitur baru yang Anda inginkan...",
+      "Sampaikan saran perbaikan Anda...",
+      "Apa buku yang Anda ingin tambahkan? Sertakan juga link nya apabila tersedia :D"
+    ],
+    "submitLoading": "Mengirim...",
+    "submit": "Kirim"
+  },
   "saveToFlashcard": "+ Kartu Pengingat",
   "removeFromFlashcard": "- Kartu Pengingat",
   "add": "Tambah +",
