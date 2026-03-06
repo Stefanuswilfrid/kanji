@@ -1,5 +1,6 @@
 "use client";
 import { BackRouteButton } from "@/components/route-button";
+import { FlashcardSettingsModal } from "@/modules/flashcard/flashcard-settings-modal";
 import { FooterButtons } from "@/modules/flashcard/footer-buttons";
 import { Flashcard } from "@/modules/flashcard/useJLPTFlashcard";
 import { Layout } from "@/modules/layout/layout";
@@ -63,6 +64,8 @@ function DisplayFlashcard({ flashcard }: { flashcard: Flashcard }) {
 
   return (
     <>
+          <FlashcardSettingsModal flashcard={flashcard} />
+
     <div className="mx-4 mt-4">
       <div className="flex items-end justify-between gap-4">
         <div>

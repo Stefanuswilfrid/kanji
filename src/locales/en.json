@@ -80,6 +80,13 @@
   "translation": "Translation",
   "keyword": "You searched for:",
   "searchErrorToast": "Please type Japanese text (かな・カナ・漢字).",
+  "numOfCards": "Number of cards",
+  "all": "All",
+  "reviewMode": "Review Mode",
+  "reviewModes": ["Word Definition"],
+  "random": "Random",
+  "cardNumbers": "Card numbers",
+  "continue": "Continue",
 
   "audioNotFound": "Audio source not found."
 

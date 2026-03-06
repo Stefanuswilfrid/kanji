@@ -89,6 +89,13 @@
   "seeTranslation": "Lihat Terjemahan",
   "keyword": "Pencarian Anda:",
   "searchErrorToast": "Ketik teks bahasa Jepang (kana/kanji).",
+  "numOfCards": "Jumlah kartu",
+  "all": "Semua",
+  "reviewMode": "Mode Ulasan",
+  "reviewModes": ["Definisi Kata"],
+  "random": "Acak",
+  "cardNumbers": "Nomor kartu",
+  "continue": "Mulai",
 
   "export": "Ekspor"
 
