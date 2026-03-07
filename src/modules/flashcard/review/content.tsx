@@ -2,6 +2,7 @@ import { FlashcardedResult } from "@/server/routers/flashcard";
 import { CardContainer } from "./card-container";
 import { ReviewProvider } from "./provider";
 import { ReviewResult } from "./review-result";
+import { Pagination } from "./pagination";
 export type CardStatus = "wrong" | "correct" | "untouched";
 
 export function FlashcardReviewContent({
@@ -17,6 +18,7 @@ export function FlashcardReviewContent({
       <ReviewResult />
 
         <CardContainer onCardClick={onCardClick} words={words} />
+        <Pagination wordsLength={words.length} />
       </ReviewProvider>
     </div>
   );
