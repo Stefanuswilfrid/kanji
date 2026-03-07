@@ -6,6 +6,7 @@ import React from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { useReview } from "./provider";
 import { CharacterCard } from "./character-card";
+import { useSmoothScroll } from "@/hooks/useSmoothScrollToIndex";
 
 export function CardContainer({
   words,
@@ -47,6 +48,16 @@ export function CardContainer({
   });
 
   const { currentIndex, reviewResult, flipped } = useReview();
+
+  const smoothScrollToIndex = useSmoothScroll(rowVirtualizer as any, "quad");
+
+  React.useEffect(() => {
+    smoothScrollToIndex(currentIndex, {
+      align: "start",
+      duration: 300,
+    });
+  }, [currentIndex, smoothScrollToIndex]);
+
 
 
   return (
