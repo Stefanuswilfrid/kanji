@@ -87,7 +87,14 @@
   "random": "Random",
   "cardNumbers": "Card numbers",
   "continue": "Continue",
-
+  "loadingFlashcards": "Loading Flashcards...",
+  "correct": "Correct",
+  "wrong": "Wrong",
+  "untouched": "Untouched",
+  "done": "Done",
+  "youDidGreat": "You did great! 🎉",
+  "notBad": "Not bad! 👌",
+  "keepPracticing": "Keep practicing! 💪",
   "audioNotFound": "Audio source not found."
 
 

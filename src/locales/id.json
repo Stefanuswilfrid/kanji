@@ -96,7 +96,14 @@
   "random": "Acak",
   "cardNumbers": "Nomor kartu",
   "continue": "Mulai",
-
+  "loadingFlashcards": "Memuat kartu pengingat...",
+  "keepPracticing": "Tetap berlatih! 💪",
+  "correct": "Benar",
+  "wrong": "Salah",
+  "untouched": "Belum",
+  "youDidGreat": "Kamu luar biasa! 🎉",
+  "done": "Selesai",
+  "notBad": "Tidak buruk! 👌",
   "export": "Ekspor"
 
 
